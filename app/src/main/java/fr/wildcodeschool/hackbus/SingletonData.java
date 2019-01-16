@@ -2,6 +2,7 @@ package fr.wildcodeschool.hackbus;
 
 import android.support.annotation.NonNull;
 
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -9,18 +10,71 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.TreeSet;
+
+import fr.wildcodeschool.hackbus.models.ProjetModel;
+import fr.wildcodeschool.hackbus.models.TypeModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
 
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class SingletonData {
+
     private static final SingletonData ourInstance = new SingletonData();
     private ArrayList<ProjetModel> projects = new ArrayList<>();
     private ArrayList<TagsModel> tags = new ArrayList<>();
     private ArrayList<UserModel> users = new ArrayList<>();
+    private ArrayList<TypeModel> types = new ArrayList<>();
 
-    public void initTagsList(){
+
+    public void initDatas(final SingletonDataListener mySingletonDataListener){
+        initTypesListe();
+        initTagsList(mySingletonDataListener);
+    }
+
+    public void initTypesListe(){
+        TreeSet<TypeModel> typesTemp = new TreeSet<>();
+        typesTemp.add(new TypeModel("Informatique"));
+        typesTemp.add(new TypeModel("Développement"));
+        typesTemp.add(new TypeModel("Physique Théorique"));
+        typesTemp.add(new TypeModel("Physique Appliquée"));
+        typesTemp.add(new TypeModel("Mathématiques"));
+        typesTemp.add(new TypeModel("Relations Humaines"));
+        typesTemp.add(new TypeModel("Communication"));
+        typesTemp.add(new TypeModel("Sociologie"));
+        typesTemp.add(new TypeModel("Biologie"));
+        typesTemp.add(new TypeModel("Chimie"));
+        typesTemp.add(new TypeModel("Mécanique"));
+        typesTemp.add(new TypeModel("Electronique Analogique"));
+        typesTemp.add(new TypeModel("Artisanat"));
+        typesTemp.add(new TypeModel("Ecriture"));
+        typesTemp.add(new TypeModel("Investigation"));
+        typesTemp.add(new TypeModel("Journalisme"));
+        typesTemp.add(new TypeModel("Négociation"));
+        typesTemp.add(new TypeModel("Finance"));
+        typesTemp.add(new TypeModel("Comptabilité"));
+        typesTemp.add(new TypeModel("Architecture réseau"));
+        typesTemp.add(new TypeModel("Economie"));
+        typesTemp.add(new TypeModel("Modélisation 3D"));
+        typesTemp.add(new TypeModel("Design"));
+        typesTemp.add(new TypeModel("Mécatronique"));
+        typesTemp.add(new TypeModel("Electronique numérique"));
+        typesTemp.add(new TypeModel("UX/UI"));
+        typesTemp.add(new TypeModel("Chasse & pêche"));
+        typesTemp.add(new TypeModel("Nature et Tradition"));
+        typesTemp.add(new TypeModel("Religion"));
+        typesTemp.add(new TypeModel("Developpement Mobile"));
+        typesTemp.add(new TypeModel("Ta maman"));
+        typesTemp.add(new TypeModel("Mécanique des fluides"));
+        typesTemp.add(new TypeModel("DSP et microcontroleurs"));
+        typesTemp.add(new TypeModel("Algorithmie"));
+        typesTemp.add(new TypeModel("Mécanique quantique"));
+        types = new ArrayList<>(typesTemp);
+    }
+
+    public void initTagsList(final SingletonDataListener mysingletonDataListener){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refTags = firebaseDatabase.getReference("tags");
         refTags.addValueEventListener(new ValueEventListener() {
@@ -32,7 +86,7 @@ public class SingletonData {
                     tag = tagsSnapshot.getValue(TagsModel.class);
                     tags.add(tag);
                 }
-                initProjectsList();
+                initProjectsList(mysingletonDataListener);
             }
 
             @Override
@@ -42,8 +96,12 @@ public class SingletonData {
         });
 
     }
+<<<<<<< HEAD
 
     public void initProjectsList(){
+=======
+    public void initProjectsList(final SingletonDataListener mySingletonDataListener){
+>>>>>>> 5cdd6a473b6c10e3dd991c4ab43b1dc6bb6faa87
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refProjets = firebaseDatabase.getReference("projets");
         refProjets.addValueEventListener(new ValueEventListener() {
@@ -55,7 +113,7 @@ public class SingletonData {
                     projet = projetSnapshot.getValue(ProjetModel.class);
                     projects.add(projet);
                 }
-                initUserLists();
+                initUserLists(mySingletonDataListener);
             }
 
             @Override
@@ -64,7 +122,7 @@ public class SingletonData {
         });
     }
 
-    public void initUserLists(){
+    public void initUserLists(final SingletonDataListener myDataListener){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refUsers = firebaseDatabase.getReference("users");
         refUsers.addValueEventListener(new ValueEventListener() {
@@ -76,6 +134,7 @@ public class SingletonData {
                     user = userSnapshot.getValue(UserModel.class);
                     users.add(user);
                 }
+                myDataListener.onResponse(true);
             }
 
             @Override
@@ -112,8 +171,6 @@ public class SingletonData {
     public static SingletonData getInstance() {
         return ourInstance;
     }
-
-
 
     private SingletonData() {
     }
