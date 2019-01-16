@@ -34,8 +34,6 @@ public class Singleton {
     -Economie
     -Modélisation 3D
     -Dessin
-
      */
-
 
 }
