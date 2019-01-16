@@ -1,154 +1,161 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:1-21:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b7d2b3f9655e08cc603494389a304543/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/romain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b27c3dedb483f5773fa0c1a4f4a12165/AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/5a6dfb4a534e200d1732e3ae8ef6e74b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/ef40f981e31b95b725bc5b1bfbd12c30/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/4182e7df7e4ed7b8b524122edcc5c33a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/172d4f7020b8558bd2e4fd5eea16e436/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/0a589fcdc84cede78a6b72640cc907e6/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/4a9170a9b2d83bee97e5e2c4377b668b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/65f18956abbf55762316c4b7a588bc9e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/dc1f1993565319f8dddc542dda545176/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/f52b4ed2d5a8862debd63eb1d9a71cad/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/eb340d662a3e6ec0c6b2a55a83e2d7c1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/ae39001420ac5731233c642cfb3d53e1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/d6c1acd846588e8265a9b863811998e2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/9990c9447ce02cf586944a4268d45dce/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4f0f0b400f71fcd7fb7de932dd0cf003/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/71f81e61d28c5558358c1fa06578d1f0/AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/ad4e4ee0bb7b68b92578173edf296d31/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/24cc6bfe2ba87902c313ee81fd56b3a5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/efea45b847f1fd67ed241c7cc3b994e6/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/eefb1d35f4103d117a99df5337ee9ebf/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/25acc58753d657c343907c79f87c1a03/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/be725c14577b10cd988bd5f3defdf7e5/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/72373bc5e3637665665a34d3fabab061/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/8e08eb0f6c3b8aa437aa5947a08bdacc/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a95114ba37db1f858baa8081742b5a93/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/99e6e6cdc3b6e90db83b7dd93c3bfaf3/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:1-21:12
+ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:1-28:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wilder/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ee0ee1b58a082b2d895b2e4db6f9d969/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/39da7fe0de8362db1b06310b8d4b42df/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/642e0d4d86ae1607eaec203092b59cf6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/2b83bdf32d24334846803600681e6475/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/d167c3de271666c46f6985420f39523d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/2b23bd26cc2fa8d2581e3690f786c623/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/81fc5ac305650984a5569408446f390c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/f232e85f83b770c153d9fb0a21c7a934/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/bce1e68a2e5b52f438334c424702f186/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/94be9e5d58ac960f79ad3d7157551306/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/36464a327a89b052b5f457ee3368f07b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/5d98f690d89292dd5ebb0d12562986b9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/1e34ddae0023b580a889d557e960f46a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/3ce3d98dd796ce72cf4b6768f8e72743/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/5f3ccfd75a85b1d8617b8a2a7bca7893/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/84d7bbfae8df5030234a7aff70dd9341/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/348c7940412970c426398f57116069bd/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b861c95c03094d5506898c5fd89d5e42/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/528b2e50da3b99a2b83a7d81fdd23c19/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/2eeb8a7f563ffc6fe971d5283adcff24/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ca55c78f55361442272cfde15c668df4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/795c39bccb4532d918df7b0c0e95db8a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/16b7adfa410c6c5423a1be268aa647b3/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/bb52e27ba3b9e37805175897bdaf14ff/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/6562926a7a7f5c183b4a4a0446f550ee/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/d5affacc3189ff4764d93ffb305f0ede/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:1-28:12
 	package
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:3:5-40
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:3:5-40
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:1-21:12
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:1-21:12
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:5:5-19:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/romain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b27c3dedb483f5773fa0c1a4f4a12165/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/romain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b27c3dedb483f5773fa0c1a4f4a12165/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4f0f0b400f71fcd7fb7de932dd0cf003/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4f0f0b400f71fcd7fb7de932dd0cf003/AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/71f81e61d28c5558358c1fa06578d1f0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/71f81e61d28c5558358c1fa06578d1f0/AndroidManifest.xml:22:5-23:19
+ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:5:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wilder/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ee0ee1b58a082b2d895b2e4db6f9d969/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wilder/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ee0ee1b58a082b2d895b2e4db6f9d969/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/84d7bbfae8df5030234a7aff70dd9341/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/84d7bbfae8df5030234a7aff70dd9341/AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4f0f0b400f71fcd7fb7de932dd0cf003/AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:11:9-40
 activity#fr.wildcodeschool.hackbus.MainActivity
-ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:12:9-18:20
+ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:12:19-47
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:12:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:16:27-74
+activity#fr.wildcodeschool.hackbus.AskingActivity
+ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:19:9-25:20
+	android:name
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml:19:19-49
 uses-sdk
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b7d2b3f9655e08cc603494389a304543/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b7d2b3f9655e08cc603494389a304543/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/romain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b27c3dedb483f5773fa0c1a4f4a12165/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/romain/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b27c3dedb483f5773fa0c1a4f4a12165/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/5a6dfb4a534e200d1732e3ae8ef6e74b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/5a6dfb4a534e200d1732e3ae8ef6e74b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/ef40f981e31b95b725bc5b1bfbd12c30/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/ef40f981e31b95b725bc5b1bfbd12c30/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/4182e7df7e4ed7b8b524122edcc5c33a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/4182e7df7e4ed7b8b524122edcc5c33a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/172d4f7020b8558bd2e4fd5eea16e436/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/172d4f7020b8558bd2e4fd5eea16e436/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/0a589fcdc84cede78a6b72640cc907e6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/0a589fcdc84cede78a6b72640cc907e6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/4a9170a9b2d83bee97e5e2c4377b668b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/4a9170a9b2d83bee97e5e2c4377b668b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/65f18956abbf55762316c4b7a588bc9e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/65f18956abbf55762316c4b7a588bc9e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/dc1f1993565319f8dddc542dda545176/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/dc1f1993565319f8dddc542dda545176/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/f52b4ed2d5a8862debd63eb1d9a71cad/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/f52b4ed2d5a8862debd63eb1d9a71cad/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/eb340d662a3e6ec0c6b2a55a83e2d7c1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/eb340d662a3e6ec0c6b2a55a83e2d7c1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/ae39001420ac5731233c642cfb3d53e1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/ae39001420ac5731233c642cfb3d53e1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/d6c1acd846588e8265a9b863811998e2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/d6c1acd846588e8265a9b863811998e2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/9990c9447ce02cf586944a4268d45dce/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/9990c9447ce02cf586944a4268d45dce/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4f0f0b400f71fcd7fb7de932dd0cf003/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4f0f0b400f71fcd7fb7de932dd0cf003/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/71f81e61d28c5558358c1fa06578d1f0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/71f81e61d28c5558358c1fa06578d1f0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/ad4e4ee0bb7b68b92578173edf296d31/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/ad4e4ee0bb7b68b92578173edf296d31/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/24cc6bfe2ba87902c313ee81fd56b3a5/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/24cc6bfe2ba87902c313ee81fd56b3a5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/efea45b847f1fd67ed241c7cc3b994e6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/efea45b847f1fd67ed241c7cc3b994e6/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/eefb1d35f4103d117a99df5337ee9ebf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/eefb1d35f4103d117a99df5337ee9ebf/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/25acc58753d657c343907c79f87c1a03/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/25acc58753d657c343907c79f87c1a03/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/be725c14577b10cd988bd5f3defdf7e5/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/be725c14577b10cd988bd5f3defdf7e5/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/72373bc5e3637665665a34d3fabab061/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/72373bc5e3637665665a34d3fabab061/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/8e08eb0f6c3b8aa437aa5947a08bdacc/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/8e08eb0f6c3b8aa437aa5947a08bdacc/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a95114ba37db1f858baa8081742b5a93/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] /home/romain/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a95114ba37db1f858baa8081742b5a93/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/99e6e6cdc3b6e90db83b7dd93c3bfaf3/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] /home/romain/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/99e6e6cdc3b6e90db83b7dd93c3bfaf3/AndroidManifest.xml:20:5-44
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wilder/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ee0ee1b58a082b2d895b2e4db6f9d969/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/wilder/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ee0ee1b58a082b2d895b2e4db6f9d969/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/39da7fe0de8362db1b06310b8d4b42df/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/39da7fe0de8362db1b06310b8d4b42df/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/642e0d4d86ae1607eaec203092b59cf6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/642e0d4d86ae1607eaec203092b59cf6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/2b83bdf32d24334846803600681e6475/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/2b83bdf32d24334846803600681e6475/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/d167c3de271666c46f6985420f39523d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/d167c3de271666c46f6985420f39523d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/2b23bd26cc2fa8d2581e3690f786c623/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/2b23bd26cc2fa8d2581e3690f786c623/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/81fc5ac305650984a5569408446f390c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/81fc5ac305650984a5569408446f390c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/f232e85f83b770c153d9fb0a21c7a934/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/f232e85f83b770c153d9fb0a21c7a934/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/bce1e68a2e5b52f438334c424702f186/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/bce1e68a2e5b52f438334c424702f186/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/94be9e5d58ac960f79ad3d7157551306/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/94be9e5d58ac960f79ad3d7157551306/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/36464a327a89b052b5f457ee3368f07b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/36464a327a89b052b5f457ee3368f07b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/5d98f690d89292dd5ebb0d12562986b9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/5d98f690d89292dd5ebb0d12562986b9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/1e34ddae0023b580a889d557e960f46a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/1e34ddae0023b580a889d557e960f46a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/3ce3d98dd796ce72cf4b6768f8e72743/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/3ce3d98dd796ce72cf4b6768f8e72743/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/5f3ccfd75a85b1d8617b8a2a7bca7893/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/5f3ccfd75a85b1d8617b8a2a7bca7893/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/84d7bbfae8df5030234a7aff70dd9341/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/84d7bbfae8df5030234a7aff70dd9341/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/348c7940412970c426398f57116069bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/348c7940412970c426398f57116069bd/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b861c95c03094d5506898c5fd89d5e42/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b861c95c03094d5506898c5fd89d5e42/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/528b2e50da3b99a2b83a7d81fdd23c19/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/528b2e50da3b99a2b83a7d81fdd23c19/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/2eeb8a7f563ffc6fe971d5283adcff24/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/2eeb8a7f563ffc6fe971d5283adcff24/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ca55c78f55361442272cfde15c668df4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ca55c78f55361442272cfde15c668df4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/795c39bccb4532d918df7b0c0e95db8a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/795c39bccb4532d918df7b0c0e95db8a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/16b7adfa410c6c5423a1be268aa647b3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/wilder/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/16b7adfa410c6c5423a1be268aa647b3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/bb52e27ba3b9e37805175897bdaf14ff/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/bb52e27ba3b9e37805175897bdaf14ff/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/6562926a7a7f5c183b4a4a0446f550ee/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/6562926a7a7f5c183b4a4a0446f550ee/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/d5affacc3189ff4764d93ffb305f0ede/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/wilder/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/d5affacc3189ff4764d93ffb305f0ede/AndroidManifest.xml:20:5-44
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-		ADDED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
-		INJECTED from /home/romain/project/hackathon/BizLabHub/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+		ADDED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml
+		INJECTED from /home/wilder/Projects/BizLab/BizLabHub/app/src/main/AndroidManifest.xml

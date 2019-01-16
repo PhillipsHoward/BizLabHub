@@ -132,6 +132,11 @@ attr editTextStyle
 attr elevation
 attr emptyVisibility
 attr expandActivityOverflowButtonDrawable
+attr fastScrollEnabled
+attr fastScrollHorizontalThumbDrawable
+attr fastScrollHorizontalTrackDrawable
+attr fastScrollVerticalThumbDrawable
+attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
 attr font
 attr fontFamily
@@ -162,6 +167,7 @@ attr itemPadding
 attr keylines
 attr lastBaselineToBottomHeight
 attr layout
+attr layoutManager
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
@@ -259,6 +265,7 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr reverseLayout
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -270,11 +277,13 @@ attr showDividers
 attr showText
 attr showTitle
 attr singleChoiceItemLayout
+attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
 attr srcCompat
+attr stackFromEnd
 attr state_above_anchor
 attr statusBarBackground
 attr subMenuArrow
@@ -373,6 +382,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -382,6 +392,7 @@ color bright_foreground_material_light
 color button_material_dark
 color button_material_light
 color colorAccent
+color colorGreyTrans
 color colorPrimary
 color colorPrimaryDark
 color dim_foreground_disabled_material_dark
@@ -392,6 +403,8 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color green
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -408,6 +421,7 @@ color material_grey_850
 color material_grey_900
 color notification_action_color_filter
 color notification_icon_bg_color
+color orange
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -416,6 +430,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color red
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -430,6 +445,8 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
+color white
+color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -514,6 +531,9 @@ dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fastscroll_default_thickness
+dimen fastscroll_margin
+dimen fastscroll_minimum_range
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -521,6 +541,9 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen item_touch_helper_max_drag_scroll_per_frame
+dimen item_touch_helper_swipe_escape_max_velocity
+dimen item_touch_helper_swipe_escape_velocity
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -628,6 +651,9 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable classic_border
+drawable ic_circle
+drawable ic_circle_white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable notification_action_background
@@ -642,6 +668,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable round_border
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -699,6 +726,8 @@ id direct
 id disableHome
 id edit_query
 id end
+id et_question
+id et_title_question
 id expand_activities_button
 id expanded_menu
 id fill
@@ -717,6 +746,8 @@ id image
 id info
 id invisible
 id italic
+id item_touch_helper_previous_elevation
+id iv_color_progress
 id left
 id line1
 id line3
@@ -741,6 +772,8 @@ id radio
 id right
 id right_icon
 id right_side
+id rv_skills
+id sb_priority
 id screen
 id scrollIndicatorDown
 id scrollIndicatorUp
@@ -753,9 +786,11 @@ id search_edit_frame
 id search_go_btn
 id search_mag_icon
 id search_plate
+id search_skills
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
+id send
 id shortcut
 id showCustom
 id showHome
@@ -779,12 +814,16 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textView
 id time
 id title
 id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id tv_count
+id tv_priority
+id tv_skills
 id uniform
 id up
 id useLogo
@@ -824,7 +863,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_asking
 layout activity_main
+layout item_skill
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -1264,6 +1305,7 @@ styleable MenuView android_windowAnimationStyle android_itemTextAppearance andro
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
+styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
