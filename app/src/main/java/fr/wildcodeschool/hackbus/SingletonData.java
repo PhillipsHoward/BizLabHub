@@ -11,6 +11,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+import fr.wildcodeschool.hackbus.models.ProjetModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
+
 public class SingletonData {
 
     private static final SingletonData ourInstance = new SingletonData();
