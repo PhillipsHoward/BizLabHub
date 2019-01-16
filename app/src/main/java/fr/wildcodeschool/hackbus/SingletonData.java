@@ -15,12 +15,13 @@ import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class SingletonData {
+
     private static final SingletonData ourInstance = new SingletonData();
     private ArrayList<ProjetModel> projects = new ArrayList<>();
     private ArrayList<TagsModel> tags = new ArrayList<>();
     private ArrayList<UserModel> users = new ArrayList<>();
 
-    public void initTagsList(){
+    public void initTagsList(final SingletonDataListener mysingletonDataListener){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refTags = firebaseDatabase.getReference("tags");
         refTags.addValueEventListener(new ValueEventListener() {
@@ -32,7 +33,7 @@ public class SingletonData {
                     tag = tagsSnapshot.getValue(TagsModel.class);
                     tags.add(tag);
                 }
-                initProjectsList();
+                initProjectsList(mysingletonDataListener);
             }
 
             @Override
@@ -42,7 +43,7 @@ public class SingletonData {
         });
 
     }
-    public void initProjectsList(){
+    public void initProjectsList(final SingletonDataListener mySingletonDataListener){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refProjets = firebaseDatabase.getReference("projets");
         refProjets.addValueEventListener(new ValueEventListener() {
@@ -54,7 +55,7 @@ public class SingletonData {
                     projet = projetSnapshot.getValue(ProjetModel.class);
                     projects.add(projet);
                 }
-                initUserLists();
+                initUserLists(mySingletonDataListener);
             }
 
             @Override
@@ -63,7 +64,7 @@ public class SingletonData {
         });
     }
 
-    public void initUserLists(){
+    public void initUserLists(final SingletonDataListener myDataListener){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refUsers = firebaseDatabase.getReference("users");
         refUsers.addValueEventListener(new ValueEventListener() {
@@ -75,6 +76,7 @@ public class SingletonData {
                     user = userSnapshot.getValue(UserModel.class);
                     users.add(user);
                 }
+                myDataListener.onResponse(true);
             }
 
             @Override
@@ -111,8 +113,6 @@ public class SingletonData {
     public static SingletonData getInstance() {
         return ourInstance;
     }
-
-
 
     private SingletonData() {
     }
