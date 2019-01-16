@@ -25,12 +25,14 @@ public class AskingActivity extends AppCompatActivity {
     TypeModel mecanique = new TypeModel("Mecanique");
     TypeModel design = new TypeModel("Design");
     TypeModel sexuel = new TypeModel("Sexuel");
+    SingletonData singletonData = SingletonData.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asking);
-
+        spinnerMethode1();
+        spinnerMethode2();
         seekBar();
     }
 

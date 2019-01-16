@@ -96,12 +96,8 @@ public class SingletonData {
         });
 
     }
-<<<<<<< HEAD
 
-    public void initProjectsList(){
-=======
     public void initProjectsList(final SingletonDataListener mySingletonDataListener){
->>>>>>> 5cdd6a473b6c10e3dd991c4ab43b1dc6bb6faa87
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refProjets = firebaseDatabase.getReference("projets");
         refProjets.addValueEventListener(new ValueEventListener() {
