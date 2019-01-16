@@ -20,7 +20,7 @@ public class UserPage extends AppCompatActivity {
         competenceList.setLayoutManager(LayoutManager);
 
         List<CompetenceModel> competences = new ArrayList<>();
-        CompetenceAdapter adapter = new CompetenceAdapter(competences, this, new UserModel());
+        ProjetTeamAdapter adapter = new ProjetTeamAdapter(competences, this, new UserModel());
         competenceList.setAdapter(adapter);
 
     }

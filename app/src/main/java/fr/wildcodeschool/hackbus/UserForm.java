@@ -15,13 +15,15 @@ public class UserForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_form);
 
+        //competence
         RecyclerView competenceList = findViewById(R.id.competenceList);
         LinearLayoutManager LayoutManager = new LinearLayoutManager(this);
         competenceList.setLayoutManager(LayoutManager);
 
         List<CompetenceModel> competences = new ArrayList<>();
-        CompetenceAdapter adapter = new CompetenceAdapter(competences, this, new UserModel());
+        ProjetTeamAdapter adapter = new ProjetTeamAdapter(competences, this, new UserModel());
         competenceList.setAdapter(adapter);
+
 
     }
 }
