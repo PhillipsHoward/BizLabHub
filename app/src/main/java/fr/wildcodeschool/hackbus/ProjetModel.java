@@ -12,6 +12,15 @@ public class ProjetModel {
     private ArrayList<UserModel> team;
     private UserModel initiateur;
     private String photo;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public ProjetModel() {
     }

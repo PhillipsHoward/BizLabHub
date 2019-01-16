@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 public class CompetenceModel {
 
-    private String nom;
+    private TagsModel tag;
     private int niveau;
     private TypeModel typeCompetence;
 
     public CompetenceModel() {
     }
 
-    public String getNom() {
-        return nom;
+    public TagsModel getTag() {
+        return tag;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNom(TagsModel tag) {
+        this.tag = tag;
     }
 
     public int getNiveau() {
