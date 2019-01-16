@@ -652,8 +652,12 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable classic_border
-drawable ic_circle
-drawable ic_circle_white
+drawable ic_circle_blue
+drawable ic_circle_green
+drawable ic_circle_grey
+drawable ic_circle_orange
+drawable ic_circle_red
+drawable ic_circle_yellow
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable notification_action_background
@@ -669,6 +673,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable round_border
+drawable seekbar_progress
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -863,6 +868,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_answer
 layout activity_asking
 layout activity_main
 layout item_skill

@@ -4,10 +4,6 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_circle.xml.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_circle.xml"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/layout-v21/notification_action_tombstone.xml"
     },
@@ -16,12 +12,12 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/anim/abc_slide_in_top.xml"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -40,12 +36,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_circle_blue.xml.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_circle_blue.xml"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_circle_green.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_circle_green.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -64,12 +68,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_circle_grey.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_circle_grey.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_circle_green.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-mdpi/ic_circle_green.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -86,6 +98,10 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_circle_grey.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_circle_grey.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -112,12 +128,12 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/anim/abc_fade_out.xml"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_layout.xml.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_layout.xml.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
@@ -126,6 +142,10 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/color_abc_tint_default.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_circle_red.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-mdpi/ic_circle_red.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_small_material.xml.flat",
@@ -188,16 +208,16 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_background_transition_holo_dark.xml.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_indicator_material.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_background_transition_holo_dark.xml.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -216,12 +236,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_circle_blue.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-mdpi/ic_circle_blue.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_circle_orange.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_circle_orange.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -276,6 +304,10 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_circle_grey.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-hdpi/ic_circle_grey.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
@@ -324,6 +356,10 @@
         "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_circle_red.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_circle_red.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_abc_search_dropdown_item_icons_2line.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
@@ -344,12 +380,20 @@
         "source": "/home/wilder/Projects/BizLab/BizLabHub/app/src/main/res/drawable/round_border.xml"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_circle_blue.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-ldpi/ic_circle_blue.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
         "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_abc_tooltip.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/layout/abc_tooltip.xml"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_circle_orange.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-mdpi/ic_circle_orange.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_checkbox.xml.flat",
@@ -396,6 +440,10 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_circle_yellow.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-hdpi/ic_circle_yellow.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
@@ -420,12 +468,12 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -436,8 +484,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable/abc_switch_thumb_material.xml"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_circle_orange.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_circle_orange.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_circle_yellow.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_circle_yellow.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_circle_orange.xml.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_circle_orange.xml"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -464,28 +524,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_circle.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_circle.png"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
-    },
-    {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_circle_white.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-mdpi/ic_circle_white.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable_classic_border.xml.flat",
         "source": "/home/wilder/Projects/BizLab/BizLabHub/app/src/main/res/drawable/classic_border.xml"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/color-v23_abc_color_highlight_material.xml.flat",
@@ -512,20 +564,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_circle_white.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_circle_white.png"
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_circle_blue.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_circle_blue.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -544,6 +596,10 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_circle_grey.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_circle_grey.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/color_abc_tint_edittext.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/color/abc_tint_edittext.xml"
     },
@@ -560,12 +616,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_circle_green.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_circle_green.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
         "source": "/home/wilder/Projects/BizLab/BizLabHub/app/src/main/res/layout/activity_main.xml"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_circle_grey.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-ldpi/ic_circle_grey.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -592,6 +656,10 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_circle_yellow.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_circle_yellow.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/color_abc_tint_switch_track.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/color/abc_tint_switch_track.xml"
     },
@@ -600,16 +668,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_circle_yellow.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_circle_yellow.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-watch-v20_abc_dialog_material_background.xml.flat",
@@ -660,12 +732,16 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_circle_orange.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_circle_orange.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -694,6 +770,10 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_circle_red.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-hdpi/ic_circle_red.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -776,6 +856,10 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable/abc_item_background_holo_light.xml"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_circle_blue.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_circle_blue.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
@@ -816,6 +900,10 @@
         "source": "/home/wilder/Projects/BizLab/BizLabHub/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_circle_blue.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_circle_blue.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -824,12 +912,12 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-v23_abc_control_background_material.xml.flat",
-        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-v23/abc_control_background_material.xml"
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_circle_green.xml.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_circle_green.xml"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_circle_white.xml.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_circle_white.xml"
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-v23_abc_control_background_material.xml.flat",
+        "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-v23/abc_control_background_material.xml"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -848,10 +936,6 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_circle_white.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-ldpi/ic_circle_white.png"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable_abc_ic_go_search_api_material.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable/abc_ic_go_search_api_material.xml"
     },
@@ -862,10 +946,6 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_circle.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-ldpi/ic_circle.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/color_abc_search_url_text.xml.flat",
@@ -936,10 +1016,6 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_circle_white.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-hdpi/ic_circle_white.png"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_launcher_background.xml.flat",
         "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_launcher_background.xml"
     },
@@ -954,6 +1030,10 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/color-v23_abc_tint_edittext.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_circle_yellow.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-mdpi/ic_circle_yellow.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -984,6 +1064,10 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_circle_red.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-ldpi/ic_circle_red.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
     },
@@ -1012,10 +1096,6 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_circle_white.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_circle_white.png"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/color_abc_hint_foreground_material_light.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/color/abc_hint_foreground_material_light.xml"
     },
@@ -1028,12 +1108,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/layout/abc_cascading_menu_item_layout.xml"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_circle_red.xml.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_circle_red.xml"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_activity_answer.xml.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/src/main/res/layout/activity_answer.xml"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_abc_screen_simple.xml.flat",
@@ -1092,10 +1180,6 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_circle.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-hdpi/ic_circle.png"
-    },
-    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
@@ -1112,12 +1196,16 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_circle_red.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_circle_red.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_circle.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_circle.png"
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_circle_green.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_circle_green.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/color_abc_background_cache_hint_selector_material_light.xml.flat",
@@ -1136,8 +1224,16 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_circle_yellow.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-ldpi/ic_circle_yellow.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable_seekbar_progress.xml.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/src/main/res/drawable/seekbar_progress.xml"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -1162,6 +1258,14 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_item_layout.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_circle_grey.xml.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_circle_grey.xml"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_circle_red.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_circle_red.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1256,6 +1360,10 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_circle_green.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-hdpi/ic_circle_green.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -1280,12 +1388,20 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_circle_orange.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-hdpi/ic_circle_orange.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/home/wilder/Projects/BizLab/BizLabHub/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout-v26_abc_screen_toolbar.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/layout-v26/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_circle_yellow.xml.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_circle_yellow.xml"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_icon.xml.flat",
@@ -1314,10 +1430,6 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_notification_template_custom_big.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/layout/notification_template_custom_big.xml"
-    },
-    {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_circle_white.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_circle_white.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -1366,6 +1478,10 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_circle_green.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-ldpi/ic_circle_green.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -1446,10 +1562,6 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/layout_abc_action_mode_close_item_material.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/layout/abc_action_mode_close_item_material.xml"
-    },
-    {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_circle.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-mdpi/ic_circle.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -1544,6 +1656,14 @@
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_circle_blue.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-hdpi/ic_circle_blue.png"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_circle_grey.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-mdpi/ic_circle_grey.png"
+    },
+    {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
@@ -1554,6 +1674,10 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/color-v21_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/color-v21/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_circle_orange.png.flat",
+        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-ldpi/ic_circle_orange.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -1578,10 +1702,6 @@
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png"
-    },
-    {
-        "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_circle.png.flat",
-        "source": "/home/wilder/Projects/BizLab/BizLabHub/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_circle.png"
     },
     {
         "merged": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_36dp.png.flat",

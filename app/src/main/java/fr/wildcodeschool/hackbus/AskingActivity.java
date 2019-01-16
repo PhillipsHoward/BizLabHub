@@ -1,12 +1,10 @@
 package fr.wildcodeschool.hackbus;
 
-import android.annotation.TargetApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class AskingActivity extends AppCompatActivity {
 
@@ -18,7 +16,6 @@ public class AskingActivity extends AppCompatActivity {
         seekBar();
     }
 
-    @TargetApi(21)
     private void seekBar() {
         SeekBar sbPriority = findViewById(R.id.sb_priority);
         final TextView tvCount = findViewById(R.id.tv_count);
@@ -38,22 +35,21 @@ public class AskingActivity extends AppCompatActivity {
 
             public void onStopTrackingTouch(SeekBar seekBar) {
                 tvCount.setText(seekBarProgress + " / " + seekBar.getMax());
-
+                //TODO: à envoyer dans singleton seekBarProgress
                 if (seekBarProgress == 0) {
-                    progressColor.setColorFilter(R.color.grey);
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_grey);
                 } else if (seekBarProgress == 1) {
-                    progressColor.setColorFilter(R.color.blue);
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_blue);
                 } else if (seekBarProgress == 2) {
-                    progressColor.setColorFilter(R.color.green);
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_green);
                 } else if (seekBarProgress == 3) {
-                    progressColor.setColorFilter(R.color.yellow);
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_yellow);
                 } else if (seekBarProgress == 4) {
-                    progressColor.setColorFilter(R.color.orange);
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_orange);
                 } else if (seekBarProgress == 5) {
-                    progressColor.setColorFilter(R.color.red);
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_red);
                 }
             }
-
         });
     }
 }
