@@ -77,7 +77,7 @@ public class SingletonData {
     public void initTagsList(final SingletonDataListener mysingletonDataListener){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refTags = firebaseDatabase.getReference("tags");
-        refTags.addValueEventListener(new ValueEventListener() {
+        refTags.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 tags.clear();
@@ -100,7 +100,7 @@ public class SingletonData {
     public void initProjectsList(final SingletonDataListener mySingletonDataListener){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refProjets = firebaseDatabase.getReference("projets");
-        refProjets.addValueEventListener(new ValueEventListener() {
+        refProjets.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 projects.clear();
@@ -121,7 +121,7 @@ public class SingletonData {
     public void initUserLists(final SingletonDataListener myDataListener){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refUsers = firebaseDatabase.getReference("users");
-        refUsers.addValueEventListener(new ValueEventListener() {
+        refUsers.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 users.clear();
@@ -144,6 +144,7 @@ public class SingletonData {
         final DatabaseReference refProjets = firebaseDatabase.getReference("projets");
         String key = refProjets.push().getKey();
         projet.setId(key);
+        projects.add(projet);
         refProjets.child(key).setValue(projet);
     }
 
@@ -152,6 +153,7 @@ public class SingletonData {
         final DatabaseReference refTags = firebaseDatabase.getReference("tags");
         String key = refTags.push().getKey();
         tag.setuId(key);
+        tags.add(tag);
         refTags.child(key).setValue(tag);
     }
 
@@ -160,9 +162,41 @@ public class SingletonData {
         final DatabaseReference refProjets = firebaseDatabase.getReference("users");
         String key = refProjets.push().getKey();
         user.setuId(key);
+        users.add(user);
         refProjets.child(key).setValue(user);
     }
 
+    public ArrayList<ProjetModel> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(ArrayList<ProjetModel> projects) {
+        this.projects = projects;
+    }
+
+    public ArrayList<TagsModel> getTags() {
+        return tags;
+    }
+
+    public void setTags(ArrayList<TagsModel> tags) {
+        this.tags = tags;
+    }
+
+    public ArrayList<UserModel> getUsers() {
+        return users;
+    }
+
+    public void setUsers(ArrayList<UserModel> users) {
+        this.users = users;
+    }
+
+    public ArrayList<TypeModel> getTypes() {
+        return types;
+    }
+
+    public void setTypes(ArrayList<TypeModel> types) {
+        this.types = types;
+    }
 
     public static SingletonData getInstance() {
         return ourInstance;

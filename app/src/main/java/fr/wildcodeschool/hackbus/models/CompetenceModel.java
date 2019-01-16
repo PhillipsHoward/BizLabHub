@@ -8,9 +8,13 @@ public class CompetenceModel {
 
     private TagsModel tag;
     private int niveau;
-    private TypeModel typeCompetence;
 
     public CompetenceModel() {
+    }
+
+    public CompetenceModel(TagsModel tag, int niveau) {
+        this.tag = tag;
+        this.niveau = niveau;
     }
 
     public TagsModel getTag() {
@@ -27,13 +31,5 @@ public class CompetenceModel {
 
     public void setNiveau(int niveau) {
         this.niveau = niveau;
-    }
-
-    public TypeModel getTypeCompetence() {
-        return typeCompetence;
-    }
-
-    public void setTypeCompetence(TypeModel typeCompetence) {
-        this.typeCompetence = typeCompetence;
     }
 }
