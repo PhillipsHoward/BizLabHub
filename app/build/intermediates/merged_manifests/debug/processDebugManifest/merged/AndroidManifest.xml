@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="fr.wildcodeschool.hackbus.LogInActivity" />
+        <activity android:name="fr.wildcodeschool.hackbus.ProjectsListActivity" />
+        <activity android:name="fr.wildcodeschool.hackbus.RequestsListActivity" />
     </application>
 
 </manifest>
