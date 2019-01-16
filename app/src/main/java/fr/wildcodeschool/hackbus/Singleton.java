@@ -14,28 +14,5 @@ public class Singleton {
 
     }
 
-    /* * LISTE DES TYPES
-
-    -Informatique
-    -Développement
-    -Physique
-    -Mathématiques
-    -Relations humaines
-    -Communication
-    -Biologie
-    -Chimie
-    -Mécanique
-    -Electronique
-    -Travaux manuels
-    -Ecriture
-    -Investigation
-    -Négociation
-    -Gestion
-    -Finances/Comptabilité
-    -Architecture
-    -Economie
-    -Modélisation 3D
-    -Dessin
-     */
 
 }
