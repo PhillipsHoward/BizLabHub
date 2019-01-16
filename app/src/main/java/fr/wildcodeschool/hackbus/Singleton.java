@@ -8,6 +8,8 @@ public class Singleton {
         return ourInstance;
     }
 
+
+
     private Singleton() {
 
     }
