@@ -10,7 +10,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.TagsModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class SingletonData {
     private static final SingletonData ourInstance = new SingletonData();
@@ -40,6 +42,7 @@ public class SingletonData {
         });
 
     }
+
     public void initProjectsList(){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refProjets = firebaseDatabase.getReference("projets");
