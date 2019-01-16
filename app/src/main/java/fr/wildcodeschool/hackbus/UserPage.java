@@ -8,14 +8,14 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserForm extends AppCompatActivity {
+public class UserPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_form);
+        setContentView(R.layout.activity_user_page);
 
-        RecyclerView competenceList = findViewById(R.id.competenceList);
+        RecyclerView competenceList = findViewById(R.id.competenceUserList);
         LinearLayoutManager LayoutManager = new LinearLayoutManager(this);
         competenceList.setLayoutManager(LayoutManager);
 
