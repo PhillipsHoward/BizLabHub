@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/romain/project/hackathon/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "/home/wilder/Projects/BizLabHub/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/home/romain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b7d2b3f9655e08cc603494389a304543/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/88c04253dc19c3a1ef2b4af6a01ad6f7/res/values-ldltr-v21/values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
