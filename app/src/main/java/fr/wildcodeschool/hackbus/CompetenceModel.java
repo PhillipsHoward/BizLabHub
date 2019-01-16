@@ -6,7 +6,7 @@ public class CompetenceModel {
 
     private String nom;
     private int niveau;
-    private ArrayList<TypeModel> typeCompetence;
+    private TypeModel typeCompetence;
 
     public CompetenceModel() {
     }
@@ -27,11 +27,11 @@ public class CompetenceModel {
         this.niveau = niveau;
     }
 
-    public ArrayList<TypeModel> getTypeCompetence() {
+    public TypeModel getTypeCompetence() {
         return typeCompetence;
     }
 
-    public void setTypeCompetence(ArrayList<TypeModel> typeCompetence) {
+    public void setTypeCompetence(TypeModel typeCompetence) {
         this.typeCompetence = typeCompetence;
     }
 }

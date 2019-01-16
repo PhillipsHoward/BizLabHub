@@ -6,7 +6,7 @@ public class ProjetModel {
 
     private String nom;
     private String description;
-    private ArrayList<TypeModel> typeProjet;
+    private TypeModel typeProjet;
     private ArrayList<CompetenceModel> competence;
     private String lienGitHub;
     private ArrayList<UserModel> team;
@@ -32,11 +32,11 @@ public class ProjetModel {
         this.description = description;
     }
 
-    public ArrayList<TypeModel> getTypeProjet() {
+    public TypeModel getTypeProjet() {
         return typeProjet;
     }
 
-    public void setTypeProjet(ArrayList<TypeModel> typeProjet) {
+    public void setTypeProjet(TypeModel typeProjet) {
         this.typeProjet = typeProjet;
     }
 

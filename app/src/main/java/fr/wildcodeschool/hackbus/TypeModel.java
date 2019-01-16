@@ -11,6 +11,10 @@ public class TypeModel {
         return nom;
     }
 
+    public TypeModel(String nom) {
+        this.nom = nom;
+    }
+
     public void setNom(String nom) {
         this.nom = nom;
     }
