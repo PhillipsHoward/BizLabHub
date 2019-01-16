@@ -15,6 +15,12 @@ public class TagsModel {
         this.uId = uId;
     }
 
+    public TagsModel(String nom, ArrayList<TypeModel> types) {
+        this.nom = nom;
+        this.types = types;
+        this.uId = "";
+    }
+
     public TagsModel() {
     }
 
