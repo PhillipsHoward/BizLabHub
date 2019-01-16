@@ -58,7 +58,6 @@ public class CompetenceAdapter extends RecyclerView.Adapter<CompetenceAdapter.My
                 holder.cardview.setBackgroundResource(R.color.colorPrimaryDark);
             }
         });
-
     }
 
     @Override

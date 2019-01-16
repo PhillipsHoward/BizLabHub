@@ -22,5 +22,8 @@ public class UserForm extends AppCompatActivity {
         List<CompetenceModel> competences = new ArrayList<>();
         CompetenceAdapter adapter = new CompetenceAdapter(competences, this, new UserModel());
         competenceList.setAdapter(adapter);
+
+        RecyclerView projetTeamList = findViewById(R.id.projetTeamList);
+
     }
 }
