@@ -8,8 +8,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
+
+import fr.wildcodeschool.hackbus.models.TagsModel;
 
 public class SingletonData {
     private static final SingletonData ourInstance = new SingletonData();
