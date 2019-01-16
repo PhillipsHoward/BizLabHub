@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/romain/project/hackathon/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/home/wilder/Projects/BizLabHub/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/romain/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/b7d2b3f9655e08cc603494389a304543/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
