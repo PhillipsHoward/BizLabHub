@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HackBus</string>
+    <string name="title_activity_projet_form">ProjetFormActivity</string>
 </resources>
