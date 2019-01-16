@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">HackBus</string>
+    <string name="title_activity_projet_form">ProjetFormActivity</string>
+    <string name="selection_type">Selection du type de projet</string>
+    <string name="choix_type">Choix du type</string>
+    <string name="ok">Ok</string>
+    <string name="selection_competence">Selectionné une competence</string>
+    <string name="choix_competence">choix de la competence</string>
 </resources>

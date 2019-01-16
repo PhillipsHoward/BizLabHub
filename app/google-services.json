@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "408559245207",
+    "firebase_url": "https://bizlabhub.firebaseio.com",
+    "project_id": "bizlabhub",
+    "storage_bucket": "bizlabhub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408559245207:android:f8b43056f4df319b",
+        "android_client_info": {
+          "package_name": "fr.wildcodeschool.hackbus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408559245207-7fbe3rlrthsdh0vll4dq1oqm34navdrb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fr.wildcodeschool.hackbus",
+            "certificate_hash": "a8bdfe827fa5b2187e7d2af5a435cd640b5dc64a"
+          }
+        },
+        {
+          "client_id": "408559245207-inbgte591prmjd430lithh8poobrqve0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV2_NDHU_nmzDfSXMe-EehOodcL25LCTo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408559245207-inbgte591prmjd430lithh8poobrqve0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
