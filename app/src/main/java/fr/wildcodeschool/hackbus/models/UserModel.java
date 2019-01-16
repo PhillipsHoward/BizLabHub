@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus;
+package fr.wildcodeschool.hackbus.models;
 
 import java.util.ArrayList;
 
@@ -13,6 +13,15 @@ public class UserModel {
     private ArrayList<ProjetModel> projetEnCours;
     private ArrayList<ProjetModel> projetInitie;
     private boolean dispo;
+    private String uId;
+
+    public String getuId() {
+        return uId;
+    }
+
+    public void setuId(String uId) {
+        this.uId = uId;
+    }
 
     public UserModel() {
     }

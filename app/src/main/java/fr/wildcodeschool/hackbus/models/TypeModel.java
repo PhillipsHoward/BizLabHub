@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus;
+package fr.wildcodeschool.hackbus.models;
 
 public class TypeModel {
 
@@ -9,6 +9,10 @@ public class TypeModel {
 
     public String getNom() {
         return nom;
+    }
+
+    public TypeModel(String nom) {
+        this.nom = nom;
     }
 
     public void setNom(String nom) {
