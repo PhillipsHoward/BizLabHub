@@ -25,6 +25,13 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="fr.wildcodeschool.hackbus.MainActivity" >
+        </activity>
+        <activity android:name="fr.wildcodeschool.hackbus.ProjetFormActivity" />
+        <activity android:name="fr.wildcodeschool.hackbus.AddCompetencesProjet" />
+        <activity
+            android:name="fr.wildcodeschool.hackbus.SplashActivity"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

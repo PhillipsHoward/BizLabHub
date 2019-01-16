@@ -1041,6 +1041,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable honk
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
@@ -1163,6 +1164,7 @@ id icon_only
 id ifRoom
 id image
 id imageView
+id imageView2
 id info
 id invisible
 id italic
@@ -1341,6 +1343,7 @@ layout activity_main
 layout activity_projects_list
 layout activity_projet_form
 layout activity_requests_list
+layout activity_splash
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/wilder/Projects/BizLabHub/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "/home/trempette/WCS_Projets/HackathonBizlab/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/88c04253dc19c3a1ef2b4af6a01ad6f7/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/trempette/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4d01921d296fb9e39042b93068643207/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/886da5bee81ce161b4ec4079f21509d3/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/home/trempette/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/8936603c0fdbe81fe87daa83543056dc/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

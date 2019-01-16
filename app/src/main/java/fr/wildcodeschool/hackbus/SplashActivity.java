@@ -12,7 +12,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         SingletonData singletonData = SingletonData.getInstance();
-        singletonData.initTagsList(new SingletonDataListener() {
+        singletonData.initDatas(new SingletonDataListener() {
             @Override
             public void onResponse(boolean success) {
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
