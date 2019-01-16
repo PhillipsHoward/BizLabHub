@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProjetFormActivity" />
-        <activity android:name=".AddCompetencesProjet"></activity>
+        <activity android:name=".AddCompetencesProjet" />
+        <activity android:name=".UserForm"></activity>
     </application>
 
 </manifest>
