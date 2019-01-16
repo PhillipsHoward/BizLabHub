@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml",
             "map": [
                 {
-                    "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/values-uz/values-uz.xml",
-=======
-            "outputFile": "/home/wilder/Projects/BizLabHub/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uz/values-uz.xml",
-            "map": [
-                {
                     "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/abe8b08e07c663e1916cccf0c59c91cf/res/values-uz/values.xml",
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -45,11 +38,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
-                    "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/4da229c531509f65bafb67b21774f5b7/res/values-uz/values-uz.xml",
-=======
                     "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0ecfc521dbdafc6c9d03b866b8664649/res/values-uz/values-uz.xml",
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -222,8 +222,6 @@ attr enforceTextAppearance
 attr errorEnabled
 attr errorTextAppearance
 attr expandActivityOverflowButtonDrawable
-<<<<<<< HEAD
-=======
 attr expanded
 attr expandedTitleGravity
 attr expandedTitleMargin
@@ -238,7 +236,6 @@ attr fabCradleRoundedCornerRadius
 attr fabCradleVerticalOffset
 attr fabCustomSize
 attr fabSize
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 attr fastScrollEnabled
 attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
@@ -424,14 +421,11 @@ attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
 attr reverseLayout
-<<<<<<< HEAD
-=======
 attr rippleColor
 attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -444,13 +438,10 @@ attr showMotionSpec
 attr showText
 attr showTitle
 attr singleChoiceItemLayout
-<<<<<<< HEAD
-=======
 attr singleLine
 attr singleSelection
 attr snackbarButtonStyle
 attr snackbarStyle
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
@@ -702,11 +693,8 @@ color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
-<<<<<<< HEAD
-color orange
-=======
 color notification_material_background_media_default_color
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
+color orange
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -863,10 +851,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
-<<<<<<< HEAD
-=======
 dimen fab_margin
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -880,8 +865,6 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
-<<<<<<< HEAD
-=======
 dimen mtrl_bottomappbar_fabOffsetEndMode
 dimen mtrl_bottomappbar_fab_cradle_margin
 dimen mtrl_bottomappbar_fab_cradle_rounded_corner_radius
@@ -930,7 +913,6 @@ dimen mtrl_textinput_box_stroke_width_default
 dimen mtrl_textinput_box_stroke_width_focused
 dimen mtrl_textinput_outline_box_expanded_padding
 dimen mtrl_toolbar_default_height
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -1038,17 +1020,9 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
-<<<<<<< HEAD
-drawable classic_border
-drawable ic_circle_blue
-drawable ic_circle_green
-drawable ic_circle_grey
-drawable ic_circle_orange
-drawable ic_circle_red
-drawable ic_circle_yellow
-=======
 drawable avd_hide_password
 drawable avd_show_password
+drawable classic_border
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1076,7 +1050,13 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
+drawable honk
+drawable ic_circle_blue
+drawable ic_circle_green
+drawable ic_circle_grey
+drawable ic_circle_orange
+drawable ic_circle_red
+drawable ic_circle_yellow
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
@@ -1098,6 +1078,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable rectangle_border
 drawable round_border
 drawable seekbar_progress
 drawable tooltip_frame_dark
@@ -1137,6 +1118,8 @@ id all
 id always
 id async
 id auto
+id b_i_ansawer
+id b_no_time
 id barrier
 id beginning
 id blocking
@@ -1172,18 +1155,15 @@ id direct
 id disableHome
 id edit_query
 id end
-<<<<<<< HEAD
-id et_question
-id et_title_question
-=======
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id et_
 id et_description_projet
 id et_projet_nom
+id et_question
+id et_title_question
 id exitUntilCollapsed
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 id expand_activities_button
 id expanded_menu
 id fill
@@ -1206,16 +1186,15 @@ id icon_only
 id ifRoom
 id image
 id imageView
+id imageView2
 id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
-<<<<<<< HEAD
 id iv_color_progress
-=======
+id iv_priority_color
 id labeled
 id largeLabel
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 id left
 id light
 id line1
@@ -1252,14 +1231,11 @@ id radio
 id right
 id right_icon
 id right_side
-<<<<<<< HEAD
 id rv_skills
-id sb_priority
-=======
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
+id sb_priority
 id screen
 id scroll
 id scrollIndicatorDown
@@ -1280,11 +1256,8 @@ id search_skills
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
-<<<<<<< HEAD
-id send
-=======
 id selected
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
+id send
 id shortcut
 id showCustom
 id showHome
@@ -1317,33 +1290,29 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
-<<<<<<< HEAD
-id textView
-=======
 id textStart
+id textView
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 id time
 id title
 id titleDividerNoCustom
 id title_template
 id top
 id topPanel
-<<<<<<< HEAD
-id tv_count
-id tv_priority
-id tv_skills
-=======
 id touch_outside
 id transition_current_scene
 id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
+id tv_count
+id tv_priority
+id tv_question
+id tv_question_title
+id tv_skills
 id uniform
 id unlabeled
 id up
@@ -1402,18 +1371,15 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-<<<<<<< HEAD
+layout activity_add_competences_projet
 layout activity_answer
 layout activity_asking
-layout activity_main
-layout item_skill
-=======
-layout activity_add_competences_projet
 layout activity_log_in
 layout activity_main
 layout activity_projects_list
 layout activity_projet_form
 layout activity_requests_list
+layout activity_splash
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1428,9 +1394,9 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout item_skill
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -2104,11 +2070,8 @@ styleable PopupWindow android_popupBackground android_popupAnimationStyle overla
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
-<<<<<<< HEAD
-=======
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable SearchableSpinner hintText
 styleable SignInButton buttonSize colorScheme scopeUris

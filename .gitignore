@@ -1,11 +1,9 @@
+
 # Created by https://www.gitignore.io/api/androidstudio
 # Edit at https://www.gitignore.io/?templates=androidstudio
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
-
-gradle.properties
-keystore.jks
 
 # Built application files
 *.apk

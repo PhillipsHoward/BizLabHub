@@ -22,15 +22,29 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="fr.wildcodeschool.hackbus.MainActivity" >
+        </activity>
+        <activity android:name="fr.wildcodeschool.hackbus.ProjetFormActivity" />
+        <activity android:name="fr.wildcodeschool.hackbus.AddCompetencesProjet" />
+        <activity
+            android:name="fr.wildcodeschool.hackbus.SplashActivity"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="fr.wildcodeschool.hackbus.AskingActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="fr.wildcodeschool.hackbus.AnswerActivity" />
         <activity android:name="fr.wildcodeschool.hackbus.LogInActivity" />
         <activity android:name="fr.wildcodeschool.hackbus.ProjectsListActivity" />
         <activity android:name="fr.wildcodeschool.hackbus.RequestsListActivity" />
@@ -110,14 +124,6 @@
         <meta-data
             android:name="android.support.VERSION"
             android:value="26.1.0" />
-        <activity android:name="fr.wildcodeschool.hackbus.AskingActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name="fr.wildcodeschool.hackbus.answerActivity" />
     </application>
 
 </manifest>

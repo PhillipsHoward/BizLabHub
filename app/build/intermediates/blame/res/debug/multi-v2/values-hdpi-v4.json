@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "/home/wilder/Projects/BizLab/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/values-hdpi-v4/values-hdpi-v4.xml",
-=======
-            "outputFile": "/home/wilder/Projects/BizLabHub/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
-            "map": [
-                {
                     "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/88c04253dc19c3a1ef2b4af6a01ad6f7/res/values-hdpi-v4/values-hdpi-v4.xml",
->>>>>>> 9522c83f497dfaf99063be7fad1eda82878c8bc5
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
