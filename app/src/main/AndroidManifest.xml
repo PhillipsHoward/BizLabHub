@@ -19,6 +19,8 @@
         <activity android:name=".LogInActivity" />
         <activity android:name=".ProjectsListActivity" />
         <activity android:name=".RequestsListActivity"></activity>
+        <activity android:name=".ProjetFormActivity" />
+        <activity android:name=".AddCompetencesProjet"></activity>
     </application>
 
 </manifest>
