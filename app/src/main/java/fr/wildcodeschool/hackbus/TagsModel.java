@@ -2,6 +2,8 @@ package fr.wildcodeschool.hackbus;
 
 import java.util.ArrayList;
 
+import fr.wildcodeschool.hackbus.models.TypeModel;
+
 public class TagsModel {
     private String nom;
     private ArrayList<TypeModel> types;

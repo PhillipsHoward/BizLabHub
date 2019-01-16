@@ -4,7 +4,7 @@
             "outputFile": "/home/wilder/Projects/BizLabHub/BizLabHub/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/413fc822ad77f9400d61e00baed83d77/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/home/wilder/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/88c04253dc19c3a1ef2b4af6a01ad6f7/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
