@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus.adapters;
+package fr.wildcodeschool.hackbus;
 
 
 import android.content.Context;
@@ -10,54 +10,49 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import fr.wildcodeschool.hackbus.R;
-import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
-public class CompetenceUserPageAdapter extends RecyclerView.Adapter<CompetenceUserPageAdapter.MyViewHolder> {
+public class ProjetInitAdapter extends RecyclerView.Adapter<ProjetInitAdapter.MyViewHolder> {
 
-    private List<CompetenceModel> competenceList;
+    private List<UserModel> userInitList;
     private Context ctx;
-    private UserModel cUser;
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView nom;
+        public TextView prenom;
 
         public MyViewHolder(View view) {
             super(view);
-            nom = view.findViewById(R.id.tv_competence);
+            nom = view.findViewById(R.id.tv_nom_init);
+            prenom = view.findViewById(R.id.tv_prenom_init);
         }
     }
 
 
-    public CompetenceUserPageAdapter(List<CompetenceModel> competenceList, Context ctx, UserModel cUser) {
-        this.competenceList = competenceList;
+    public ProjetInitAdapter(List<UserModel> userInitList, Context ctx) {
+        this.userInitList = userInitList;
         this.ctx = ctx;
-        this.cUser = cUser;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_competence_user, parent, false);
+                .inflate(R.layout.item_projet_init_user, parent, false);
 
         return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final CompetenceModel competence = competenceList.get(position);
-        holder.nom.setText(competence.getTag().getNom());
+        final UserModel userInit = userInitList.get(position);
+        holder.nom.setText(userInit.getNom());
+        holder.prenom.setText(userInit.getPrenom());
     }
 
     @Override
     public int getItemCount() {
-        return competenceList.size();
+        return userInitList.size();
     }
-
-    public void onClick(View v) {
-
-    }
-
 }

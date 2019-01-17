@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus.adapters;
+package fr.wildcodeschool.hackbus;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,10 +30,8 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
     public int getItemCount() {
         return mProjects.size();
     }
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle, tvNameOrganiser, tvNbParticipants;
-
         public ViewHolder(View v) {
             super(v);
             this.tvTitle = v.findViewById(R.id.tv_title_project);

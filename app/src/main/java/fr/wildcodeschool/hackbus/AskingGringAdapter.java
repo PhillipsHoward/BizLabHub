@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus.adapters;
+package fr.wildcodeschool.hackbus;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import fr.wildcodeschool.hackbus.R;
 import fr.wildcodeschool.hackbus.models.TagsModel;
 
 public class AskingGringAdapter extends RecyclerView.Adapter<AskingGringAdapter.ViewHolder> {

@@ -1,14 +1,14 @@
 package fr.wildcodeschool.hackbus;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 
-import fr.wildcodeschool.hackbus.adapters.ProjectsListAdapter;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 
-public class ProjectsListActivity extends SuperActivity {
+public class ProjectsListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +23,4 @@ public class ProjectsListActivity extends SuperActivity {
         ProjectsListAdapter adapter = new ProjectsListAdapter(projectsModels);
         listProjects.setAdapter(adapter);
     }
-
 }
