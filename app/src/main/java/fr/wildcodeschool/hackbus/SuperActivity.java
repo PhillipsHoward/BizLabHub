@@ -20,7 +20,7 @@ public class SuperActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
-        changeStatus(true);
+        changeStatus(false);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ResourcesCompat.getColor(getResources(), R.color.red, null)));
         changeText(NOT_DISPO);
         super.onStart();
@@ -36,7 +36,7 @@ public class SuperActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         mSwitchAB.setChecked(false);
-        changeStatus(false);
+        //changeStatus(false);
     }
 
 
@@ -80,8 +80,6 @@ public class SuperActivity extends AppCompatActivity {
 
     protected void changeStatus(boolean disponible) {
         SingletonData.getInstance().getcUser().setDispo(disponible);
-        SingletonData.getInstance().updateUser(
-                SingletonData.getInstance().getcUser()
-        );
+        SingletonData.getInstance().updateUser(SingletonData.getInstance().getcUser());
     }
 }
