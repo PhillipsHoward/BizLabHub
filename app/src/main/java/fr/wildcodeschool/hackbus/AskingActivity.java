@@ -22,8 +22,10 @@ import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 import java.util.ArrayList;
 
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
+import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class AskingActivity extends AppCompatActivity {
 
@@ -185,5 +187,51 @@ public class AskingActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
+    }
+
+
+    private ArrayList<UserModel> selectPotentialsRecipients(ArrayList<UserModel> users, ArrayList<TagsModel> tags, ProjetModel currentProject) {
+
+        ArrayList<UserModel> recipients = new ArrayList<>(users);
+
+        for (UserModel user : recipients) {
+
+            if (!user.isDispo()) {
+               recipients.remove(user);
+               break;
+            }
+
+            boolean isPresentInProject = false;
+
+            for (ProjetModel project : user.getProjetEnCours()) {
+
+                if(project.getId() == currentProject.getId()) {
+                    isPresentInProject = true;
+                    break;
+                }
+            }
+
+            if (!isPresentInProject) {
+                recipients.remove(user);
+                break;
+            }
+
+            for (TagsModel tag : tags) {
+
+                boolean hasTheGoodTag = false;
+                for (CompetenceModel competence : user.getCompetence()) {
+                    if (competence.getTag().getuId() == tag.getuId()) {
+                        hasTheGoodTag = true;
+                        break;
+                    }
+                }
+
+                if (!hasTheGoodTag) {
+                    recipients.remove(user);
+                }
+            }
+        }
+
+        return recipients;
     }
 }
