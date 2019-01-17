@@ -12,14 +12,13 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".UserForm">
+        tools:context=".UserPage">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tv_titreUserPage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Creer un utilisateur"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,10 +34,9 @@
             android:layout_marginRight="8dp"
             android:ems="10"
             android:hint="Nom"
-            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_titreUserPage" />
 
         <TextView
             android:id="@+id/tv_prenom"
@@ -51,10 +49,9 @@
             android:layout_marginRight="8dp"
             android:ems="10"
             android:hint="Prenom"
-            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_nom" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_nom" />
 
         <TextView
             android:id="@+id/tv_poste"
@@ -67,10 +64,9 @@
             android:layout_marginRight="8dp"
             android:ems="10"
             android:hint="Poste"
-            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_prenom" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_prenom" />
 
         <TextView
             android:id="@+id/tv_mail"
@@ -83,10 +79,9 @@
             android:layout_marginRight="8dp"
             android:ems="10"
             android:hint="Email"
-            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_poste" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_poste" />
 
         <TextView
             android:id="@+id/tv_tel"
@@ -99,7 +94,6 @@
             android:layout_marginRight="8dp"
             android:ems="10"
             android:hint="Telephone"
-            android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_mail" />
@@ -116,7 +110,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_tel">
+            app:layout_constraintTop_toBottomOf="@+id/tv_tel">
         </android.support.v7.widget.RecyclerView>
 
         <android.support.v7.widget.RecyclerView

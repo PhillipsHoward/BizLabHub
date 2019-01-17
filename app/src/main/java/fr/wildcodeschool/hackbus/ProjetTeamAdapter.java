@@ -45,17 +45,12 @@ public class ProjetTeamAdapter extends RecyclerView.Adapter<ProjetTeamAdapter.My
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         final UserModel userTeam = userTeamList.get(position);
-        holder.nom.setText(userTeam.getTag().getNom());
-        holder.prenom.setText(userTeam.getTag().getNom());
+        holder.nom.setText(userTeam.getNom());
+        holder.prenom.setText(userTeam.getPrenom());
     }
 
     @Override
     public int getItemCount() {
         return userTeamList.size();
     }
-
-    public void onClick(View v) {
-
-    }
-
 }

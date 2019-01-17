@@ -2,7 +2,7 @@ package fr.wildcodeschool.hackbus;
 
 import java.util.ArrayList;
 
-public class UserModel {
+public class CompetenceModel {
 
     private TagsModel tag;
     private int niveau;

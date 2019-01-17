@@ -21,7 +21,7 @@ public class UserForm extends AppCompatActivity {
         competenceList.setLayoutManager(LayoutManager);
 
         List<CompetenceModel> competences = new ArrayList<>();
-        ProjetTeamAdapter adapter = new ProjetTeamAdapter(competences, this, new UserModel());
+        CompetenceAdapter adapter = new CompetenceAdapter(competences, this, new UserModel());
         competenceList.setAdapter(adapter);
 
 

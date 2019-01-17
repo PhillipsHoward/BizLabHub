@@ -15,13 +15,13 @@ public class UserPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_page);
 
-        RecyclerView competenceList = findViewById(R.id.competenceUserList);
+        /*RecyclerView competenceList = findViewById(R.id.competenceUserList);
         LinearLayoutManager LayoutManager = new LinearLayoutManager(this);
         competenceList.setLayoutManager(LayoutManager);
 
         List<CompetenceModel> competences = new ArrayList<>();
         ProjetTeamAdapter adapter = new ProjetTeamAdapter(competences, this, new UserModel());
-        competenceList.setAdapter(adapter);
+        competenceList.setAdapter(adapter);*/
 
     }
 }
