@@ -40,13 +40,9 @@ public class ProjetFormActivity extends AppCompatActivity {
     public void spinnerMethode1() {
         mSearchableSpinner = findViewById(R.id.sp_type);
 
-        final ArrayList<String> typeDeProjet = new ArrayList<>();
-        typeDeProjet.add(informatique.getNom());
-        typeDeProjet.add(mecanique.getNom());
-        typeDeProjet.add(design.getNom());
-        typeDeProjet.add(sexuel.getNom());
+        final ArrayList<TypeModel> typeDeProjet = SingletonData.getInstance().getTypes();
 
-        final ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjet);
+        final ArrayAdapter<TypeModel> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjet);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSearchableSpinner.setAdapter(spinnerAdapter);
         mSearchableSpinner.setPrompt(getString(R.string.selection_type));
@@ -56,7 +52,7 @@ public class ProjetFormActivity extends AppCompatActivity {
         mSearchableSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String typeProjet = typeDeProjet.get(position);
+                TypeModel typeProjet = typeDeProjet.get(position);
             }
 
             @Override
@@ -70,6 +66,7 @@ public class ProjetFormActivity extends AppCompatActivity {
         mSearchableSpinner = findViewById(R.id.sp_competence);
 
         final ArrayList<CompetenceModel> competence = new ArrayList<>(); // TODO récuperer les competenceModels
+        SingletonData.getInstance().getTags();
 
         final ArrayAdapter<CompetenceModel> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, competence);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
