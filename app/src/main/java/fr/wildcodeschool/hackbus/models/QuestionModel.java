@@ -7,7 +7,7 @@ public class QuestionModel {
     private String id;
     private String question;
     private String title;
-    private String projet;
+    private ProjetModel projet;
     private UserModel sender;
     private ArrayList<UserModel> userReponse;
     private int priority;
@@ -17,7 +17,6 @@ public class QuestionModel {
     public QuestionModel() {
     }
 
-    //TODO: à dégager quand tout sera complet (utiliser autre constructeur)
     public QuestionModel(UserModel sender, String title, String question, int priority) {
         this.open = true;
         this.sender = sender;
@@ -59,12 +58,32 @@ public class QuestionModel {
         this.title = title;
     }
 
-    public String getProjet() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public ProjetModel getProjet() {
         return projet;
     }
 
-    public void setProjet(String projet) {
+    public void setProjet(ProjetModel projet) {
         this.projet = projet;
+    }
+
+    public ArrayList<UserModel> getUserReponse() {
+        return userReponse;
+    }
+
+    public void setUserReponse(ArrayList<UserModel> userReponse) {
+        this.userReponse = userReponse;
+    }
+
+    public Boolean getOpen() {
+        return open;
     }
 
     public ArrayList<String> getSkills() {
@@ -73,14 +92,6 @@ public class QuestionModel {
 
     public void setSkills(ArrayList<String> skills) {
         this.skills = skills;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public UserModel getSender() {
