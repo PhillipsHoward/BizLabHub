@@ -27,7 +27,7 @@ import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
-public class AskingActivity extends AppCompatActivity {
+public class AskingActivity extends SuperActivity {
 
     private int mSeekBarProgress = 0;
     private Singleton mSingleton;

@@ -11,7 +11,7 @@ import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends SuperActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

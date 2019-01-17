@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import fr.wildcodeschool.hackbus.models.QuestionModel;
 
-public class AnswerActivity extends AppCompatActivity {
+public class AnswerActivity extends SuperActivity {
 
     private Singleton mSingleton;
 

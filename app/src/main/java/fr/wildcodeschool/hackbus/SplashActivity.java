@@ -22,6 +22,8 @@ public class SplashActivity extends AppCompatActivity {
                         singletonData.setcUser(userModel);
                     }
                 }
+                singletonData.getcUser().setDispo(true);
+                singletonData.updateUser(singletonData.getcUser());
                 startActivity(new Intent(SplashActivity.this, AskingActivity.class));
             }
         });
