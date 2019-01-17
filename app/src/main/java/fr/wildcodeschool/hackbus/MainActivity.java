@@ -25,5 +25,6 @@ public class MainActivity extends SuperActivity {
 
         Intent goToFormProjet = new Intent(MainActivity.this, ProjetFormActivity.class);
         MainActivity.this.startActivity(goToFormProjet);
+
     }
 }

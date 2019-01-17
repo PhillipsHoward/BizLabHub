@@ -153,15 +153,17 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_skills"/>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/rv_skills"
+                    android:id="@+id/TagRecyclerView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/sp_tag" />
 
@@ -171,14 +173,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:padding="8dp"
                     android:text="Send"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rv_skills" />
+                    app:layout_constraintTop_toBottomOf="@+id/TagRecyclerView" />
 
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>

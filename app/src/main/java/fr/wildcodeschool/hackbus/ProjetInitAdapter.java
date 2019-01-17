@@ -46,7 +46,7 @@ public class ProjetInitAdapter extends RecyclerView.Adapter<ProjetInitAdapter.My
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         final ProjetModel projetInit = projetInitList.get(position);
-        holder.nom.setText(projetInit.getNom()); //TODO récuperer les projet init du CurrentUser
+        holder.nom.setText(projetInit.getNom());
     }
 
     @Override
