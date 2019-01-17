@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus;
+package fr.wildcodeschool.hackbus.models;
 
 import java.util.ArrayList;
 
@@ -13,6 +13,12 @@ public class TagsModel {
         this.nom = nom;
         this.types = types;
         this.uId = uId;
+    }
+
+    public TagsModel(String nom, ArrayList<TypeModel> types) {
+        this.nom = nom;
+        this.types = types;
+        this.uId = "";
     }
 
     public TagsModel() {

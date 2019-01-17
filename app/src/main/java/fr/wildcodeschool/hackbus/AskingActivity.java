@@ -4,6 +4,9 @@ import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -14,10 +17,26 @@ import android.widget.Toast;
 
 import fr.wildcodeschool.hackbus.models.QuestionModel;
 
+import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
+
+import java.util.ArrayList;
+
+import fr.wildcodeschool.hackbus.models.CompetenceModel;
+import fr.wildcodeschool.hackbus.models.TagsModel;
+import fr.wildcodeschool.hackbus.models.TypeModel;
+
 public class AskingActivity extends AppCompatActivity {
 
     private int mSeekBarProgress = 0;
     private Singleton mSingleton;
+
+    private SearchableSpinner mSearchableSpinner = null;
+    private String typeModels;
+    TypeModel informatique = new TypeModel("Informatique");
+    TypeModel mecanique = new TypeModel("Mecanique");
+    TypeModel design = new TypeModel("Design");
+    TypeModel sexuel = new TypeModel("Sexuel");
+    SingletonData singletonData = SingletonData.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +44,8 @@ public class AskingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_asking);
 
         mSingleton = Singleton.getInstance();
+
+        spinnerTag();
 
         seekBar();
 
@@ -98,6 +119,37 @@ public class AskingActivity extends AppCompatActivity {
                     QuestionModel newQuestion = new QuestionModel(mSingleton.getUser(), titleText, questionText, mSeekBarProgress);
                     //TODO: model question tout prêt à balancer quelque part
                 }
+            }
+        });
+    }
+
+    //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
+    public void spinnerTag() {
+        mSearchableSpinner = findViewById(R.id.sp_tag);
+
+        final ArrayList<TypeModel> typeModelSingleton = singletonData.getTypes();
+         ArrayList<String> typeDeProjets = new ArrayList<>();
+        for (TypeModel typeModel: typeModelSingleton) {
+            typeModels =  typeModel.getNom();
+            typeDeProjets.add(typeModels);
+        }
+
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjets);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mSearchableSpinner.setAdapter(spinnerAdapter);
+        mSearchableSpinner.setPrompt(getString(R.string.selection_type));
+        mSearchableSpinner.setTitle(getString(R.string.choix_type));
+        mSearchableSpinner.setPositiveButton(getString(R.string.ok));
+
+        mSearchableSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                TypeModel typeProjet = typeModelSingleton.get(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
     }
