@@ -48,7 +48,7 @@ public class AskingActivity extends SuperActivity {
         mSingleton = Singleton.getInstance();
         spinnerTag();
         seekBar();
-        //sendButton();
+        sendButton();
         infoButton();
     }
 
@@ -114,15 +114,10 @@ public class AskingActivity extends SuperActivity {
                 if (titleText.isEmpty() || questionText.isEmpty()) {
                     Toast.makeText(AskingActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
-
                     ProjetModel currentProject = singletonData.getProjects().get(0); //TODO A REMPLACER PAR LE VRAI CURRENT PROJECT
                     ArrayList<UserModel> usersReceptors = selectPotentialsRecipients(singletonData.getUsers(), mTagsToQuestion, currentProject);
                     QuestionModel newQuestion = new QuestionModel(singletonData.getcUser(), titleText, questionText, mSeekBarProgress, usersReceptors, mTagsToQuestion, true, new ArrayList<ReponseModel>(), currentProject);
-
-                    //Singleton.getInstance().a
-
-
-
+                    singletonData.askAQuestion(newQuestion);
                     startActivity(new Intent(AskingActivity.this, QuestionActivity.class));
                 }
             }

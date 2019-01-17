@@ -1,5 +1,6 @@
 package fr.wildcodeschool.hackbus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 import android.view.Menu;
@@ -16,6 +17,8 @@ public class MainActivity extends SuperActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        startActivity(new Intent(MainActivity.this, AskingActivity.class));
 
         final SingletonData singletonData = SingletonData.getInstance();
         singletonData.initListenerPresence(new PresenceListener() {

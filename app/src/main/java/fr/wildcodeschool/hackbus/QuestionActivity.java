@@ -15,6 +15,7 @@ import fr.wildcodeschool.hackbus.models.ReponseModel;
 public class QuestionActivity extends AppCompatActivity {
 
     private Singleton mSingleton;
+    private SingletonData mDataSingleton;
     private QuestionModel mCurrentQuestion;
     private Boolean isCreator = false;
 
@@ -24,6 +25,8 @@ public class QuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_question);
 
         mSingleton = Singleton.getInstance();
+        mDataSingleton = SingletonData.getInstance();
+
         //mCurrentQuestion = mSingleton.getCurrentQuestion();
 
         /*TODO: à décommenter quand BDD sera OK
@@ -52,7 +55,7 @@ public class QuestionActivity extends AppCompatActivity {
                 if(answerText.isEmpty()){
                     Toast.makeText(QuestionActivity.this, "Please write your answer", Toast.LENGTH_SHORT).show();
                 } else {
-                    ReponseModel newReponse = new ReponseModel(answerText, mSingleton.getUser());
+                    ReponseModel newReponse = new ReponseModel(answerText, mDataSingleton.getcUser());
                     //TODO: à balancer vers la BDD
                 }
             }
