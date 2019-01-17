@@ -3,7 +3,7 @@ package fr.wildcodeschool.hackbus;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class AddCompetencesProjet extends AppCompatActivity {
+public class AddCompetencesProjet extends SuperActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

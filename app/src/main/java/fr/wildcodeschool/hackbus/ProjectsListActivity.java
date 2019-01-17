@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 
-public class ProjectsListActivity extends AppCompatActivity {
+public class ProjectsListActivity extends SuperActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

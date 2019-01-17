@@ -22,12 +22,26 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class SingletonData {
 
-    private static final SingletonData ourInstance = new SingletonData();
+    public static final String UID_PERSO = "-LWQ8ZI6sNDlSvXG6cNU";
+
+    public static final SingletonData ourInstance = new SingletonData();
     private ArrayList<ProjetModel> projects = new ArrayList<>();
     private ArrayList<TagsModel> tags = new ArrayList<>();
     private ArrayList<UserModel> users = new ArrayList<>();
     private ArrayList<TypeModel> types = new ArrayList<>();
+    private UserModel cUser = new UserModel();
 
+    public static String getUidPerso() {
+        return UID_PERSO;
+    }
+
+    public UserModel getcUser() {
+        return cUser;
+    }
+
+    public void setcUser(UserModel cUser) {
+        this.cUser = cUser;
+    }
 
     public void initDatas(final SingletonDataListener mySingletonDataListener){
         initTypesListe();
@@ -203,5 +217,11 @@ public class SingletonData {
     }
 
     private SingletonData() {
+    }
+
+    public void updateUser(UserModel user){
+        final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        final DatabaseReference refUser = firebaseDatabase.getReference("users").child(user.getuId());
+        refUser.setValue(user);
     }
 }
