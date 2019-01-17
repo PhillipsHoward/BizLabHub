@@ -1,10 +1,12 @@
 package fr.wildcodeschool.hackbus;
 
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -15,15 +17,68 @@ import fr.wildcodeschool.hackbus.models.QuestionModel;
 public class AskingActivity extends AppCompatActivity {
 
     private int mSeekBarProgress = 0;
+    private Singleton mSingleton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asking);
 
+        mSingleton = Singleton.getInstance();
+
         seekBar();
 
-        sendButton();
+        //sendButton();
+
+        infoButton();
+    }
+
+    private void infoButton() {
+        ImageButton info = findViewById(R.id.ib_info);
+        final View greyView = findViewById(R.id.view_grey);
+        final TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showInfoPopup();
+            }
+        });
+
+        greyView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeInfoPopup();
+            }
+        });
+
+        priorityMeaning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeInfoPopup();
+
+            }
+        });
+    }
+
+    private void closeInfoPopup() {
+        View greyView = findViewById(R.id.view_grey);
+        TextView priorityPopup = findViewById(R.id.tv_priority_popup);
+        TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+
+        greyView.setVisibility(View.GONE);
+        priorityPopup.setVisibility(View.GONE);
+        priorityMeaning.setVisibility(View.GONE);
+    }
+
+    private void showInfoPopup() {
+        View greyView = findViewById(R.id.view_grey);
+        TextView priorityPopup = findViewById(R.id.tv_priority_popup);
+        TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+
+        greyView.setVisibility(View.VISIBLE);
+        priorityPopup.setVisibility(View.VISIBLE);
+        priorityMeaning.setVisibility(View.VISIBLE);
     }
 
     private void sendButton() {
@@ -40,7 +95,7 @@ public class AskingActivity extends AppCompatActivity {
                 if (titleText.isEmpty() || questionText.isEmpty()) {
                     Toast.makeText(AskingActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    QuestionModel newQuestion = new QuestionModel(titleText, questionText, mSeekBarProgress);
+                    QuestionModel newQuestion = new QuestionModel(mSingleton.getUser(), titleText, questionText, mSeekBarProgress);
                     //TODO: model question tout prêt à balancer quelque part
                 }
             }
