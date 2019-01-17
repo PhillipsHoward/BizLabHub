@@ -18,6 +18,8 @@ public class SuperActivity extends AppCompatActivity {
     private static String NOT_DISPO = "Not now, I'm busy";
     private static String DISPO = "Open office !";
 
+
+
     @Override
     protected void onStart() {
         changeStatus(false);

@@ -1,8 +1,13 @@
 package fr.wildcodeschool.hackbus;
 
+import android.app.Application;
+import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -13,6 +18,7 @@ import java.util.ArrayList;
 import java.util.TreeSet;
 
 import fr.wildcodeschool.hackbus.models.ProjetModel;
+import fr.wildcodeschool.hackbus.models.QuestionModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
@@ -22,7 +28,8 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class SingletonData {
 
-    public static final String UID_PERSO = "-LWQ8ZI4VFAbrKK_DB5A";
+
+    public static final String UID_PERSO = "-LWMcSuFQXu5fkvCt40K";
 
     public static final SingletonData ourInstance = new SingletonData();
     private ArrayList<ProjetModel> projects = new ArrayList<>();
@@ -145,6 +152,7 @@ public class SingletonData {
                     users.add(user);
                 }
                 myDataListener.onResponse(true);
+
             }
 
             @Override
@@ -223,5 +231,86 @@ public class SingletonData {
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refUser = firebaseDatabase.getReference("users").child(user.getuId());
         refUser.setValue(user);
+
     }
+
+    public void initListenerQuestionReponse(){}
+
+    public void initListenerPresence(final PresenceListener presenceListenerInterface){
+        ChildEventListener presenceListener = new ChildEventListener() {
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                dataSnapshot.getKey();
+                for(UserModel userModel : SingletonData.getInstance().getUsers()){
+                    if(userModel.getuId().equals(dataSnapshot.getKey())){
+                        userModel.setDispo((boolean) dataSnapshot.child("dispo").getValue());
+                        presenceListenerInterface.onChange(userModel);
+                    }
+                }
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        };
+
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
+            databaseReference.addChildEventListener(presenceListener);
+    }
+
+    public void askAQuestion(QuestionModel question){
+        final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        String projetID = question.getProjet().getId();
+        String senderId = question.getSender().getuId();
+        DatabaseReference projetRef = firebaseDatabase.getReference("projets").child(projetID).child("questions");
+        String key = projetRef.push().getKey();
+        question.setId(key);
+        projetRef.setValue(question);
+
+        for(ProjetModel projet : projects){
+            if(projet.getId().equals(projetID)) projet.getQuestions().add(question);
+        }
+
+        for(UserModel user : users){
+            if(user.getuId().equals(senderId)) {
+                user.getQuestionAsked().add(question);
+                updateUser(user);
+            }
+        }
+
+        for(UserModel userAnswer : question.getUserReponse()){
+            for(UserModel user : users){
+                if(user.getuId().equals(userAnswer.getuId())){
+                    user.getQuestionAsked().add(question);
+                    updateUser(user);
+                }
+            }
+        }
+
+
+
+
+
+
+
+    }
+
+
 }

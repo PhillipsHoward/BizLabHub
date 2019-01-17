@@ -30,8 +30,10 @@ public class ProjectsListAdapter extends RecyclerView.Adapter<ProjectsListAdapte
     public int getItemCount() {
         return mProjects.size();
     }
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle, tvNameOrganiser, tvNbParticipants;
+
         public ViewHolder(View v) {
             super(v);
             this.tvTitle = v.findViewById(R.id.tv_title_project);

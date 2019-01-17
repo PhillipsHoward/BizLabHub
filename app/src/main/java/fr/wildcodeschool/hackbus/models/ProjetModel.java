@@ -14,6 +14,15 @@ public class ProjetModel {
     private UserModel initiateur;
     private String photo;
     private String id;
+    private ArrayList<QuestionModel> questions;
+
+    public ArrayList<QuestionModel> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(ArrayList<QuestionModel> questions) {
+        this.questions = questions;
+    }
 
     public String getId() {
         return id;
