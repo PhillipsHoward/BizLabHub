@@ -36,7 +36,7 @@
                     android:layout_marginRight="8dp"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="Titre de ma question"
+                    android:hint="Title of my question"
                     android:inputType="textShortMessage"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@
                     android:background="@drawable/classic_border"
                     android:ems="10"
                     android:gravity="start"
-                    android:hint="Je pose ma question"
+                    android:hint="I ask my question"
                     android:inputType="textMultiLine"
                     android:padding="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -68,10 +68,22 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="16dp"
-                    android:text="Importance"
+                    android:text="Priority"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/et_question" />
+
+                <ImageButton
+                    android:id="@+id/ib_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_priority"
+                    app:layout_constraintStart_toEndOf="@+id/tv_priority"
+                    app:layout_constraintTop_toTopOf="@+id/tv_priority"
+                    app:srcCompat="@drawable/ic_info" />
 
                 <TextView
                     android:id="@+id/tv_count"
@@ -108,6 +120,7 @@
                     android:layout_marginRight="16dp"
                     android:max="5"
                     android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_progress"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_priority" />
@@ -119,7 +132,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="16dp"
-                    android:text="Compétences"
+                    android:text="Skills"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/sb_priority" />
@@ -162,7 +175,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:padding="8dp"
-                    android:text="Envoyer"
+                    android:text="Send"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rv_skills" />
@@ -171,6 +184,47 @@
         </LinearLayout>
     </ScrollView>
 
+    <View
+        android:id="@+id/view_grey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorGreyTrans"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_meaning_priority"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/classic_border_white"
+        android:paddingLeft="24dp"
+        android:paddingTop="60dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="24dp"
+        android:text="Choose from 0 to 5, as 0 means that you will have an answer when someone will have time and 5 you need an answer by the end of the day."
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_priority_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Priority"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_meaning_priority" />
 
 
 </android.support.constraint.ConstraintLayout>

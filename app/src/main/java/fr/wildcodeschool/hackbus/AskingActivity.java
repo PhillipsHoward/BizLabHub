@@ -1,15 +1,21 @@
 package fr.wildcodeschool.hackbus;
 
-import android.annotation.TargetApi;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import fr.wildcodeschool.hackbus.models.QuestionModel;
 
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
@@ -20,6 +26,9 @@ import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
 
 public class AskingActivity extends AppCompatActivity {
+
+    private int mSeekBarProgress = 0;
+    private Singleton mSingleton;
 
     private SearchableSpinner mSearchableSpinner = null;
     private String typeModels;
@@ -33,11 +42,88 @@ public class AskingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asking);
+
+        mSingleton = Singleton.getInstance();
+
         spinnerTag();
+
         seekBar();
+
+        //sendButton();
+
+        infoButton();
     }
 
-    //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
+    private void infoButton() {
+        ImageButton info = findViewById(R.id.ib_info);
+        final View greyView = findViewById(R.id.view_grey);
+        final TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showInfoPopup();
+            }
+        });
+
+        greyView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeInfoPopup();
+            }
+        });
+
+        priorityMeaning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeInfoPopup();
+
+            }
+        });
+    }
+
+    private void closeInfoPopup() {
+        View greyView = findViewById(R.id.view_grey);
+        TextView priorityPopup = findViewById(R.id.tv_priority_popup);
+        TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+
+        greyView.setVisibility(View.GONE);
+        priorityPopup.setVisibility(View.GONE);
+        priorityMeaning.setVisibility(View.GONE);
+    }
+
+    private void showInfoPopup() {
+        View greyView = findViewById(R.id.view_grey);
+        TextView priorityPopup = findViewById(R.id.tv_priority_popup);
+        TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+
+        greyView.setVisibility(View.VISIBLE);
+        priorityPopup.setVisibility(View.VISIBLE);
+        priorityMeaning.setVisibility(View.VISIBLE);
+    }
+
+    private void sendButton() {
+        Button send = findViewById(R.id.send);
+        final EditText title = findViewById(R.id.et_title_question);
+        final EditText question = findViewById(R.id.et_question);
+
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String titleText = title.getText().toString();
+                String questionText = question.getText().toString();
+
+                if (titleText.isEmpty() || questionText.isEmpty()) {
+                    Toast.makeText(AskingActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                } else {
+                    QuestionModel newQuestion = new QuestionModel(mSingleton.getUser(), titleText, questionText, mSeekBarProgress);
+                    //TODO: model question tout prêt à balancer quelque part
+                }
+            }
+        });
+    }
+
+    //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
     public void spinnerTag() {
         mSearchableSpinner = findViewById(R.id.sp_tag);
 
@@ -68,42 +154,36 @@ public class AskingActivity extends AppCompatActivity {
         });
     }
 
-    @TargetApi(21)
     private void seekBar() {
         SeekBar sbPriority = findViewById(R.id.sb_priority);
         final TextView tvCount = findViewById(R.id.tv_count);
         final ImageView progressColor = findViewById(R.id.iv_color_progress);
 
         sbPriority.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int seekBarProgress = 0;
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                seekBarProgress = progress;
-
-            }
-
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                tvCount.setText(seekBarProgress + " / " + seekBar.getMax());
-
-                if (seekBarProgress == 0) {
-                    progressColor.setColorFilter(R.color.grey);
-                } else if (seekBarProgress == 1) {
-                    progressColor.setColorFilter(R.color.blue);
-                } else if (seekBarProgress == 2) {
-                    progressColor.setColorFilter(R.color.green);
-                } else if (seekBarProgress == 3) {
-                    progressColor.setColorFilter(R.color.yellow);
-                } else if (seekBarProgress == 4) {
-                    progressColor.setColorFilter(R.color.orange);
-                } else if (seekBarProgress == 5) {
-                    progressColor.setColorFilter(R.color.red);
+                mSeekBarProgress = progress;
+                tvCount.setText(mSeekBarProgress + " / " + seekBar.getMax());
+                if (mSeekBarProgress == 0) {
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_grey);
+                } else if (mSeekBarProgress == 1) {
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_blue);
+                } else if (mSeekBarProgress == 2) {
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_green);
+                } else if (mSeekBarProgress == 3) {
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_yellow);
+                } else if (mSeekBarProgress == 4) {
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_orange);
+                } else if (mSeekBarProgress == 5) {
+                    progressColor.setBackgroundResource(R.drawable.ic_circle_red);
                 }
             }
 
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
     }
 }

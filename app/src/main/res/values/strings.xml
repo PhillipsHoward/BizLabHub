@@ -6,4 +6,11 @@
     <string name="ok">Ok</string>
     <string name="selection_competence">Selectionné une competence</string>
     <string name="choix_competence">choix de la competence</string>
+    <string name="telephone">Telephone</string>
+    <string name="fake_project_title">Faux titre de projet</string>
+    <string name="all_your_projects">All your projects</string>
+    <string name="organizer">Organizer :</string>
+    <string name="fake_organizer_name">Phillips Howard</string>
+    <string name="nb_participants">Nb.participants :</string>
+    <string name="team_size">34</string>
 </resources>
