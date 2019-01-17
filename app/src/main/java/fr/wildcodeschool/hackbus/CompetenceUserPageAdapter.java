@@ -50,7 +50,7 @@ public class CompetenceUserPageAdapter extends RecyclerView.Adapter<CompetenceUs
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         final CompetenceModel competence = competenceList.get(position);
-        holder.nom.setText(competence.getTag().getNom()); //TODO récuperer les compétence du CurrentUser
+        holder.nom.setText(competence.getTag().getNom());
     }
 
     @Override

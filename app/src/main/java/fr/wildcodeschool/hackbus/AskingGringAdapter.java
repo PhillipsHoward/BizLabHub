@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import fr.wildcodeschool.hackbus.models.TagsModel;
+import fr.wildcodeschool.hackbus.models.TypeModel;
 
 public class AskingGringAdapter extends RecyclerView.Adapter<AskingGringAdapter.ViewHolder> {
     private ArrayList<TagsModel> mTag;

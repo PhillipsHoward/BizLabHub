@@ -1,12 +1,14 @@
 package fr.wildcodeschool.hackbus;
 
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -15,30 +17,26 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import fr.wildcodeschool.hackbus.models.QuestionModel;
-
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 import java.util.ArrayList;
 
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
+import fr.wildcodeschool.hackbus.models.QuestionModel;
 import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class AskingActivity extends SuperActivity {
 
+    SingletonData singletonData = SingletonData.getInstance();
+    Context mContext;
+    boolean isFisrt = true;
     private int mSeekBarProgress = 0;
     private Singleton mSingleton;
-
     private SearchableSpinner mSearchableSpinner = null;
     private String typeModels;
-    TypeModel informatique = new TypeModel("Informatique");
-    TypeModel mecanique = new TypeModel("Mecanique");
-    TypeModel design = new TypeModel("Design");
-    TypeModel sexuel = new TypeModel("Sexuel");
-    SingletonData singletonData = SingletonData.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,28 +123,53 @@ public class AskingActivity extends SuperActivity {
         });
     }
 
-    //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
     public void spinnerTag() {
         mSearchableSpinner = findViewById(R.id.sp_tag);
 
-        final ArrayList<TypeModel> typeModelSingleton = singletonData.getTypes();
-         ArrayList<String> typeDeProjets = new ArrayList<>();
-        for (TypeModel typeModel: typeModelSingleton) {
-            typeModels =  typeModel.getNom();
+        final ArrayList<TagsModel> tagModelSingleton = singletonData.getTags();
+        final ArrayList<String> typeDeProjets = new ArrayList<>();
+        for (TagsModel tagModel : tagModelSingleton) {
+            typeModels = tagModel.getNom();
             typeDeProjets.add(typeModels);
         }
 
-        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjets);
+        final ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjets);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSearchableSpinner.setAdapter(spinnerAdapter);
         mSearchableSpinner.setPrompt(getString(R.string.selection_type));
         mSearchableSpinner.setTitle(getString(R.string.choix_type));
         mSearchableSpinner.setPositiveButton(getString(R.string.ok));
 
+        //TODO récuperer cette liste de tag (typeDeProjetAdapter) pour transferé les info de la question
+        final ArrayList<TagsModel> typeDeProjetAdapter = new ArrayList<>();
+        final AskingGringAdapter adapterTag = new AskingGringAdapter(mContext, typeDeProjetAdapter);
+        RecyclerView TagRecyclerView = findViewById(R.id.TagRecyclerView);
+        TagRecyclerView.setLayoutManager(new GridLayoutManager(AskingActivity.this, 3));
+        TagRecyclerView.setAdapter(adapterTag);
+
         mSearchableSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                TypeModel typeProjet = typeModelSingleton.get(position);
+                //Vérifie si Nous somme a l'arrivé de la page comme cela nous n'ajouton pas la valeur du premliers champs contenu dans l'input
+                if (!isFisrt) {
+                    TagsModel typeTag = tagModelSingleton.get(position);
+                    boolean isSelected = false;
+                    //Je vérifie si l'item na pas déja etais selectionné
+                    for (TagsModel tagModel: typeDeProjetAdapter) {
+                        if(tagModel.getNom().equals(typeTag.getNom())){
+                            Toast.makeText(getApplicationContext(), "Vous ne pouvez pas avoir deux tags similaire", Toast.LENGTH_SHORT).show();
+                            isSelected = true;
+                            break;
+                        }
+                    }
+                    // si l'item na pas etais selectioné je l'ajoute
+                    if(!isSelected){
+                        typeDeProjetAdapter.add(typeTag);
+                        adapterTag.notifyDataSetChanged();
+                    }
+                }
+                isFisrt = false;
             }
 
             @Override
@@ -189,7 +212,6 @@ public class AskingActivity extends SuperActivity {
         });
     }
 
-
     private ArrayList<UserModel> selectPotentialsRecipients(ArrayList<UserModel> users, ArrayList<TagsModel> tags, ProjetModel currentProject) {
 
         ArrayList<UserModel> recipients = new ArrayList<>(users);
@@ -197,15 +219,15 @@ public class AskingActivity extends SuperActivity {
         for (UserModel user : recipients) {
 
             if (!user.isDispo()) {
-               recipients.remove(user);
-               break;
+                recipients.remove(user);
+                break;
             }
 
             boolean isPresentInProject = false;
 
             for (ProjetModel project : user.getProjetEnCours()) {
 
-                if(project.getId() == currentProject.getId()) {
+                if (project.getId() == currentProject.getId()) {
                     isPresentInProject = true;
                     break;
                 }
@@ -217,7 +239,6 @@ public class AskingActivity extends SuperActivity {
             }
 
             for (TagsModel tag : tags) {
-
                 boolean hasTheGoodTag = false;
                 for (CompetenceModel competence : user.getCompetence()) {
                     if (competence.getTag().getuId() == tag.getuId()) {
@@ -225,13 +246,11 @@ public class AskingActivity extends SuperActivity {
                         break;
                     }
                 }
-
                 if (!hasTheGoodTag) {
                     recipients.remove(user);
                 }
             }
         }
-
         return recipients;
     }
 }
