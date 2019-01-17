@@ -3,27 +3,32 @@ package fr.wildcodeschool.hackbus.models;
 import java.util.ArrayList;
 
 public class QuestionModel {
+
+    private int id;
     private String question;
     private String title;
     private String projet;
-    private UserModel userDemand;
+    private UserModel sender;
     private ArrayList<UserModel> userReponse;
     private int priority;
     private ArrayList<String> skills;
+    private Boolean open = true;
 
     public QuestionModel() {
     }
 
     //TODO: à dégager quand tout sera complet (utiliser autre constructeur)
-    public QuestionModel(UserModel userDemand, String title, String question, int priority) {
-        this.userDemand = userDemand;
+    public QuestionModel(UserModel sender, String title, String question, int priority) {
+        this.open = true;
+        this.sender = sender;
         this.title = title;
         this.question = question;
         this.priority = priority;
     }
 
-    public QuestionModel(UserModel userDemand, String title, String question, int priority, ArrayList<String> skills) {
-        this.userDemand = userDemand;
+    public QuestionModel(UserModel sender, String title, String question, int priority, ArrayList<String> skills) {
+        this.open = true;
+        this.sender = sender;
         this.title = title;
         this.question = question;
         this.priority = priority;
@@ -68,5 +73,29 @@ public class QuestionModel {
 
     public void setSkills(ArrayList<String> skills) {
         this.skills = skills;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public UserModel getSender() {
+        return sender;
+    }
+
+    public void setSender(UserModel sender) {
+        this.sender = sender;
+    }
+
+    public Boolean isOpen() {
+        return open;
+    }
+
+    public void setOpen(Boolean open) {
+        this.open = open;
     }
 }
