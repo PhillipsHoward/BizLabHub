@@ -25,17 +25,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AskingActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".AnswerActivity"></activity>
         <activity android:name=".LogInActivity" />
         <activity android:name=".ProjectsListActivity" />
-        <activity android:name=".RequestsListActivity"></activity>
+        <activity android:name=".RequestsListActivity"/>
+        <activity android:name=".UserForm" />
+        <activity android:name=".UserPage"/>
+        <activity android:name=".AskingActivity"/>
+        <activity android:name=".AnswerActivity"/>
     </application>
 
 </manifest>
