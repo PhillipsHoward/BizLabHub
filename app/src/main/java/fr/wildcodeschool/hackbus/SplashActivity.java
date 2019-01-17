@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import fr.wildcodeschool.hackbus.models.UserModel;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -11,10 +13,15 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        SingletonData singletonData = SingletonData.getInstance();
+        final SingletonData singletonData = SingletonData.getInstance();
         singletonData.initDatas(new SingletonDataListener() {
             @Override
             public void onResponse(boolean success) {
+                for(UserModel userModel : singletonData.getUsers()){
+                    if(userModel.getuId().equals(SingletonData.getUidPerso())){
+                        singletonData.setcUser(userModel);
+                    }
+                }
                 startActivity(new Intent(SplashActivity.this, AskingActivity.class));
             }
         });
