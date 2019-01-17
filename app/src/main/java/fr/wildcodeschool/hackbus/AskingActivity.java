@@ -1,5 +1,6 @@
 package fr.wildcodeschool.hackbus;
 
+import android.content.Intent;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,7 +26,6 @@ import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.QuestionModel;
 import fr.wildcodeschool.hackbus.models.TagsModel;
-import fr.wildcodeschool.hackbus.models.TypeModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class AskingActivity extends SuperActivity {
@@ -57,7 +57,7 @@ public class AskingActivity extends SuperActivity {
     private void infoButton() {
         ImageButton info = findViewById(R.id.ib_info);
         final View greyView = findViewById(R.id.view_grey);
-        final TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+        final TextView priorityMeaning = findViewById(R.id.tv_close_open_confirmation);
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +85,7 @@ public class AskingActivity extends SuperActivity {
     private void closeInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView priorityPopup = findViewById(R.id.tv_priority_popup);
-        TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+        TextView priorityMeaning = findViewById(R.id.tv_close_open_confirmation);
 
         greyView.setVisibility(View.GONE);
         priorityPopup.setVisibility(View.GONE);
@@ -95,7 +95,7 @@ public class AskingActivity extends SuperActivity {
     private void showInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView priorityPopup = findViewById(R.id.tv_priority_popup);
-        TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+        TextView priorityMeaning = findViewById(R.id.tv_close_open_confirmation);
 
         greyView.setVisibility(View.VISIBLE);
         priorityPopup.setVisibility(View.VISIBLE);
@@ -118,6 +118,7 @@ public class AskingActivity extends SuperActivity {
                 } else {
                     QuestionModel newQuestion = new QuestionModel(mSingleton.getUser(), titleText, questionText, mSeekBarProgress);
                     //TODO: model question tout prêt à balancer quelque part
+                    startActivity(new Intent(AskingActivity.this, QuestionActivity.class));
                 }
             }
         });

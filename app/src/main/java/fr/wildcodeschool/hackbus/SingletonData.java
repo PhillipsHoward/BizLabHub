@@ -27,6 +27,7 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class SingletonData {
 
+
     public static final String UID_PERSO = "-LWMcSuFQXu5fkvCt40K";
 
     public static final SingletonData ourInstance = new SingletonData();
