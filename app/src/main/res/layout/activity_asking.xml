@@ -14,7 +14,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,6 +38,7 @@
                     android:gravity="center"
                     android:hint="Title of my question"
                     android:inputType="textShortMessage"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -62,7 +63,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/et_title_question" />
 
                 <TextView
-                    android:id="@+id/tv_priority"
+                    android:id="@+id/tv_open_close"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -80,9 +81,9 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:background="@android:color/transparent"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_priority"
-                    app:layout_constraintStart_toEndOf="@+id/tv_priority"
-                    app:layout_constraintTop_toTopOf="@+id/tv_priority"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_open_close"
+                    app:layout_constraintStart_toEndOf="@+id/tv_open_close"
+                    app:layout_constraintTop_toTopOf="@+id/tv_open_close"
                     app:srcCompat="@drawable/ic_info" />
 
                 <TextView
@@ -123,7 +124,7 @@
                     android:progressDrawable="@drawable/seekbar_progress"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_priority" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_open_close" />
 
                 <TextView
                     android:id="@+id/tv_skills"
@@ -138,7 +139,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/sb_priority" />
 
 
-
                 <com.toptoche.searchablespinnerlibrary.SearchableSpinner
                     android:id="@+id/sp_tag"
                     android:layout_width="match_parent"
@@ -150,10 +150,10 @@
                     android:layout_marginRight="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_skills"/>
+                    app:layout_constraintTop_toBottomOf="@+id/tv_skills" />
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/rv_skills"
+                    android:id="@+id/TagRecyclerView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -171,14 +171,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:padding="8dp"
                     android:text="Send"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rv_skills" />
+                    app:layout_constraintTop_toBottomOf="@+id/TagRecyclerView" />
 
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>
@@ -196,7 +196,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_meaning_priority"
+        android:id="@+id/tv_close_open_confirmation"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -224,7 +224,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_meaning_priority" />
+        app:layout_constraintTop_toTopOf="@+id/tv_close_open_confirmation" />
 
 
 </android.support.constraint.ConstraintLayout>

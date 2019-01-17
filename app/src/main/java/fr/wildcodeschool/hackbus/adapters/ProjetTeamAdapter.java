@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus;
+package fr.wildcodeschool.hackbus.adapters;
 
 
 import android.content.Context;
@@ -10,28 +10,17 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import fr.wildcodeschool.hackbus.models.UserModel;
+import fr.wildcodeschool.hackbus.R;
+import fr.wildcodeschool.hackbus.models.ProjetModel;
 
 public class ProjetTeamAdapter extends RecyclerView.Adapter<ProjetTeamAdapter.MyViewHolder> {
 
-    private List<UserModel> userTeamList;
+    private List<ProjetModel> projetTeamList;
     private Context ctx;
 
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView nom;
-        public TextView prenom;
-
-        public MyViewHolder(View view) {
-            super(view);
-            nom = view.findViewById(R.id.tv_nom);
-            prenom = view.findViewById(R.id.tv_prenom);
-        }
-    }
-
-
-    public ProjetTeamAdapter(List<UserModel> userTeamList, Context ctx) {
-        this.userTeamList = userTeamList;
+    public ProjetTeamAdapter(List<ProjetModel> projetTeamList, Context ctx) {
+        this.projetTeamList = projetTeamList;
         this.ctx = ctx;
     }
 
@@ -46,13 +35,23 @@ public class ProjetTeamAdapter extends RecyclerView.Adapter<ProjetTeamAdapter.My
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final UserModel userTeam = userTeamList.get(position);
-        holder.nom.setText(userTeam.getNom());
-        holder.prenom.setText(userTeam.getPrenom());
+        final ProjetModel projetTeam = projetTeamList.get(position);
+        holder.nom.setText(projetTeam.getNom());
+
     }
 
     @Override
     public int getItemCount() {
-        return userTeamList.size();
+        return projetTeamList.size();
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        public TextView nom;
+
+
+        public MyViewHolder(View view) {
+            super(view);
+            nom = view.findViewById(R.id.tv_nom);
+        }
     }
 }
