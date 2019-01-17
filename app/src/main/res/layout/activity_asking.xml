@@ -153,7 +153,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_skills"/>
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/rv_skills"
+                    android:id="@+id/TagRecyclerView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
