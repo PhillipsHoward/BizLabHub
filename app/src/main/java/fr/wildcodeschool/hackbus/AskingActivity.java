@@ -16,11 +16,13 @@ import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 import java.util.ArrayList;
 
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
+import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
 
 public class AskingActivity extends AppCompatActivity {
 
     private SearchableSpinner mSearchableSpinner = null;
+    private String typeModels;
     TypeModel informatique = new TypeModel("Informatique");
     TypeModel mecanique = new TypeModel("Mecanique");
     TypeModel design = new TypeModel("Design");
@@ -31,21 +33,22 @@ public class AskingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asking);
-        spinnerMethode1();
-        spinnerMethode2();
+        spinnerTag();
         seekBar();
     }
 
-    public void spinnerMethode1() {
-        mSearchableSpinner = findViewById(R.id.sp_type);
+    //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
+    public void spinnerTag() {
+        mSearchableSpinner = findViewById(R.id.sp_tag);
 
-        final ArrayList<String> typeDeProjet = new ArrayList<>();
-        typeDeProjet.add(informatique.getNom());
-        typeDeProjet.add(mecanique.getNom());
-        typeDeProjet.add(design.getNom());
-        typeDeProjet.add(sexuel.getNom());
+        final ArrayList<TypeModel> typeModelSingleton = singletonData.getTypes();
+         ArrayList<String> typeDeProjets = new ArrayList<>();
+        for (TypeModel typeModel: typeModelSingleton) {
+            typeModels =  typeModel.getNom();
+            typeDeProjets.add(typeModels);
+        }
 
-        final ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjet);
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjets);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSearchableSpinner.setAdapter(spinnerAdapter);
         mSearchableSpinner.setPrompt(getString(R.string.selection_type));
@@ -55,7 +58,7 @@ public class AskingActivity extends AppCompatActivity {
         mSearchableSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String typeProjet = typeDeProjet.get(position);
+                TypeModel typeProjet = typeModelSingleton.get(position);
             }
 
             @Override
@@ -65,30 +68,6 @@ public class AskingActivity extends AppCompatActivity {
         });
     }
 
-    public void spinnerMethode2() {
-        mSearchableSpinner = findViewById(R.id.sp_competence);
-
-        final ArrayList<CompetenceModel> competence = new ArrayList<>(); // TODO récuperer les competenceModels
-
-        final ArrayAdapter<CompetenceModel> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, competence);
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSearchableSpinner.setAdapter(spinnerAdapter);
-        mSearchableSpinner.setPrompt(getString(R.string.selection_competence));
-        mSearchableSpinner.setTitle(getString(R.string.choix_competence));
-        mSearchableSpinner.setPositiveButton(getString(R.string.ok));
-
-        mSearchableSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                CompetenceModel comp = competence.get(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-    }
     @TargetApi(21)
     private void seekBar() {
         SeekBar sbPriority = findViewById(R.id.sb_priority);

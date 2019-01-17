@@ -127,7 +127,7 @@
 
 
                 <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                    android:id="@+id/sp_type"
+                    android:id="@+id/sp_tag"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginStart="8dp"
@@ -138,21 +138,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_skills"/>
-
-
-                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                    android:id="@+id/sp_competence"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/sp_type"/>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_skills"
@@ -165,7 +150,7 @@
                     android:layout_marginRight="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/sp_competence" />
+                    app:layout_constraintTop_toBottomOf="@+id/sp_tag" />
 
                 <Button
                     android:id="@+id/send"
