@@ -10,28 +10,27 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class ProjetInitAdapter extends RecyclerView.Adapter<ProjetInitAdapter.MyViewHolder> {
 
-    private List<UserModel> userInitList;
+    private List<ProjetModel> projetInitList;
     private Context ctx;
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView nom;
-        public TextView prenom;
 
         public MyViewHolder(View view) {
             super(view);
             nom = view.findViewById(R.id.tv_nom_init);
-            prenom = view.findViewById(R.id.tv_prenom_init);
         }
     }
 
 
-    public ProjetInitAdapter(List<UserModel> userInitList, Context ctx) {
-        this.userInitList = userInitList;
+    public ProjetInitAdapter(List<ProjetModel> projetInitList, Context ctx) {
+        this.projetInitList = projetInitList;
         this.ctx = ctx;
     }
 
@@ -46,13 +45,12 @@ public class ProjetInitAdapter extends RecyclerView.Adapter<ProjetInitAdapter.My
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final UserModel userInit = userInitList.get(position);
-        holder.nom.setText(userInit.getNom());
-        holder.prenom.setText(userInit.getPrenom());
+        final ProjetModel projetInit = projetInitList.get(position);
+        holder.nom.setText(projetInit.getNom()); //TODO récuperer les projet init du CurrentUser
     }
 
     @Override
     public int getItemCount() {
-        return userInitList.size();
+        return projetInitList.size();
     }
 }
