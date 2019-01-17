@@ -76,7 +76,10 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:background="@drawable/classic_border"
-                    android:padding="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="32dp"
                     android:text="The question"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +124,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_wanna_help" />
 
                 <Button
-                    android:id="@+id/b_i_ansawer"
+                    android:id="@+id/send"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:background="@drawable/classic_border"
@@ -185,6 +188,17 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_skills" />
 
+                <TextView
+                    android:id="@+id/tv_user_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="UserName"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_question"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_question" />
+
             </android.support.constraint.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
@@ -201,7 +215,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_meaning_priority"
+        android:id="@+id/tv_close_open_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Want to close?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_close_open_confirmation" />
+
+    <TextView
+        android:id="@+id/tv_close_open_confirmation"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -211,24 +238,11 @@
         android:paddingTop="60dp"
         android:paddingRight="24dp"
         android:paddingBottom="24dp"
-        android:text="Choose from 0 to 5, as 0 means that you will have an answer when someone will have time and 5 you need an answer by the end of the day."
+        android:text="Yes! Close this question please"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_priority_popup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Priority"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_meaning_priority" />
 
 </android.support.constraint.ConstraintLayout>
