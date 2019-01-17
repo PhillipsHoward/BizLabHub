@@ -12,7 +12,7 @@ import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
-public class UserPage extends AppCompatActivity {
+public class UserPage extends SuperActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

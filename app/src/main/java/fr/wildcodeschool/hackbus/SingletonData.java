@@ -218,4 +218,10 @@ public class SingletonData {
 
     private SingletonData() {
     }
+
+    public void updateUser(UserModel user){
+        final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        final DatabaseReference refUser = firebaseDatabase.getReference("users").child(user.getuId());
+        refUser.setValue(user);
+    }
 }
