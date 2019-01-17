@@ -17,6 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
+import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.QuestionModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
@@ -128,6 +129,20 @@ public class SingletonData {
                 ProjetModel projet = new ProjetModel();
                 for (DataSnapshot projetSnapshot : dataSnapshot.getChildren()) {
                     projet = projetSnapshot.getValue(ProjetModel.class);
+
+                    if (projet.getQuestions() == null) {
+                        projet.setQuestions(new ArrayList<QuestionModel>());
+                    }
+
+                    if (projet.getTeam() == null) {
+                        projet.setTeam(new ArrayList<UserModel>());
+                    }
+
+                    if (projet.getCompetence() == null) {
+                        projet.setCompetence(new ArrayList<TagsModel>());
+                    }
+
+
                     projects.add(projet);
                 }
                 initUserLists(mySingletonDataListener);
@@ -149,6 +164,26 @@ public class SingletonData {
                 UserModel user = new UserModel();
                 for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
                     user = userSnapshot.getValue(UserModel.class);
+
+                    if(user.getCompetence() == null) {
+                        user.setCompetence(new ArrayList<CompetenceModel>());
+                    }
+
+                    if(user.getProjetEnCours() == null) {
+                        user.setProjetEnCours(new ArrayList<ProjetModel>());
+                    }
+
+                    if(user.getProjetInitie() == null) {
+                        user.setProjetInitie(new ArrayList<ProjetModel>());
+                    }
+
+                    if(user.getQuestionAsked() == null) {
+                        user.setQuestionAsked(new ArrayList<QuestionModel>());
+                    }
+
+                    if(user.getQuestionNeedAnswer() == null) {
+                        user.setQuestionNeedAnswer(new ArrayList<QuestionModel>());
+                    }
                     users.add(user);
                 }
                 myDataListener.onResponse(true);
@@ -231,7 +266,6 @@ public class SingletonData {
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refUser = firebaseDatabase.getReference("users").child(user.getuId());
         refUser.setValue(user);
-
     }
 
     public void initListenerQuestionReponse(){}
@@ -282,7 +316,7 @@ public class SingletonData {
         DatabaseReference projetRef = firebaseDatabase.getReference("projets").child(projetID).child("questions");
         String key = projetRef.push().getKey();
         question.setId(key);
-        projetRef.setValue(question);
+        projetRef.child(key).setValue(question);
 
         for(ProjetModel projet : projects){
             if(projet.getId().equals(projetID)) projet.getQuestions().add(question);

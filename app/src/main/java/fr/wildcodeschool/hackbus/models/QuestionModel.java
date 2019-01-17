@@ -16,7 +16,6 @@ public class QuestionModel {
     private ArrayList<ReponseModel> allReponses;
 
     public QuestionModel() {
-
     }
 
     public QuestionModel(UserModel sender, String title, String question, int priority) {
@@ -28,12 +27,10 @@ public class QuestionModel {
     }
 
     public QuestionModel(UserModel sender, String title, String question, int priority, ArrayList<UserModel> userReponse, ArrayList<TagsModel> skills, Boolean open, ArrayList<ReponseModel> allReponses, ProjetModel projet) {
-        this.open = true;
         this.sender = sender;
         this.title = title;
         this.question = question;
         this.priority = priority;
-        this.skills = skills;
         this.userReponse = userReponse;
         this.skills = skills;
         this.open = open;
@@ -41,20 +38,12 @@ public class QuestionModel {
         this.projet = projet;
     }
 
-    public ArrayList<ReponseModel> getAllReponses() {
-        return allReponses;
+    public String getId() {
+        return id;
     }
 
-    public void setAllReponses(ArrayList<ReponseModel> allReponses) {
-        this.allReponses = allReponses;
-    }
-
-    public int getPriority() {
-        return priority;
-    }
-
-    public void setPriority(int priority) {
-        this.priority = priority;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getQuestion() {
@@ -73,40 +62,12 @@ public class QuestionModel {
         this.title = title;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public ProjetModel getProjet() {
         return projet;
     }
 
     public void setProjet(ProjetModel projet) {
         this.projet = projet;
-    }
-
-    public ArrayList<UserModel> getUserReponse() {
-        return userReponse;
-    }
-
-    public void setUserReponse(ArrayList<UserModel> userReponse) {
-        this.userReponse = userReponse;
-    }
-
-    public Boolean getOpen() {
-        return open;
-    }
-
-    public ArrayList<TagsModel> getSkills() {
-        return skills;
-    }
-
-    public void setSkills(ArrayList<TagsModel> skills) {
-        this.skills = skills;
     }
 
     public UserModel getSender() {
@@ -117,11 +78,43 @@ public class QuestionModel {
         this.sender = sender;
     }
 
+    public ArrayList<UserModel> getUserReponse() {
+        return userReponse;
+    }
+
+    public void setUserReponse(ArrayList<UserModel> userReponse) {
+        this.userReponse = userReponse;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public ArrayList<TagsModel> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(ArrayList<TagsModel> skills) {
+        this.skills = skills;
+    }
+
     public Boolean isOpen() {
         return open;
     }
 
     public void setOpen(Boolean open) {
         this.open = open;
+    }
+
+    public ArrayList<ReponseModel> getAllReponses() {
+        return allReponses;
+    }
+
+    public void setAllReponses(ArrayList<ReponseModel> allReponses) {
+        this.allReponses = allReponses;
     }
 }
