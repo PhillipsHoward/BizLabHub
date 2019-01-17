@@ -2,6 +2,7 @@ package fr.wildcodeschool.hackbus.models;
 
 public class ReponseModel {
 
+    private String id;
     private String answer;
     private UserModel sender;
 
@@ -10,6 +11,14 @@ public class ReponseModel {
     public ReponseModel(String answer, UserModel sender) {
         this.answer = answer;
         this.sender = sender;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getAnswer() {
