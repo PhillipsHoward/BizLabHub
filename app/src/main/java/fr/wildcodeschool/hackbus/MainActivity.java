@@ -18,8 +18,5 @@ public class MainActivity extends SuperActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        Intent goToFormProjet = new Intent(MainActivity.this, ProjetFormActivity.class);
-        MainActivity.this.startActivity(goToFormProjet);
     }
 }
