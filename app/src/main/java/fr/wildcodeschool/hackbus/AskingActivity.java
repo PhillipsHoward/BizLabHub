@@ -152,10 +152,11 @@ public class AskingActivity extends SuperActivity {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                //Vérifie si Nous somme a l'arrivé de la page comme cela nous n'ajouton pas la valeur du premliers champs contenu dans l'input
                 if (!isFisrt) {
                     TypeModel typeProjet = typeModelSingleton.get(position);
                     boolean isSelected = false;
+                    //Je vérifie si l'item na pas déja etais selectionné
                     for (TypeModel typeModel: typeDeProjetAdapter) {
                         if(typeModel.getNom().equals(typeProjet.getNom())){
                             Toast.makeText(getApplicationContext(), "Vous ne pouvez pas avoir deux tags similaire", Toast.LENGTH_SHORT).show();
@@ -163,6 +164,7 @@ public class AskingActivity extends SuperActivity {
                             break;
                         }
                     }
+                    // si l'item na pas etais selectioné je l'ajoute
                     if(!isSelected){
                         typeDeProjetAdapter.add(typeProjet);
                         adapterTag.notifyDataSetChanged();
