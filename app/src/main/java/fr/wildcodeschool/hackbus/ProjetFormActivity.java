@@ -10,6 +10,9 @@ import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 import java.util.ArrayList;
 
+import fr.wildcodeschool.hackbus.models.CompetenceModel;
+import fr.wildcodeschool.hackbus.models.TypeModel;
+
 public class ProjetFormActivity extends AppCompatActivity {
 
     private SearchableSpinner mSearchableSpinner = null;

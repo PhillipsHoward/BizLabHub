@@ -1,13 +1,15 @@
-package fr.wildcodeschool.hackbus;
+package fr.wildcodeschool.hackbus.models;
 
 import java.util.ArrayList;
+
+import fr.wildcodeschool.hackbus.TagsModel;
 
 public class ProjetModel {
 
     private String nom;
     private String description;
     private TypeModel typeProjet;
-    private ArrayList<CompetenceModel> competence;
+    private ArrayList<TagsModel> competence;
     private String lienGitHub;
     private ArrayList<UserModel> team;
     private UserModel initiateur;
@@ -49,11 +51,11 @@ public class ProjetModel {
         this.typeProjet = typeProjet;
     }
 
-    public ArrayList<CompetenceModel> getCompetence() {
+    public ArrayList<TagsModel> getCompetence() {
         return competence;
     }
 
-    public void setCompetence(ArrayList<CompetenceModel> competence) {
+    public void setCompetence(ArrayList<TagsModel> competence) {
         this.competence = competence;
     }
 
