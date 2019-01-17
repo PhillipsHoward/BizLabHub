@@ -15,7 +15,7 @@ public class SplashActivity extends AppCompatActivity {
         singletonData.initDatas(new SingletonDataListener() {
             @Override
             public void onResponse(boolean success) {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, AskingActivity.class));
             }
         });
     }

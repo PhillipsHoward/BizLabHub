@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus;
+package fr.wildcodeschool.hackbus.models;
 
 import java.util.ArrayList;
 
