@@ -21,12 +21,10 @@ public class ProjetInitAdapter extends RecyclerView.Adapter<ProjetInitAdapter.My
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView nom;
-        public TextView prenom;
 
         public MyViewHolder(View view) {
             super(view);
             nom = view.findViewById(R.id.tv_nom_init);
-            prenom = view.findViewById(R.id.tv_prenom_init);
         }
     }
 

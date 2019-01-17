@@ -47,7 +47,7 @@ public class ProjetTeamAdapter extends RecyclerView.Adapter<ProjetTeamAdapter.My
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         final ProjetModel projetTeam = projetTeamList.get(position);
-        holder.nom.setText(projetTeam.getNom()); // TODO récuperer les users des projets du CurrentUser
+        holder.nom.setText(projetTeam.getNom()); // TODO récuperer les projets du CurrentUser
     }
 
     @Override
