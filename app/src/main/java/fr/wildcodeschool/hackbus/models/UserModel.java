@@ -12,6 +12,8 @@ public class UserModel {
     private ArrayList<CompetenceModel> competence;
     private ArrayList<ProjetModel> projetEnCours;
     private ArrayList<ProjetModel> projetInitie;
+    private ArrayList<QuestionModel> questionAsked;
+    private ArrayList<QuestionModel> questionNeedAnswer;
     private boolean dispo;
     private String uId;
 
@@ -96,5 +98,21 @@ public class UserModel {
 
     public void setDispo(boolean dispo) {
         this.dispo = dispo;
+    }
+
+    public ArrayList<QuestionModel> getQuestionAsked() {
+        return questionAsked;
+    }
+
+    public void setQuestionAsked(ArrayList<QuestionModel> questionAsked) {
+        this.questionAsked = questionAsked;
+    }
+
+    public ArrayList<QuestionModel> getQuestionNeedAnswer() {
+        return questionNeedAnswer;
+    }
+
+    public void setQuestionNeedAnswer(ArrayList<QuestionModel> questionNeedAnswer) {
+        this.questionNeedAnswer = questionNeedAnswer;
     }
 }
