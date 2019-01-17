@@ -213,7 +213,6 @@ public class AskingActivity extends SuperActivity {
         });
     }
 
-
     private ArrayList<UserModel> selectPotentialsRecipients(ArrayList<UserModel> users, ArrayList<TagsModel> tags, ProjetModel currentProject) {
 
         ArrayList<UserModel> recipients = new ArrayList<>(users);

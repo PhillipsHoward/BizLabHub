@@ -11,4 +11,7 @@
     <color name="yellow">#FFFFE600</color>
     <color name="orange">#FFFF6F00</color>
     <color name="red">#FFCB0C0C</color>
+    <color name="green_dispo">#00FF00 </color>
+    <color name="red_not_dispo">#990000</color>
+
 </resources>
