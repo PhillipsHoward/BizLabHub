@@ -1,8 +1,18 @@
 package fr.wildcodeschool.hackbus;
 
 import android.annotation.TargetApi;
+import android.content.Context;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -28,13 +38,15 @@ public class AskingActivity extends AppCompatActivity {
     TypeModel design = new TypeModel("Design");
     TypeModel sexuel = new TypeModel("Sexuel");
     SingletonData singletonData = SingletonData.getInstance();
-
+    Context mContext;
+    boolean isFisrt = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asking);
         spinnerTag();
         seekBar();
+
     }
 
     //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
@@ -48,17 +60,31 @@ public class AskingActivity extends AppCompatActivity {
             typeDeProjets.add(typeModels);
         }
 
-        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjets);
+        final ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjets);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSearchableSpinner.setAdapter(spinnerAdapter);
         mSearchableSpinner.setPrompt(getString(R.string.selection_type));
         mSearchableSpinner.setTitle(getString(R.string.choix_type));
         mSearchableSpinner.setPositiveButton(getString(R.string.ok));
 
+        final ArrayList<TypeModel> typeDeProjetAdapter = new ArrayList<>();
+        final AskingGringAdapter adapterTag = new AskingGringAdapter(mContext, typeDeProjetAdapter);
+        RecyclerView TagRecyclerView = findViewById(R.id.TagRecyclerView);
+        TagRecyclerView.setLayoutManager(new GridLayoutManager(AskingActivity.this, 3));
+        TagRecyclerView.setAdapter(adapterTag);
+
         mSearchableSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                TypeModel typeProjet = typeModelSingleton.get(position);
+                boolean isSelected = true;
+                if(!isFisrt){
+                    adapterTag.notifyDataSetChanged();
+                    TypeModel typeProjet = typeModelSingleton.get(position);
+                    typeDeProjetAdapter.add(typeProjet);
+
+                }
+                isFisrt = false;
             }
 
             @Override
