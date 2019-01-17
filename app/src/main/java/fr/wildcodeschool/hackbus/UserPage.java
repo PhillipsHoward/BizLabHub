@@ -1,6 +1,5 @@
 package fr.wildcodeschool.hackbus;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.wildcodeschool.hackbus.adapters.CompetenceUserPageAdapter;
+import fr.wildcodeschool.hackbus.adapters.ProjetInitAdapter;
+import fr.wildcodeschool.hackbus.adapters.ProjetTeamAdapter;
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.TagsModel;

@@ -26,6 +26,13 @@ public class QuestionModel {
         this.priority = priority;
     }
 
+    public QuestionModel(String title, String question, int priority) {
+        this.open = true;
+        this.title = title;
+        this.question = question;
+        this.priority = priority;
+    }
+
     public QuestionModel(UserModel sender, String title, String question, int priority, ArrayList<String> skills) {
         this.open = true;
         this.sender = sender;

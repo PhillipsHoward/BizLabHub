@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus;
+package fr.wildcodeschool.hackbus.adapters;
 
 
 import android.content.Context;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import fr.wildcodeschool.hackbus.R;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 
 public class ProjetTeamAdapter extends RecyclerView.Adapter<ProjetTeamAdapter.MyViewHolder> {
