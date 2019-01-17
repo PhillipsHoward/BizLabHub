@@ -13,6 +13,7 @@ public class QuestionModel {
     private int priority;
     private ArrayList<String> skills;
     private Boolean open = true;
+    private ArrayList<ReponseModel> allReponses;
 
     public QuestionModel() {
     }
@@ -32,6 +33,14 @@ public class QuestionModel {
         this.question = question;
         this.priority = priority;
         this.skills = skills;
+    }
+
+    public ArrayList<ReponseModel> getAllReponses() {
+        return allReponses;
+    }
+
+    public void setAllReponses(ArrayList<ReponseModel> allReponses) {
+        this.allReponses = allReponses;
     }
 
     public int getPriority() {
