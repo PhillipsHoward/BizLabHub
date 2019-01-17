@@ -13,4 +13,5 @@
     <string name="fake_organizer_name">Phillips Howard</string>
     <string name="nb_participants">Nb.participants :</string>
     <string name="team_size">34</string>
+    <string name="no_similars_tag">Vous ne pouvez pas avoir deux tags similaire</string>
 </resources>

@@ -11,11 +11,12 @@ public class QuestionModel {
     private UserModel sender;
     private ArrayList<UserModel> userReponse;
     private int priority;
-    private ArrayList<String> skills;
+    private ArrayList<TagsModel> skills;
     private Boolean open = true;
     private ArrayList<ReponseModel> allReponses;
 
     public QuestionModel() {
+
     }
 
     public QuestionModel(UserModel sender, String title, String question, int priority) {
@@ -26,13 +27,18 @@ public class QuestionModel {
         this.priority = priority;
     }
 
-    public QuestionModel(UserModel sender, String title, String question, int priority, ArrayList<String> skills) {
+    public QuestionModel(UserModel sender, String title, String question, int priority, ArrayList<UserModel> userReponse, ArrayList<TagsModel> skills, Boolean open, ArrayList<ReponseModel> allReponses, ProjetModel projet) {
         this.open = true;
         this.sender = sender;
         this.title = title;
         this.question = question;
         this.priority = priority;
         this.skills = skills;
+        this.userReponse = userReponse;
+        this.skills = skills;
+        this.open = open;
+        this.allReponses = allReponses;
+        this.projet = projet;
     }
 
     public ArrayList<ReponseModel> getAllReponses() {
@@ -95,11 +101,11 @@ public class QuestionModel {
         return open;
     }
 
-    public ArrayList<String> getSkills() {
+    public ArrayList<TagsModel> getSkills() {
         return skills;
     }
 
-    public void setSkills(ArrayList<String> skills) {
+    public void setSkills(ArrayList<TagsModel> skills) {
         this.skills = skills;
     }
 
