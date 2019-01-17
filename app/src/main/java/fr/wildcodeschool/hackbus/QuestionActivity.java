@@ -31,7 +31,7 @@ public class QuestionActivity extends AppCompatActivity {
             isCreator = true;
         }*/
 
-        //TODO: appeler setDataQuestion & setButtons quand BDD recup'
+        //TODO: appeler getDataQuestion & setButtons quand BDD recup'
 
         //TODO: créer Adapter et l'appeler avec ITEM_QUESTION
     }
