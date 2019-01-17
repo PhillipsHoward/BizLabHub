@@ -14,8 +14,6 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".ProjetFormActivity" />
-        <activity android:name=".AddCompetencesProjet" />
         <activity android:name=".SplashActivity"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar">
@@ -32,6 +30,9 @@
         <activity android:name=".AddCompetencesProjet" />
         <activity android:name=".UserForm" />
         <activity android:name=".UserPage"></activity>
+        <activity android:name=".AskingActivity">
+
+        </activity>
     </application>
 
 </manifest>

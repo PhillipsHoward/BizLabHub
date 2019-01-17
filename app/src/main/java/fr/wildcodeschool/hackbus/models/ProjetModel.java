@@ -2,7 +2,6 @@ package fr.wildcodeschool.hackbus.models;
 
 import java.util.ArrayList;
 
-import fr.wildcodeschool.hackbus.TagsModel;
 
 public class ProjetModel {
 

@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FormProjetActivity">
+    tools:context=".ProjetFormActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -115,6 +115,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_description_projet" />
 
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/sp_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/github_project"/>
+
             <EditText
                 android:id="@+id/et_description_projet"
                 android:layout_width="0dp"
@@ -132,20 +145,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_projet_nom" />
-
-            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                android:id="@+id/sp_type"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/github_project" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline"

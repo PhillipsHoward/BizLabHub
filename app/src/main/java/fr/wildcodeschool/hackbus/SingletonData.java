@@ -9,12 +9,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
+
+import fr.wildcodeschool.hackbus.models.ProjetModel;
+import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class SingletonData {
@@ -93,6 +96,7 @@ public class SingletonData {
         });
 
     }
+
     public void initProjectsList(final SingletonDataListener mySingletonDataListener){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refProjets = firebaseDatabase.getReference("projets");
