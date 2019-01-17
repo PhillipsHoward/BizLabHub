@@ -275,7 +275,42 @@ public class SingletonData {
             databaseReference.addChildEventListener(presenceListener);
     }
 
-    public void addAQuestion(QuestionModel question){}
+    public void askAQuestion(QuestionModel question){
+        final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        String projetID = question.getProjet().getId();
+        String senderId = question.getSender().getuId();
+        DatabaseReference projetRef = firebaseDatabase.getReference("projets").child(projetID).child("questions");
+        String key = projetRef.push().getKey();
+        question.setId(key);
+        projetRef.setValue(question);
+
+        for(ProjetModel projet : projects){
+            if(projet.getId().equals(projetID)) projet.getQuestions().add(question);
+        }
+
+        for(UserModel user : users){
+            if(user.getuId().equals(senderId)) {
+                user.getQuestionAsked().add(question);
+                updateUser(user);
+            }
+        }
+
+        for(UserModel userAnswer : question.getUserReponse()){
+            for(UserModel user : users){
+                if(user.getuId().equals(userAnswer.getuId())){
+                    user.getQuestionAsked().add(question);
+                    updateUser(user);
+                }
+            }
+        }
+
+
+
+
+
+
+
+    }
 
 
 }
