@@ -37,7 +37,7 @@ public class AskingActivity extends AppCompatActivity {
         seekBar();
     }
 
-    //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
+    //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
     public void spinnerTag() {
         mSearchableSpinner = findViewById(R.id.sp_tag);
 
