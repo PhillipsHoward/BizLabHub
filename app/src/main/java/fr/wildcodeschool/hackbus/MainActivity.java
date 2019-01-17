@@ -1,19 +1,13 @@
 package fr.wildcodeschool.hackbus;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
-import fr.wildcodeschool.hackbus.models.CompetenceModel;
-import fr.wildcodeschool.hackbus.models.ProjetModel;
-import fr.wildcodeschool.hackbus.models.TypeModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class MainActivity extends SuperActivity {
@@ -23,8 +17,14 @@ public class MainActivity extends SuperActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent goToFormProjet = new Intent(MainActivity.this, ProjetFormActivity.class);
-        MainActivity.this.startActivity(goToFormProjet);
+        final SingletonData singletonData = SingletonData.getInstance();
+        singletonData.initListenerPresence(new PresenceListener() {
+            @Override
+            public void onChange(UserModel user) {
+                if(!singletonData.getcUser().getuId().equals(user.getuId()))
+                Toast.makeText(MainActivity.this, user.getPrenom() + " connexion : " + user.isDispo(), Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 }

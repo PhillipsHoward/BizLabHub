@@ -23,4 +23,5 @@ public class ProjectsListActivity extends SuperActivity {
         ProjectsListAdapter adapter = new ProjectsListAdapter(projectsModels);
         listProjects.setAdapter(adapter);
     }
+
 }
