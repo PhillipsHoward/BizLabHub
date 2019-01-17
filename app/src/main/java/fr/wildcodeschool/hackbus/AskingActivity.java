@@ -30,10 +30,6 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class AskingActivity extends SuperActivity {
 
-    TypeModel informatique = new TypeModel("Informatique");
-    TypeModel mecanique = new TypeModel("Mecanique");
-    TypeModel design = new TypeModel("Design");
-    TypeModel sexuel = new TypeModel("Sexuel");
     SingletonData singletonData = SingletonData.getInstance();
     Context mContext;
     boolean isFisrt = true;
