@@ -8,6 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.wildcodeschool.hackbus.models.CompetenceModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
+
 public class UserForm extends AppCompatActivity {
 
     @Override

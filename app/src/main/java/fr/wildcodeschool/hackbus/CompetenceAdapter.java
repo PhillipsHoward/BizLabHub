@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import fr.wildcodeschool.hackbus.models.CompetenceModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
+
 public class CompetenceAdapter extends RecyclerView.Adapter<CompetenceAdapter.MyViewHolder> {
 
     private List<CompetenceModel> competenceList;

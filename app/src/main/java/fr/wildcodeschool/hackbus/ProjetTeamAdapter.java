@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import fr.wildcodeschool.hackbus.models.UserModel;
+
 public class ProjetTeamAdapter extends RecyclerView.Adapter<ProjetTeamAdapter.MyViewHolder> {
 
     private List<UserModel> userTeamList;
