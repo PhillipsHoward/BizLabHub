@@ -14,10 +14,10 @@ import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
 
 public class AskingGringAdapter extends RecyclerView.Adapter<AskingGringAdapter.ViewHolder> {
-    private ArrayList<TypeModel> mTag;
+    private ArrayList<TagsModel> mTag;
     private Context mContext;
 
-    public AskingGringAdapter(Context mContext, ArrayList<TypeModel> mTag) {
+    public AskingGringAdapter(Context mContext, ArrayList<TagsModel> mTag) {
         this.mContext = mContext;
         this.mTag = mTag;
     }

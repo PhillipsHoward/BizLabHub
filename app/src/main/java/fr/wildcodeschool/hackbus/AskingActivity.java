@@ -33,10 +33,6 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class AskingActivity extends SuperActivity {
 
-    TypeModel informatique = new TypeModel("Informatique");
-    TypeModel mecanique = new TypeModel("Mecanique");
-    TypeModel design = new TypeModel("Design");
-    TypeModel sexuel = new TypeModel("Sexuel");
     SingletonData singletonData = SingletonData.getInstance();
     Context mContext;
     boolean isFisrt = true;
@@ -131,14 +127,13 @@ public class AskingActivity extends SuperActivity {
         });
     }
 
-    //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
     public void spinnerTag() {
         mSearchableSpinner = findViewById(R.id.sp_tag);
 
-        final ArrayList<TypeModel> typeModelSingleton = singletonData.getTypes();
-        ArrayList<String> typeDeProjets = new ArrayList<>();
-        for (TypeModel typeModel : typeModelSingleton) {
-            typeModels = typeModel.getNom();
+        final ArrayList<TagsModel> tagModelSingleton = singletonData.getTags();
+        final ArrayList<String> typeDeProjets = new ArrayList<>();
+        for (TagsModel tagModel : tagModelSingleton) {
+            typeModels = tagModel.getNom();
             typeDeProjets.add(typeModels);
         }
 
@@ -149,7 +144,8 @@ public class AskingActivity extends SuperActivity {
         mSearchableSpinner.setTitle(getString(R.string.choix_type));
         mSearchableSpinner.setPositiveButton(getString(R.string.ok));
 
-        final ArrayList<TypeModel> typeDeProjetAdapter = new ArrayList<>();
+        //TODO récuperer cette liste de tag (typeDeProjetAdapter) pour transferé les info de la question
+        final ArrayList<TagsModel> typeDeProjetAdapter = new ArrayList<>();
         final AskingGringAdapter adapterTag = new AskingGringAdapter(mContext, typeDeProjetAdapter);
         RecyclerView TagRecyclerView = findViewById(R.id.TagRecyclerView);
         TagRecyclerView.setLayoutManager(new GridLayoutManager(AskingActivity.this, 3));
@@ -159,12 +155,23 @@ public class AskingActivity extends SuperActivity {
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                boolean isSelected = true;
+                //Vérifie si Nous somme a l'arrivé de la page comme cela nous n'ajouton pas la valeur du premliers champs contenu dans l'input
                 if (!isFisrt) {
-                    adapterTag.notifyDataSetChanged();
-                    TypeModel typeProjet = typeModelSingleton.get(position);
-                    typeDeProjetAdapter.add(typeProjet);
-
+                    TagsModel typeTag = tagModelSingleton.get(position);
+                    boolean isSelected = false;
+                    //Je vérifie si l'item na pas déja etais selectionné
+                    for (TagsModel tagModel: typeDeProjetAdapter) {
+                        if(tagModel.getNom().equals(typeTag.getNom())){
+                            Toast.makeText(getApplicationContext(), "Vous ne pouvez pas avoir deux tags similaire", Toast.LENGTH_SHORT).show();
+                            isSelected = true;
+                            break;
+                        }
+                    }
+                    // si l'item na pas etais selectioné je l'ajoute
+                    if(!isSelected){
+                        typeDeProjetAdapter.add(typeTag);
+                        adapterTag.notifyDataSetChanged();
+                    }
                 }
                 isFisrt = false;
             }
@@ -237,7 +244,6 @@ public class AskingActivity extends SuperActivity {
             }
 
             for (TagsModel tag : tags) {
-
                 boolean hasTheGoodTag = false;
                 for (CompetenceModel competence : user.getCompetence()) {
                     if (competence.getTag().getuId() == tag.getuId()) {
@@ -245,13 +251,11 @@ public class AskingActivity extends SuperActivity {
                         break;
                     }
                 }
-
                 if (!hasTheGoodTag) {
                     recipients.remove(user);
                 }
             }
         }
-
         return recipients;
     }
 }
