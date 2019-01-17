@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.TreeSet;
 
 import fr.wildcodeschool.hackbus.models.ProjetModel;
+import fr.wildcodeschool.hackbus.models.QuestionModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
@@ -233,6 +234,8 @@ public class SingletonData {
 
     }
 
+    public void initListenerQuestionReponse(){}
+
     public void initListenerPresence(final PresenceListener presenceListenerInterface){
         ChildEventListener presenceListener = new ChildEventListener() {
 
@@ -271,6 +274,8 @@ public class SingletonData {
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
             databaseReference.addChildEventListener(presenceListener);
     }
+
+    public void addAQuestion(QuestionModel question){}
 
 
 }
