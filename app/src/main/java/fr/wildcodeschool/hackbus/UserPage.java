@@ -18,14 +18,16 @@ public class UserPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_page);
 
+        //competence
         RecyclerView competenceList = findViewById(R.id.competenceUserList);
         LinearLayoutManager LayoutManager = new LinearLayoutManager(this);
         competenceList.setLayoutManager(LayoutManager);
 
         List<CompetenceModel> competences = new ArrayList<>();
-        CompetenceAdapter adapter = new CompetenceAdapter(competences, this, new UserModel());
+        CompetenceUserPageAdapter adapter = new CompetenceUserPageAdapter(competences, this, new UserModel());
         competenceList.setAdapter(adapter);
 
+        //projet team
         RecyclerView projetTeamList = findViewById(R.id.projetTeamList);
         LinearLayoutManager LayoutManager2 = new LinearLayoutManager(this);
         projetTeamList.setLayoutManager(LayoutManager2);
@@ -33,6 +35,15 @@ public class UserPage extends AppCompatActivity {
         List<UserModel> userTeam = new ArrayList<>();
         ProjetTeamAdapter adapter2 = new ProjetTeamAdapter(userTeam, this);
         competenceList.setAdapter(adapter2);
+
+        //projet init
+        RecyclerView projetInitList = findViewById(R.id.myProjetList);
+        LinearLayoutManager LayoutManager3 = new LinearLayoutManager(this);
+        projetInitList.setLayoutManager(LayoutManager3);
+
+        List<UserModel> userInit = new ArrayList<>();
+        ProjetInitAdapter adapter3 = new ProjetInitAdapter(userInit, this);
+        competenceList.setAdapter(adapter3);
 
     }
 }

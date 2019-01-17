@@ -66,7 +66,7 @@ public class ProjetFormActivity extends AppCompatActivity {
         mSearchableSpinner = findViewById(R.id.sp_competence);
 
         final ArrayList<CompetenceModel> competence = new ArrayList<>(); // TODO récuperer les competenceModels
-        SingletonData.getInstance().getTags();
+        //SingletonData.getInstance().getTags();
 
         final ArrayAdapter<CompetenceModel> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, competence);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
