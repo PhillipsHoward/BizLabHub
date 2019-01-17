@@ -14,6 +14,8 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".ProjetFormActivity" />
+        <activity android:name=".AddCompetencesProjet" />
         <activity android:name=".SplashActivity"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar">
@@ -23,14 +25,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AskingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AnswerActivity"></activity>
         <activity android:name=".LogInActivity" />
         <activity android:name=".ProjectsListActivity" />
         <activity android:name=".RequestsListActivity"></activity>
-        <activity android:name=".ProjetFormActivity" />
-        <activity android:name=".AddCompetencesProjet"></activity>
-        <activity android:name=".AskingActivity">
-
-        </activity>
     </application>
 
 </manifest>
