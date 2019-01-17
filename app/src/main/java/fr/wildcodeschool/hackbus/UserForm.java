@@ -11,7 +11,7 @@ import java.util.List;
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
-public class UserForm extends AppCompatActivity {
+public class UserForm extends SuperActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
