@@ -123,14 +123,13 @@ public class AskingActivity extends SuperActivity {
         });
     }
 
-    //TODO IMPLEMENTER UNE LISTE TAG DE FIREBAAAASE ! (pour l'instant petite liste des compétences a la place pour tester le spinner)
     public void spinnerTag() {
         mSearchableSpinner = findViewById(R.id.sp_tag);
 
-        final ArrayList<TypeModel> typeModelSingleton = singletonData.getTypes();
+        final ArrayList<TagsModel> tagModelSingleton = singletonData.getTags();
         final ArrayList<String> typeDeProjets = new ArrayList<>();
-        for (TypeModel typeModel : typeModelSingleton) {
-            typeModels = typeModel.getNom();
+        for (TagsModel tagModel : tagModelSingleton) {
+            typeModels = tagModel.getNom();
             typeDeProjets.add(typeModels);
         }
 
@@ -142,7 +141,7 @@ public class AskingActivity extends SuperActivity {
         mSearchableSpinner.setPositiveButton(getString(R.string.ok));
 
         //TODO récuperer cette liste de tag (typeDeProjetAdapter) pour transferé les info de la question
-        final ArrayList<TypeModel> typeDeProjetAdapter = new ArrayList<>();
+        final ArrayList<TagsModel> typeDeProjetAdapter = new ArrayList<>();
         final AskingGringAdapter adapterTag = new AskingGringAdapter(mContext, typeDeProjetAdapter);
         RecyclerView TagRecyclerView = findViewById(R.id.TagRecyclerView);
         TagRecyclerView.setLayoutManager(new GridLayoutManager(AskingActivity.this, 3));
@@ -154,11 +153,11 @@ public class AskingActivity extends SuperActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //Vérifie si Nous somme a l'arrivé de la page comme cela nous n'ajouton pas la valeur du premliers champs contenu dans l'input
                 if (!isFisrt) {
-                    TypeModel typeProjet = typeModelSingleton.get(position);
+                    TagsModel typeTag = tagModelSingleton.get(position);
                     boolean isSelected = false;
                     //Je vérifie si l'item na pas déja etais selectionné
-                    for (TypeModel typeModel: typeDeProjetAdapter) {
-                        if(typeModel.getNom().equals(typeProjet.getNom())){
+                    for (TagsModel tagModel: typeDeProjetAdapter) {
+                        if(tagModel.getNom().equals(typeTag.getNom())){
                             Toast.makeText(getApplicationContext(), "Vous ne pouvez pas avoir deux tags similaire", Toast.LENGTH_SHORT).show();
                             isSelected = true;
                             break;
@@ -166,7 +165,7 @@ public class AskingActivity extends SuperActivity {
                     }
                     // si l'item na pas etais selectioné je l'ajoute
                     if(!isSelected){
-                        typeDeProjetAdapter.add(typeProjet);
+                        typeDeProjetAdapter.add(typeTag);
                         adapterTag.notifyDataSetChanged();
                     }
                 }
