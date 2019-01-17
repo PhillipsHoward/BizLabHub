@@ -11,12 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".ProjetFormActivity" />
         <activity android:name=".AddCompetencesProjet" />
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -32,10 +31,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AnswerActivity"></activity>
+        <activity android:name=".QuestionActivity" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".ProjectsListActivity" />
-        <activity android:name=".RequestsListActivity"></activity>
+        <activity android:name=".RequestsListActivity" />
+        <activity android:name=".AnswerActivity"></activity>
     </application>
 
 </manifest>
