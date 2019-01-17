@@ -29,7 +29,6 @@
         <activity android:name=".LogInActivity" />
         <activity android:name=".ProjectsListActivity" />
         <activity android:name=".RequestsListActivity" />
-        <activity android:name=".AnswerActivity"/>
         <activity android:name=".UserForm" />
         <activity android:name=".UserPage"/>
     </application>
