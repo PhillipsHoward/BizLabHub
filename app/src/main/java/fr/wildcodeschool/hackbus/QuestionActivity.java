@@ -4,8 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 import fr.wildcodeschool.hackbus.models.QuestionModel;
 
@@ -21,6 +24,56 @@ public class QuestionActivity extends AppCompatActivity {
         mSingleton = Singleton.getInstance();
 
         //TODO: appeler setDataQuestion & setButtons quand BDD recup'
+
+        infoButton();
+    }
+
+    private void infoButton() {
+        ImageButton info = findViewById(R.id.ib_info);
+        final View greyView = findViewById(R.id.view_grey);
+        final TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showInfoPopup();
+            }
+        });
+
+        greyView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeInfoPopup();
+            }
+        });
+
+        priorityMeaning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeInfoPopup();
+
+            }
+        });
+    }
+
+    private void closeInfoPopup() {
+        View greyView = findViewById(R.id.view_grey);
+        TextView priorityPopup = findViewById(R.id.tv_priority_popup);
+        TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+
+        greyView.setVisibility(View.GONE);
+        priorityPopup.setVisibility(View.GONE);
+        priorityMeaning.setVisibility(View.GONE);
+    }
+
+    private void showInfoPopup() {
+        View greyView = findViewById(R.id.view_grey);
+        TextView priorityPopup = findViewById(R.id.tv_priority_popup);
+        TextView priorityMeaning = findViewById(R.id.tv_meaning_priority);
+
+        greyView.setVisibility(View.VISIBLE);
+        priorityPopup.setVisibility(View.VISIBLE);
+        priorityMeaning.setVisibility(View.VISIBLE);
     }
 
     private void setButtons() {
@@ -38,8 +91,15 @@ public class QuestionActivity extends AppCompatActivity {
         noTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mSingleton.getUser().getQuestionNeedAnswer().remove(currentQuestion);
-                //TODO: à vérifier
+                ArrayList<QuestionModel> questionList = mSingleton.getUser().getQuestionNeedAnswer();
+                for(int i = 0; i < questionList.size(); i ++) {
+                    if(questionList.get(i).getId() == currentQuestion.getId()) {
+                        questionList.remove(i);
+                    }
+                }
+                mSingleton.getUser().setQuestionNeedAnswer(questionList);
+                //TODO: à vérifier OU tester celle commentee
+               // mSingleton.getUser().getQuestionNeedAnswer().remove(currentQuestion);
             }
         });
     }

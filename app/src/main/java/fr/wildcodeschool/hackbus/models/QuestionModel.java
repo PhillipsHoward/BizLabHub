@@ -3,6 +3,7 @@ package fr.wildcodeschool.hackbus.models;
 import java.util.ArrayList;
 
 public class QuestionModel {
+    private int id;
     private String question;
     private String title;
     private String projet;
@@ -68,5 +69,13 @@ public class QuestionModel {
 
     public void setSkills(ArrayList<String> skills) {
         this.skills = skills;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

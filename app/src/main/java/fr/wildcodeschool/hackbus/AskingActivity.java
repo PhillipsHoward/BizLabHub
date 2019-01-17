@@ -1,5 +1,6 @@
 package fr.wildcodeschool.hackbus;
 
+import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,7 +50,7 @@ public class AskingActivity extends AppCompatActivity {
 
         seekBar();
 
-        //sendButton();
+        sendButton();
 
         infoButton();
     }
@@ -118,6 +119,7 @@ public class AskingActivity extends AppCompatActivity {
                 } else {
                     QuestionModel newQuestion = new QuestionModel(mSingleton.getUser(), titleText, questionText, mSeekBarProgress);
                     //TODO: model question tout prêt à balancer quelque part
+                    startActivity(new Intent(AskingActivity.this, QuestionActivity.class));
                 }
             }
         });
