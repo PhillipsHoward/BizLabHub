@@ -1,8 +1,13 @@
 package fr.wildcodeschool.hackbus;
 
+import android.app.Application;
+import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,7 +27,7 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class SingletonData {
 
-    public static final String UID_PERSO = "-LWQ8ZI6sNDlSvXG6cNU";
+    public static final String UID_PERSO = "-LWMcSuFQXu5fkvCt40K";
 
     public static final SingletonData ourInstance = new SingletonData();
     private ArrayList<ProjetModel> projects = new ArrayList<>();
@@ -145,6 +150,7 @@ public class SingletonData {
                     users.add(user);
                 }
                 myDataListener.onResponse(true);
+
             }
 
             @Override
@@ -223,5 +229,47 @@ public class SingletonData {
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference refUser = firebaseDatabase.getReference("users").child(user.getuId());
         refUser.setValue(user);
+
     }
+
+    public void initListenerPresence(final PresenceListener presenceListenerInterface){
+        ChildEventListener presenceListener = new ChildEventListener() {
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                dataSnapshot.getKey();
+                for(UserModel userModel : SingletonData.getInstance().getUsers()){
+                    if(userModel.getuId().equals(dataSnapshot.getKey())){
+                        userModel.setDispo((boolean) dataSnapshot.child("dispo").getValue());
+                        presenceListenerInterface.onChange(userModel);
+                    }
+                }
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        };
+
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
+            databaseReference.addChildEventListener(presenceListener);
+    }
+
+
 }
