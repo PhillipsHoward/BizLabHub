@@ -1,6 +1,5 @@
 package fr.wildcodeschool.hackbus;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 import android.view.Menu;
@@ -112,7 +111,34 @@ public class MainActivity extends SuperActivity {
                 Toast.makeText(MainActivity.this, user.getPrenom() + " connexion : " + user.isDispo(), Toast.LENGTH_LONG).show();
             }
         });
-        startActivity(new Intent(MainActivity.this, AskingActivity.class));
+/*
+        Button listProject = findViewById(R.id.bt_projet_list);
+        Button createProject = findViewById(R.id.bt_form_projet);
+        Button userPage = findViewById(R.id.bt_user_page);
+
+        listProject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToListProject = new Intent(MainActivity.this, ProjectsListActivity.class);
+                MainActivity.this.startActivity(goToListProject);
+            }
+        });
+
+        createProject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToFormProject = new Intent(MainActivity.this, ProjetFormActivity.class);
+                MainActivity.this.startActivity(goToFormProject);
+            }
+        });
+
+        userPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToUserPage = new Intent(MainActivity.this, UserPage.class);
+                MainActivity.this.startActivity(goToUserPage);
+            }
+        });*/
 
     }
 }
