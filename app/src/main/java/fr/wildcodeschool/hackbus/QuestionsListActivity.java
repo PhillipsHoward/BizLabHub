@@ -8,11 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import fr.wildcodeschool.hackbus.adapters.QuestionsListAdapter;
 import fr.wildcodeschool.hackbus.models.QuestionModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class QuestionsListActivity extends AppCompatActivity {
 
@@ -22,6 +24,25 @@ public class QuestionsListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions_list);
+
+        final SingletonData singletonData = SingletonData.getInstance();
+        singletonData.initListenerPresence(new PresenceListener() {
+            @Override
+            public void onChange(UserModel user) {
+                if(!singletonData.getcUser().getuId().equals(user.getuId())) {
+                    if(user.isDispo()) Toast.makeText(QuestionsListActivity.this, user.getPrenom() + " is connected !", Toast.LENGTH_LONG).show();
+                    else Toast.makeText(QuestionsListActivity.this, user.getPrenom() + " disconnected !", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        singletonData.getANewQuestionListener(new QuestionReponseListener() {
+            @Override
+            public void onChange(QuestionModel question) {
+                UserModel sender = singletonData.findUserById(question.getSenderId());
+                Toast.makeText(QuestionsListActivity.this, sender.getPrenom() + " send you a new question : " + question.getTitle(), Toast.LENGTH_LONG).show();
+            }
+        }, singletonData.getcUser());
 
         setAdapter();
     }

@@ -28,6 +28,25 @@ public class QuestionActivity extends AppCompatActivity {
         mSingleton = Singleton.getInstance();
         mDataSingleton = SingletonData.getInstance();
 
+        final SingletonData singletonData = SingletonData.getInstance();
+        singletonData.initListenerPresence(new PresenceListener() {
+            @Override
+            public void onChange(UserModel user) {
+                if(!singletonData.getcUser().getuId().equals(user.getuId())) {
+                    if(user.isDispo()) Toast.makeText(QuestionActivity.this, user.getPrenom() + " is connected !", Toast.LENGTH_LONG).show();
+                    else Toast.makeText(QuestionActivity.this, user.getPrenom() + " disconnected !", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        singletonData.getANewQuestionListener(new QuestionReponseListener() {
+            @Override
+            public void onChange(QuestionModel question) {
+                UserModel sender = singletonData.findUserById(question.getSenderId());
+                Toast.makeText(QuestionActivity.this, sender.getPrenom() + " send you a new question : " + question.getTitle(), Toast.LENGTH_LONG).show();
+            }
+        }, singletonData.getcUser());
+
         //mCurrentQuestion = mSingleton.getCurrentQuestion();
 
         /*TODO: à décommenter quand BDD sera OK

@@ -46,6 +46,25 @@ public class AskingActivity extends SuperActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asking);
 
+        final SingletonData singletonData = SingletonData.getInstance();
+        singletonData.initListenerPresence(new PresenceListener() {
+            @Override
+            public void onChange(UserModel user) {
+                if(!singletonData.getcUser().getuId().equals(user.getuId())) {
+                    if(user.isDispo()) Toast.makeText(AskingActivity.this, user.getPrenom() + " is connected !", Toast.LENGTH_LONG).show();
+                    else Toast.makeText(AskingActivity.this, user.getPrenom() + " disconnected !", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        singletonData.getANewQuestionListener(new QuestionReponseListener() {
+            @Override
+            public void onChange(QuestionModel question) {
+                UserModel sender = singletonData.findUserById(question.getSenderId());
+                Toast.makeText(AskingActivity.this, sender.getPrenom() + " send you a new question : " + question.getTitle(), Toast.LENGTH_LONG).show();
+            }
+        }, singletonData.getcUser());
+
         mSingleton = Singleton.getInstance();
         spinnerTag();
         seekBar();
