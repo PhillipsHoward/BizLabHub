@@ -8,13 +8,16 @@ public class ProjetModel {
     private String nom;
     private String description;
     private TypeModel typeProjet;
-    private ArrayList<TagsModel> competence;
+    private ArrayList<TagsModel> competence = new ArrayList<>();
     private String lienGitHub;
-    private ArrayList<UserModel> team;
+    private ArrayList<UserModel> team = new ArrayList<>();
     private UserModel initiateur;
     private String photo;
     private String id;
-    private ArrayList<QuestionModel> questions;
+    private ArrayList<QuestionModel> questions = new ArrayList<>();
+
+    public ProjetModel() {
+    }
 
     public ArrayList<QuestionModel> getQuestions() {
         return questions;
@@ -30,9 +33,6 @@ public class ProjetModel {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public ProjetModel() {
     }
 
     public String getNom() {
@@ -97,5 +97,21 @@ public class ProjetModel {
 
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+    @Override
+    public String toString() {
+        return "ProjetModel{" +
+                "nom='" + nom + '\'' +
+                ", description='" + description + '\'' +
+                ", typeProjet=" + typeProjet +
+                ", competence=" + competence +
+                ", lienGitHub='" + lienGitHub + '\'' +
+                ", team=" + team +
+                ", initiateur=" + initiateur +
+                ", photo='" + photo + '\'' +
+                ", id='" + id + '\'' +
+                ", questions=" + questions +
+                '}';
     }
 }

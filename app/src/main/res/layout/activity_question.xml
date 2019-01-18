@@ -127,7 +127,7 @@
                     android:id="@+id/send"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/classic_border"
+                    android:background="@drawable/classic_border_colorprimary"
                     android:text="Send"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="@+id/et_answer"
@@ -225,10 +225,10 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_close_open_confirmation" />
+        app:layout_constraintTop_toTopOf="@+id/tv_quicky" />
 
     <TextView
-        android:id="@+id/tv_close_open_confirmation"
+        android:id="@+id/tv_quicky"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

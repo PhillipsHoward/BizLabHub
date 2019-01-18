@@ -17,28 +17,21 @@ public class SuperActivity extends AppCompatActivity {
     Switch mSwitchAB;
     private static String NOT_DISPO = "Not now, I'm busy";
     private static String DISPO = "Open office !";
-
-
+    SingletonData mDataSingleton = SingletonData.getInstance();
 
     @Override
     protected void onStart() {
-        changeStatus(false);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ResourcesCompat.getColor(getResources(), R.color.red, null)));
-        changeText(NOT_DISPO);
         super.onStart();
     }
 
     @Override
     protected void onStop() {
-        changeStatus(false);
         super.onStop();
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        mSwitchAB.setChecked(false);
-        //changeStatus(false);
     }
 
 
@@ -51,22 +44,26 @@ public class SuperActivity extends AppCompatActivity {
 
         mSwitchAB = item
                 .getActionView().findViewById(R.id.switchAB);
-        mSwitchAB.setChecked(false);
+        if(mDataSingleton.getcUser().isDispo()) {
+            mSwitchAB.setChecked(true);
+            changeText(DISPO);
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ResourcesCompat.getColor(getResources(), R.color.green, null)));
+        } else {
+            mSwitchAB.setChecked(false);
+            changeText(NOT_DISPO);
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ResourcesCompat.getColor(getResources(), R.color.red, null)));
+        }
 
         mSwitchAB.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
                 if (isChecked) {
-                    Toast.makeText(getApplication(), "You're now ready to answer questions", Toast.LENGTH_SHORT)
-                            .show();
                     getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ResourcesCompat.getColor(getResources(), R.color.green, null)));
                     changeText(DISPO);
                     changeStatus(true);
 
                 } else {
-                    Toast.makeText(getApplication(), "You will not receive questions for now", Toast.LENGTH_SHORT)
-                            .show();
                     getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ResourcesCompat.getColor(getResources(), R.color.red, null)));
                     changeText(NOT_DISPO);
                     changeStatus(false);

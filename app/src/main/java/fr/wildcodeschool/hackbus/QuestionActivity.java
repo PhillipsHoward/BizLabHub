@@ -11,10 +11,12 @@ import android.widget.Toast;
 
 import fr.wildcodeschool.hackbus.models.QuestionModel;
 import fr.wildcodeschool.hackbus.models.ReponseModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class QuestionActivity extends AppCompatActivity {
 
     private Singleton mSingleton;
+    private SingletonData mDataSingleton;
     private QuestionModel mCurrentQuestion;
     private Boolean isCreator = false;
 
@@ -24,6 +26,8 @@ public class QuestionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_question);
 
         mSingleton = Singleton.getInstance();
+        mDataSingleton = SingletonData.getInstance();
+
         //mCurrentQuestion = mSingleton.getCurrentQuestion();
 
         /*TODO: à décommenter quand BDD sera OK
@@ -40,7 +44,7 @@ public class QuestionActivity extends AppCompatActivity {
     private void setButtons() {
         Button answerButton = findViewById(R.id.send);
         TextView openOrClose = findViewById(R.id.tv_open_close);
-        TextView closeOpenConfirmation = findViewById(R.id.tv_close_open_confirmation);
+        TextView closeOpenConfirmation = findViewById(R.id.tv_quicky);
 
         final EditText answer = findViewById(R.id.et_answer);
 
@@ -50,9 +54,9 @@ public class QuestionActivity extends AppCompatActivity {
                 String answerText = answer.getText().toString();
 
                 if(answerText.isEmpty()){
-                    Toast.makeText(QuestionActivity.this, "Please write your answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionActivity.this, "Please write your answerNow", Toast.LENGTH_SHORT).show();
                 } else {
-                    ReponseModel newReponse = new ReponseModel(answerText, mSingleton.getUser());
+                    ReponseModel newReponse = new ReponseModel(answerText, mDataSingleton.getcUser());
                     //TODO: à balancer vers la BDD
                 }
             }
@@ -80,7 +84,7 @@ public class QuestionActivity extends AppCompatActivity {
     private void closeInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView closeOpenPopup = findViewById(R.id.tv_close_open_popup);
-        TextView closeOpenConfirmation = findViewById(R.id.tv_close_open_confirmation);
+        TextView closeOpenConfirmation = findViewById(R.id.tv_quicky);
 
         greyView.setVisibility(View.GONE);
         closeOpenPopup.setVisibility(View.GONE);
@@ -90,7 +94,7 @@ public class QuestionActivity extends AppCompatActivity {
     private void showInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView closeOpenPopup = findViewById(R.id.tv_close_open_popup);
-        TextView closeOpenConfirmation = findViewById(R.id.tv_close_open_confirmation);
+        TextView closeOpenConfirmation = findViewById(R.id.tv_quicky);
 
         greyView.setVisibility(View.VISIBLE);
         closeOpenPopup.setVisibility(View.VISIBLE);
@@ -103,12 +107,13 @@ public class QuestionActivity extends AppCompatActivity {
         TextView question = findViewById(R.id.tv_question);
         TextView userNameQuestion = findViewById(R.id.tv_user_question);
         TextView openOrClose = findViewById(R.id.tv_open_close);
-
-        String nameAndFirstLastnameLetter = mCurrentQuestion.getSender().getPrenom() + mCurrentQuestion.getSender().getNom().charAt(0);
+        UserModel sender = mDataSingleton.findUserById(mCurrentQuestion.getSenderId());
+        String nameAndFirstLastnameLetter = sender.getPrenom() + " " + sender.getNom().charAt(0);
 
         title.setText(mCurrentQuestion.getTitle());
         question.setText(mCurrentQuestion.getQuestion());
         userNameQuestion.setText(nameAndFirstLastnameLetter);
+        userNameQuestion.setText("RB");
 
         if(!mCurrentQuestion.isOpen()) {
             openOrClose.setText("CLOSE");

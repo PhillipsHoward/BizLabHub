@@ -1,5 +1,6 @@
 package fr.wildcodeschool.hackbus;
 
+import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.QuestionModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
@@ -8,6 +9,8 @@ public class Singleton {
     private static final Singleton ourInstance = new Singleton();
     private QuestionModel currentQuestion;
     private UserModel user;
+    private ProjetModel newProject = new ProjetModel();
+    private ProjetModel currentProject = new ProjetModel();
 
     public static Singleton getInstance() {
         return ourInstance;
@@ -15,6 +18,14 @@ public class Singleton {
 
     private Singleton() {
 
+    }
+
+    public ProjetModel getNewProject() {
+        return newProject;
+    }
+
+    public void setNewProject(ProjetModel newProject) {
+        this.newProject = newProject;
     }
 
     public QuestionModel getCurrentQuestion() {
@@ -25,12 +36,12 @@ public class Singleton {
         this.currentQuestion = currentQuestion;
     }
 
-    public UserModel getUser() {
-        return user;
+    public ProjetModel getCurrentProject() {
+        return currentProject;
     }
 
-    public void setUser(UserModel user) {
-        this.user = user;
+    public void setCurrentProject(ProjetModel currentProject) {
+        this.currentProject = currentProject;
     }
 
 }

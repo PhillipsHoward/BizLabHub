@@ -13,4 +13,10 @@
     <string name="fake_organizer_name">Phillips Howard</string>
     <string name="nb_participants">Nb.participants :</string>
     <string name="team_size">34</string>
+    <string name="menu">MENU</string>
+    <string name="create_new_project">Create new project</string>
+    <string name="project_s_list">Project\'s list</string>
+    <string name="user_page">User Page</string>
+    <string name="create_project">Create Project</string>
+    <string name="no_similars_tag">Vous ne pouvez pas avoir deux tags similaire</string>
 </resources>
