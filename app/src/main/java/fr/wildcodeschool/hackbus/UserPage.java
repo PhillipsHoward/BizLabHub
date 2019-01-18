@@ -29,9 +29,10 @@ public class UserPage extends SuperActivity {
 
         List<CompetenceModel> competences = new ArrayList<>();
         for (CompetenceModel competence : SingletonData.getInstance().getcUser().getCompetence()) {
-            for (TagsModel tag : SingletonData.getInstance().getTags())
-            if (tag.getuId().equals(competence.getTag().getuId())) {
-                competences.add(competence);
+            for (TagsModel tag : SingletonData.getInstance().getTags()) {
+                if (tag.getuId().equals(competence.getTag().getuId())) {
+                    competences.add(competence);
+                }
             }
         }
         CompetenceUserPageAdapter adapter = new CompetenceUserPageAdapter(competences, this, new UserModel());
