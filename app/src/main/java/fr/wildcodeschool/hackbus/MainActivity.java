@@ -127,6 +127,7 @@ public class MainActivity extends SuperActivity {
             }
         }, singletonData.getcUser());
 
+
         Button listProject = findViewById(R.id.bt_projet_list);
         Button createProject = findViewById(R.id.bt_form_projet);
         Button userPage = findViewById(R.id.bt_user_page);
