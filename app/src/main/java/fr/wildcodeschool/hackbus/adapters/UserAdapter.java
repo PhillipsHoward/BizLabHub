@@ -1,4 +1,4 @@
-package fr.wildcodeschool.hackbus;
+package fr.wildcodeschool.hackbus.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import fr.wildcodeschool.hackbus.models.ProjetModel;
+import fr.wildcodeschool.hackbus.R;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
