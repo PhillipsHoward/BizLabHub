@@ -4,13 +4,13 @@ public class ReponseModel {
 
     private String id;
     private String answer;
-    private UserModel sender;
+
 
     public ReponseModel() {}
 
     public ReponseModel(String answer, UserModel sender) {
         this.answer = answer;
-        this.sender = sender;
+
     }
 
     public String getId() {
@@ -29,11 +29,4 @@ public class ReponseModel {
         this.answer = answer;
     }
 
-    public UserModel getSender() {
-        return sender;
-    }
-
-    public void setSender(UserModel sender) {
-        this.sender = sender;
-    }
 }

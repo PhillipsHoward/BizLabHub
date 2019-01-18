@@ -33,7 +33,7 @@ public class QuestionsListActivity extends AppCompatActivity {
         final Button aDay = findViewById(R.id.b_a_day);
         final Button dontKnow = findViewById(R.id.b_dont_know);
 
-        questionModel.add(new QuestionModel("blibli", "hello", 3));
+        //questionModel.add(new QuestionModel("blibli", "hello", 3));
         //TODO: à dégager avec appelle BDD
 
         final QuestionsListAdapter adapterQuestionModel = new QuestionsListAdapter(questionModel, mContext, new QuestionsListAdapter.QuestionListener() {
