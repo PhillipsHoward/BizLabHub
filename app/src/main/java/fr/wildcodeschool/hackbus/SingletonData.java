@@ -278,7 +278,8 @@ public class SingletonData {
 
     public void initListenerQuestionReponse(){}
 
-    public void initListenerPresence(final PresenceListener presenceListenerInterface){
+    public void initListenerPresence(final PresenceListener presenceListenerInterface) {
+
         ChildEventListener presenceListener = new ChildEventListener() {
 
             @Override
