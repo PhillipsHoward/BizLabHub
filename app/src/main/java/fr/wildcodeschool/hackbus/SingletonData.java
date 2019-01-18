@@ -32,7 +32,7 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 public class SingletonData {
 
 
-    public static final String UID_PERSO = "-LWSHtslO2xCT6-lrxxP";
+    public static final String UID_PERSO = "-LWSHtu9_W5Tg74p8wsU";
 
     public static final SingletonData ourInstance = new SingletonData();
     private ArrayList<ProjetModel> projects = new ArrayList<>();
@@ -355,4 +355,41 @@ public class SingletonData {
         return new UserModel();
     }
 
+    public void getANewQuestionListener(final QuestionReponseListener questionReponseListener, UserModel user){
+        user = cUser;
+        final UserModel finalUser = user;
+        ChildEventListener getAquestionListener = new ChildEventListener() {
+
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                QuestionModel question = dataSnapshot.getValue(QuestionModel.class);
+                questionReponseListener.onChange(question);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                boolean test = true;
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+
+    };
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users").child(finalUser.getuId()).child("questionAsked");
+        databaseReference.addChildEventListener(getAquestionListener);
+
+}
 }
