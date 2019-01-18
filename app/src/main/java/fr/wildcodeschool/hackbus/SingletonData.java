@@ -32,7 +32,7 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 public class SingletonData {
 
 
-    public static final String UID_PERSO = "-LWSHtu9_W5Tg74p8wsU";
+    public static final String UID_PERSO = "-LWSHtugyAsOxWdhw5Z9";
 
     public static final SingletonData ourInstance = new SingletonData();
     private ArrayList<ProjetModel> projects = new ArrayList<>();
@@ -40,6 +40,7 @@ public class SingletonData {
     private ArrayList<UserModel> users = new ArrayList<>();
     private ArrayList<TypeModel> types = new ArrayList<>();
     private UserModel cUser = new UserModel();
+    private ChildEventListener questionAsked = null;
 
     public static String getUidPerso() {
         return UID_PERSO;
@@ -289,11 +290,10 @@ public class SingletonData {
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                dataSnapshot.getKey();
-                for(UserModel userModel : SingletonData.getInstance().getUsers()){
 
+                for(UserModel userModel : SingletonData.getInstance().getUsers()){
                     if(userModel.getuId().equals(dataSnapshot.getKey())){
-                        if((boolean) dataSnapshot.child("dispo").getValue() && !userModel.isDispo()) {
+                        if(userModel.isDispo() != (boolean) dataSnapshot.child("dispo").getValue()) {
                             userModel.setDispo((boolean) dataSnapshot.child("dispo").getValue());
                             presenceListenerInterface.onChange(userModel);
                         }
@@ -362,7 +362,8 @@ public class SingletonData {
     public void getANewQuestionListener(final QuestionReponseListener questionReponseListener, UserModel user){
         user = cUser;
         final UserModel finalUser = user;
-        ChildEventListener getAquestionListener = new ChildEventListener() {
+        if(questionAsked != null) return;
+        questionAsked = new ChildEventListener() {
 
 
             @Override
@@ -393,7 +394,7 @@ public class SingletonData {
 
     };
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users").child(finalUser.getuId()).child("questionAsked");
-        databaseReference.addChildEventListener(getAquestionListener);
+        databaseReference.addChildEventListener(questionAsked);
 
 }
 }

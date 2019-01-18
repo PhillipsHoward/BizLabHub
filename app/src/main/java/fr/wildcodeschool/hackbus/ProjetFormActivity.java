@@ -5,13 +5,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 import java.util.ArrayList;
 
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
+import fr.wildcodeschool.hackbus.models.QuestionModel;
 import fr.wildcodeschool.hackbus.models.TypeModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class ProjetFormActivity extends SuperActivity {
 
@@ -28,6 +31,25 @@ public class ProjetFormActivity extends SuperActivity {
         setContentView(R.layout.activity_projet_form);
         spinnerMethode1();
         spinnerMethode2();
+
+        final SingletonData singletonData = SingletonData.getInstance();
+        singletonData.initListenerPresence(new PresenceListener() {
+            @Override
+            public void onChange(UserModel user) {
+                if(!singletonData.getcUser().getuId().equals(user.getuId())) {
+                    if(user.isDispo()) Toast.makeText(ProjetFormActivity.this, user.getPrenom() + " is connected !", Toast.LENGTH_LONG).show();
+                    else Toast.makeText(ProjetFormActivity.this, user.getPrenom() + " disconnected !", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        singletonData.getANewQuestionListener(new QuestionReponseListener() {
+            @Override
+            public void onChange(QuestionModel question) {
+                UserModel sender = singletonData.findUserById(question.getSenderId());
+                Toast.makeText(ProjetFormActivity.this, sender.getPrenom() + " send you a new question : " + question.getTitle(), Toast.LENGTH_LONG).show();
+            }
+        }, singletonData.getcUser());
 
 
 
