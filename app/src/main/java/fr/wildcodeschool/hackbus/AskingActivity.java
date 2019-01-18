@@ -26,6 +26,7 @@ import fr.wildcodeschool.hackbus.adapters.AskingGringAdapter;
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.QuestionModel;
+import fr.wildcodeschool.hackbus.models.ReponseModel;
 import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
@@ -38,6 +39,7 @@ public class AskingActivity extends SuperActivity {
     private Singleton mSingleton;
     private SearchableSpinner mSearchableSpinner = null;
     private String typeModels;
+    ArrayList<TagsModel> mTagsToQuestion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +47,9 @@ public class AskingActivity extends SuperActivity {
         setContentView(R.layout.activity_asking);
 
         mSingleton = Singleton.getInstance();
-
         spinnerTag();
-
         seekBar();
-
-        //sendButton();
-
+        sendButton();
         infoButton();
     }
 
@@ -117,8 +115,10 @@ public class AskingActivity extends SuperActivity {
                 if (titleText.isEmpty() || questionText.isEmpty()) {
                     Toast.makeText(AskingActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    QuestionModel newQuestion = new QuestionModel(mSingleton.getUser(), titleText, questionText, mSeekBarProgress);
-                    //TODO: model question tout prêt à balancer quelque part
+                    ProjetModel currentProject = singletonData.getProjects().get(0); //TODO A REMPLACER PAR LE VRAI CURRENT PROJECT
+                    ArrayList<UserModel> usersReceptors = selectPotentialsRecipients(singletonData.getUsers(), mTagsToQuestion, currentProject);
+                    QuestionModel newQuestion = new QuestionModel(titleText, questionText, mSeekBarProgress, mTagsToQuestion, true, new ArrayList<ReponseModel>());
+                    singletonData.askAQuestion(newQuestion, currentProject, singletonData.getcUser(), usersReceptors);
                     startActivity(new Intent(AskingActivity.this, QuestionActivity.class));
                 }
             }
@@ -142,9 +142,8 @@ public class AskingActivity extends SuperActivity {
         mSearchableSpinner.setTitle(getString(R.string.choix_type));
         mSearchableSpinner.setPositiveButton(getString(R.string.ok));
 
-        //TODO récuperer cette liste de tag (typeDeProjetAdapter) pour transferé les info de la question
-        final ArrayList<TagsModel> typeDeProjetAdapter = new ArrayList<>();
-        final AskingGringAdapter adapterTag = new AskingGringAdapter(mContext, typeDeProjetAdapter);
+        mTagsToQuestion = new ArrayList<>();
+        final AskingGringAdapter adapterTag = new AskingGringAdapter(mContext, mTagsToQuestion);
         RecyclerView TagRecyclerView = findViewById(R.id.TagRecyclerView);
         TagRecyclerView.setLayoutManager(new GridLayoutManager(AskingActivity.this, 3));
         TagRecyclerView.setAdapter(adapterTag);
@@ -158,16 +157,16 @@ public class AskingActivity extends SuperActivity {
                     TagsModel typeTag = tagModelSingleton.get(position);
                     boolean isSelected = false;
                     //Je vérifie si l'item na pas déja etais selectionné
-                    for (TagsModel tagModel: typeDeProjetAdapter) {
+                    for (TagsModel tagModel: mTagsToQuestion) {
                         if(tagModel.getNom().equals(typeTag.getNom())){
-                            Toast.makeText(getApplicationContext(), "Vous ne pouvez pas avoir deux tags similaire", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.no_similars_tag, Toast.LENGTH_SHORT).show();
                             isSelected = true;
                             break;
                         }
                     }
                     // si l'item na pas etais selectioné je l'ajoute
                     if(!isSelected){
-                        typeDeProjetAdapter.add(typeTag);
+                        mTagsToQuestion.add(typeTag);
                         adapterTag.notifyDataSetChanged();
                     }
                 }
