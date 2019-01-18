@@ -20,7 +20,7 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class CompetenceProjetAdapter extends RecyclerView.Adapter<CompetenceProjetAdapter.MyViewHolder> {
 
-    private List<Tags> competenceList;
+    private List<CompetenceModel> competenceList;
     private Context ctx;
     private ProjetModel newProject = Singleton.getInstance().getNewProject();
 
