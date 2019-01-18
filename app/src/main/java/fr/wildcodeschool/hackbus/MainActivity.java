@@ -25,6 +25,5 @@ public class MainActivity extends SuperActivity {
                 Toast.makeText(MainActivity.this, user.getPrenom() + " connexion : " + user.isDispo(), Toast.LENGTH_LONG).show();
             }
         });
-
     }
 }
