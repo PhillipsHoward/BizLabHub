@@ -32,7 +32,7 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 public class SingletonData {
 
 
-    public static final String UID_PERSO = "-LWSHtslO2xCT6-lrxxP";
+    public static final String UID_PERSO = "-LWSHtu9_W5Tg74p8wsU";
 
     public static final SingletonData ourInstance = new SingletonData();
     private ArrayList<ProjetModel> projects = new ArrayList<>();
@@ -291,9 +291,12 @@ public class SingletonData {
             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 dataSnapshot.getKey();
                 for(UserModel userModel : SingletonData.getInstance().getUsers()){
+
                     if(userModel.getuId().equals(dataSnapshot.getKey())){
-                        userModel.setDispo((boolean) dataSnapshot.child("dispo").getValue());
-                        presenceListenerInterface.onChange(userModel);
+                        if((boolean) dataSnapshot.child("dispo").getValue() && !userModel.isDispo()) {
+                            userModel.setDispo((boolean) dataSnapshot.child("dispo").getValue());
+                            presenceListenerInterface.onChange(userModel);
+                        }
                     }
                 }
             }
