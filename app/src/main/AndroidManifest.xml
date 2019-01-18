@@ -13,7 +13,6 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity" />
         <activity android:name=".ProjetFormActivity" />
-        <activity android:name=".AddCompetencesProjet" />
         <activity
             android:name=".SplashActivity"
             android:noHistory="true"
@@ -26,9 +25,7 @@
         </activity>
         <activity android:name=".AskingActivity" />
         <activity android:name=".QuestionActivity" />
-        <activity android:name=".LogInActivity" />
         <activity android:name=".ProjectsListActivity" />
-        <activity android:name=".RequestsListActivity" />
         <activity android:name=".UserForm" />
         <activity android:name=".UserPage" />
         <activity android:name=".QuestionsListActivity"></activity>

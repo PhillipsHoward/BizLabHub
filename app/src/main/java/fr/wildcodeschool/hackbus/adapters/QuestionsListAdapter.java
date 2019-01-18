@@ -77,7 +77,6 @@ public class QuestionsListAdapter extends RecyclerView.Adapter<QuestionsListAdap
                 listener.onTouch(question);
             }
         });
-        //TODO: à rajouter les clicks au boutons answerNow et answer quick
     }
 
     public interface QuestionListener {
