@@ -1,6 +1,9 @@
 package fr.wildcodeschool.hackbus;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -111,7 +114,15 @@ public class MainActivity extends SuperActivity {
                 Toast.makeText(MainActivity.this, user.getPrenom() + " connexion : " + user.isDispo(), Toast.LENGTH_LONG).show();
             }
         });
-/*
+
+        singletonData.getANewQuestionListener(new QuestionReponseListener() {
+            @Override
+            public void onChange(QuestionModel question) {
+                UserModel sender = singletonData.findUserById(question.getSenderId());
+                Toast.makeText(MainActivity.this, sender.getPrenom() + " send you a new question !", Toast.LENGTH_LONG).show();
+            }
+        }, singletonData.getcUser());
+
         Button listProject = findViewById(R.id.bt_projet_list);
         Button createProject = findViewById(R.id.bt_form_projet);
         Button userPage = findViewById(R.id.bt_user_page);
@@ -138,7 +149,7 @@ public class MainActivity extends SuperActivity {
                 Intent goToUserPage = new Intent(MainActivity.this, UserPage.class);
                 MainActivity.this.startActivity(goToUserPage);
             }
-        });*/
+        });
 
     }
 }
