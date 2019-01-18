@@ -41,12 +41,12 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:ems="10"
+            android:hint="Name"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_picture"
-            tools:text="Name" />
+            app:layout_constraintTop_toBottomOf="@+id/iv_picture" />
 
         <EditText
             android:id="@+id/et_description"
@@ -58,11 +58,11 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:ems="10"
+            android:hint="Description"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_nomproj"
-            tools:text="Description" />
+            app:layout_constraintTop_toBottomOf="@+id/et_nomproj" />
 
         <EditText
             android:id="@+id/et_git"
@@ -74,11 +74,11 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:ems="10"
+            android:hint="GitHub"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_description"
-            tools:text="GitHub" />
+            app:layout_constraintTop_toBottomOf="@+id/et_description" />
 
         <ImageView
             android:id="@+id/iv_picture"

@@ -9,8 +9,8 @@ public class Singleton {
     private static final Singleton ourInstance = new Singleton();
     private QuestionModel currentQuestion;
     private UserModel user;
-    private ProjetModel newProject;
-    private ProjetModel currentProject;
+    private ProjetModel newProject = new ProjetModel();
+    private ProjetModel currentProject = new ProjetModel();
 
     public static Singleton getInstance() {
         return ourInstance;

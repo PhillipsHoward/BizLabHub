@@ -37,10 +37,6 @@ public class ProjetFormActivity extends SuperActivity {
         setContentView(R.layout.activity_projet_form);
         spinnerMethode1();
 
-        TextView initUser = findViewById(R.id.tv_init);
-        initUser.setText(SingletonData.getInstance().getcUser().getNom());
-
-
         //competence
         RecyclerView competenceList = findViewById(R.id.rv_competence);
         LinearLayoutManager LayoutManager = new LinearLayoutManager(this);
@@ -53,6 +49,8 @@ public class ProjetFormActivity extends SuperActivity {
         CompetenceProjetAdapter adapter = new CompetenceProjetAdapter(competences, this, newProject);
         competenceList.setAdapter(adapter);
 
+        TextView initUser = findViewById(R.id.tv_init);
+        initUser.setText(SingletonData.getInstance().getcUser().getNom());
 
         Button valid = findViewById(R.id.bt_valid);
         valid.setOnClickListener(new View.OnClickListener() {
@@ -66,15 +64,17 @@ public class ProjetFormActivity extends SuperActivity {
                 String descriptionValue = description.getText().toString();
                 String gitValue = git.getText().toString();
 
-                if (nameValue.isEmpty() && descriptionValue.isEmpty() && gitValue.isEmpty() && typeProjet == null) {
+                if (nameValue.isEmpty() || descriptionValue.isEmpty() || gitValue.isEmpty() || typeProjet == null) {
                     Toast.makeText(ProjetFormActivity.this, "Edit text is empty", Toast.LENGTH_SHORT).show();
                 } else {
+                    newProject.setInitiateur(SingletonData.getInstance().getcUser());
                     newProject.setNom(nameValue);
                     newProject.setDescription(descriptionValue);
                     newProject.setLienGitHub(gitValue);
                     newProject.setTypeProjet(typeProjet);
 
-                    Toast.makeText(ProjetFormActivity.this, newProject.toString(), Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(ProjetFormActivity.this, newProject.toString(), Toast.LENGTH_SHORT).show();
+                    SingletonData.getInstance().addProjects(newProject);
                 }
 
             }
@@ -83,10 +83,13 @@ public class ProjetFormActivity extends SuperActivity {
 
     public void spinnerMethode1() {
         mSearchableSpinner = findViewById(R.id.sp_type);
-
+        final  ArrayList<String> typeValue = new ArrayList<>();
         final ArrayList<TypeModel> typeDeProjet = SingletonData.getInstance().getTypes();
+        for (TypeModel typtype : typeDeProjet) {
+            typeValue.add(typtype.getNom());
+        }
 
-        final ArrayAdapter<TypeModel> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeDeProjet);
+        final ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, typeValue);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSearchableSpinner.setAdapter(spinnerAdapter);
         mSearchableSpinner.setPrompt(getString(R.string.selection_type));

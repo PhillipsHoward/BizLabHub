@@ -98,4 +98,20 @@ public class ProjetModel {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
+
+    @Override
+    public String toString() {
+        return "ProjetModel{" +
+                "nom='" + nom + '\'' +
+                ", description='" + description + '\'' +
+                ", typeProjet=" + typeProjet +
+                ", competence=" + competence +
+                ", lienGitHub='" + lienGitHub + '\'' +
+                ", team=" + team +
+                ", initiateur=" + initiateur +
+                ", photo='" + photo + '\'' +
+                ", id='" + id + '\'' +
+                ", questions=" + questions +
+                '}';
+    }
 }

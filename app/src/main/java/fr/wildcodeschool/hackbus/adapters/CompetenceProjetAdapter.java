@@ -61,10 +61,10 @@ public class CompetenceProjetAdapter extends RecyclerView.Adapter<CompetenceProj
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayList<TagsModel> tags = new ArrayList<>();
+               // ArrayList<TagsModel> tags = new ArrayList<>();
 
                 ProjetModel newProject = Singleton.getInstance().getNewProject();
-
+                if(newProject.getCompetence() == null) newProject.setCompetence(new ArrayList<TagsModel>());
                 newProject.getCompetence().add(competence);
                 holder.cardview.setBackgroundResource(R.color.colorPrimaryDark);
             }
