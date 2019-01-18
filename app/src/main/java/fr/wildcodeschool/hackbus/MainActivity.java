@@ -131,7 +131,7 @@ public class MainActivity extends SuperActivity {
         listProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToListProject = new Intent(MainActivity.this, AskingActivity.class);
+                Intent goToListProject = new Intent(MainActivity.this, ProjectsListActivity.class);
                 MainActivity.this.startActivity(goToListProject);
             }
         });
