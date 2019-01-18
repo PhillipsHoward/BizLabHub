@@ -318,9 +318,6 @@ public class SingletonData {
             databaseReference.addChildEventListener(presenceListener);
     }
 
-
-
-
     public void askAQuestion(QuestionModel question, ProjetModel projetModel, UserModel sender, ArrayList<UserModel> answerer){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         String projetID = projetModel.getId();
