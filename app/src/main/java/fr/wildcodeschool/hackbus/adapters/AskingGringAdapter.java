@@ -48,7 +48,7 @@ public class AskingGringAdapter extends RecyclerView.Adapter<AskingGringAdapter.
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tagssss = itemView.findViewById(R.id.textView);
+            tagssss = itemView.findViewById(R.id.tv_create_user);
         }
     }
 }
