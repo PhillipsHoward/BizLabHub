@@ -127,7 +127,7 @@
                     android:id="@+id/send"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/classic_border"
+                    android:background="@drawable/classic_border_colorprimary"
                     android:text="Send"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="@+id/et_answer"

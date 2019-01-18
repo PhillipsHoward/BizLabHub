@@ -42,7 +42,7 @@ public class SplashActivity extends AppCompatActivity {
                 singletonData.getcUser().setDispo(true);
                 singletonData.updateUser(singletonData.getcUser());
 
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, ProjectsListActivity.class));
             }
         });
     }
