@@ -58,7 +58,7 @@ public class SuperActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
                 if (isChecked) {
-                    Toast.makeText(getApplication(), "You're now ready to answer questions", Toast.LENGTH_SHORT)
+                    Toast.makeText(getApplication(), "You're now ready to answerNow questions", Toast.LENGTH_SHORT)
                             .show();
                     getSupportActionBar().setBackgroundDrawable(new ColorDrawable(ResourcesCompat.getColor(getResources(), R.color.green, null)));
                     changeText(DISPO);
