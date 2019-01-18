@@ -22,6 +22,7 @@ import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 import java.util.ArrayList;
 
+import fr.wildcodeschool.hackbus.adapters.AskingGringAdapter;
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.QuestionModel;
@@ -48,7 +49,7 @@ public class AskingActivity extends SuperActivity {
         mSingleton = Singleton.getInstance();
         spinnerTag();
         seekBar();
-        //sendButton();
+        sendButton();
         infoButton();
     }
 
@@ -114,15 +115,10 @@ public class AskingActivity extends SuperActivity {
                 if (titleText.isEmpty() || questionText.isEmpty()) {
                     Toast.makeText(AskingActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
-
                     ProjetModel currentProject = singletonData.getProjects().get(0); //TODO A REMPLACER PAR LE VRAI CURRENT PROJECT
                     ArrayList<UserModel> usersReceptors = selectPotentialsRecipients(singletonData.getUsers(), mTagsToQuestion, currentProject);
-                    QuestionModel newQuestion = new QuestionModel(singletonData.getcUser(), titleText, questionText, mSeekBarProgress, usersReceptors, mTagsToQuestion, true, new ArrayList<ReponseModel>(), currentProject);
-
-                    //Singleton.getInstance().a
-
-
-
+                    QuestionModel newQuestion = new QuestionModel(titleText, questionText, mSeekBarProgress, mTagsToQuestion, true, new ArrayList<ReponseModel>());
+                    singletonData.askAQuestion(newQuestion, currentProject, singletonData.getcUser(), usersReceptors);
                     startActivity(new Intent(AskingActivity.this, QuestionActivity.class));
                 }
             }

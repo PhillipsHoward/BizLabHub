@@ -9,11 +9,11 @@ public class UserModel {
     private String poste;
     private String email;
     private String tel;
-    private ArrayList<CompetenceModel> competence;
-    private ArrayList<ProjetModel> projetEnCours;
-    private ArrayList<ProjetModel> projetInitie;
-    private ArrayList<QuestionModel> questionAsked;
-    private ArrayList<QuestionModel> questionNeedAnswer;
+    private ArrayList<CompetenceModel> competence = new ArrayList<>();
+    private ArrayList<ProjetModel> projetEnCours = new ArrayList<>();
+    private ArrayList<ProjetModel> projetInitie = new ArrayList<>();
+    private ArrayList<QuestionModel> questionAsked = new ArrayList<>();
+    private ArrayList<QuestionModel> questionNeedAnswer = new ArrayList<>();
     private boolean dispo;
     private String uId;
 
