@@ -46,11 +46,11 @@ public class ProjetFormActivity extends SuperActivity {
         LinearLayoutManager LayoutManager = new LinearLayoutManager(this);
         competenceList.setLayoutManager(LayoutManager);
 
-        List<CompetenceModel> competences = new ArrayList<>();
-        for (CompetenceModel comp : SingletonData.getInstance().getTags()) {
+        List<TagsModel> competences = new ArrayList<>();
+        for (TagsModel comp : SingletonData.getInstance().getTags()) {
             competences.add(comp);
         }
-        CompetenceProjetAdapter adapter = new CompetenceProjetAdapter(competences, this, new UserModel());
+        CompetenceProjetAdapter adapter = new CompetenceProjetAdapter(competences, this, newProject);
         competenceList.setAdapter(adapter);
 
 
@@ -79,10 +79,6 @@ public class ProjetFormActivity extends SuperActivity {
 
             }
         });
-
-
-
-
     }
 
     public void spinnerMethode1() {

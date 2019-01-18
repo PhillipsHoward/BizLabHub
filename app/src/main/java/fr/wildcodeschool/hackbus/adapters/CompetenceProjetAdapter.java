@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fr.wildcodeschool.hackbus.R;
@@ -20,7 +21,7 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class CompetenceProjetAdapter extends RecyclerView.Adapter<CompetenceProjetAdapter.MyViewHolder> {
 
-    private List<CompetenceModel> competenceList;
+    private List<TagsModel> competenceList;
     private Context ctx;
     private ProjetModel newProject = Singleton.getInstance().getNewProject();
 
@@ -36,7 +37,7 @@ public class CompetenceProjetAdapter extends RecyclerView.Adapter<CompetenceProj
     }
 
 
-    public CompetenceProjetAdapter(List<CompetenceModel> competenceList, Context ctx, ProjetModel newProject) {
+    public CompetenceProjetAdapter(List<TagsModel> competenceList, Context ctx, ProjetModel newProject) {
         this.competenceList = competenceList;
         this.ctx = ctx;
         this.newProject = newProject;
@@ -53,14 +54,18 @@ public class CompetenceProjetAdapter extends RecyclerView.Adapter<CompetenceProj
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final CompetenceModel competence = competenceList.get(position);
-        final TagsModel tag = competence.getTag();
-        holder.nom.setText(tag.getNom());
+        final TagsModel competence = competenceList.get(position);
+        //final TagsModel tag = competence.getTag();
+        holder.nom.setText(competence.getNom());
 
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                newProject.getCompetence().add(tag);
+                ArrayList<TagsModel> tags = new ArrayList<>();
+
+                ProjetModel newProject = Singleton.getInstance().getNewProject();
+
+                newProject.getCompetence().add(competence);
                 holder.cardview.setBackgroundResource(R.color.colorPrimaryDark);
             }
         });
