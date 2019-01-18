@@ -246,4 +246,5 @@ public class AskingActivity extends SuperActivity {
         }
         return recipients;
     }
+
 }
