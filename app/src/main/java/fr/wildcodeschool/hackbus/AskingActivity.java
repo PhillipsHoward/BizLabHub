@@ -117,8 +117,8 @@ public class AskingActivity extends SuperActivity {
                 } else {
                     ProjetModel currentProject = singletonData.getProjects().get(0); //TODO A REMPLACER PAR LE VRAI CURRENT PROJECT
                     ArrayList<UserModel> usersReceptors = selectPotentialsRecipients(singletonData.getUsers(), mTagsToQuestion, currentProject);
-                    QuestionModel newQuestion = new QuestionModel(singletonData.getcUser(), titleText, questionText, mSeekBarProgress, usersReceptors, mTagsToQuestion, true, new ArrayList<ReponseModel>(), currentProject);
-                    singletonData.askAQuestion(newQuestion);
+                    QuestionModel newQuestion = new QuestionModel(titleText, questionText, mSeekBarProgress, mTagsToQuestion, true, new ArrayList<ReponseModel>());
+                    singletonData.askAQuestion(newQuestion, currentProject, singletonData.getcUser(), usersReceptors);
                     startActivity(new Intent(AskingActivity.this, QuestionActivity.class));
                 }
             }

@@ -15,6 +15,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.TreeSet;
 
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
@@ -30,7 +32,7 @@ import fr.wildcodeschool.hackbus.models.UserModel;
 public class SingletonData {
 
 
-    public static final String UID_PERSO = "-LWMcSuFQXu5fkvCt40K";
+    public static final String UID_PERSO = "-LWSHtslO2xCT6-lrxxP";
 
     public static final SingletonData ourInstance = new SingletonData();
     private ArrayList<ProjetModel> projects = new ArrayList<>();
@@ -268,6 +270,12 @@ public class SingletonData {
         refUser.setValue(user);
     }
 
+    public void updateProjet(ProjetModel projetModel){
+        final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        final DatabaseReference refUser = firebaseDatabase.getReference("projets").child(projetModel.getId());
+        refUser.setValue(projetModel);
+    }
+
     public void initListenerQuestionReponse(){}
 
     public void initListenerPresence(final PresenceListener presenceListenerInterface){
@@ -309,42 +317,42 @@ public class SingletonData {
             databaseReference.addChildEventListener(presenceListener);
     }
 
-    public void askAQuestion(QuestionModel question){
+    public void askAQuestion(QuestionModel question, ProjetModel projetModel, UserModel sender, ArrayList<UserModel> answerer){
         final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        String projetID = question.getProjet().getId();
-        String senderId = question.getSender().getuId();
-        DatabaseReference projetRef = firebaseDatabase.getReference("projets").child(projetID).child("questions");
+        String projetID = projetModel.getId();
+        String senderId = sender.getuId();
+        question.setSenderId(senderId);
+
+        for(UserModel user : answerer){
+            if(question.getAnswererId() == null) question.setAnswererId(new ArrayList<String>());
+            question.getAnswererId().add(user.getuId());
+        }
+
+        DatabaseReference projetRef = firebaseDatabase.getReference("projets").child(projetID);
         String key = projetRef.push().getKey();
         question.setId(key);
         projetRef.child(key).setValue(question);
 
-        for(ProjetModel projet : projects){
-            if(projet.getId().equals(projetID)) projet.getQuestions().add(question);
+        projetModel.getQuestions().add(question);
+        updateProjet(projetModel);
+
+        sender.getQuestionNeedAnswer().add(question);
+        DatabaseReference senderRef = firebaseDatabase.getReference("users");
+        updateUser(sender);
+
+        for(UserModel user : answerer){
+            user.getQuestionAsked().add(question);
+            updateUser(user);
         }
-
-        for(UserModel user : users){
-            if(user.getuId().equals(senderId)) {
-                user.getQuestionAsked().add(question);
-                updateUser(user);
-            }
-        }
-
-        for(UserModel userAnswer : question.getUserReponse()){
-            for(UserModel user : users){
-                if(user.getuId().equals(userAnswer.getuId())){
-                    user.getQuestionAsked().add(question);
-                    updateUser(user);
-                }
-            }
-        }
-
-
-
-
-
 
 
     }
 
+    public UserModel findUserById(String uId){
+        for (UserModel userModel : users){
+            if(userModel.getuId().equals(uId)) return userModel;
+        }
+        return new UserModel();
+    }
 
 }

@@ -30,7 +30,7 @@ public class QuestionsListActivity extends AppCompatActivity {
     private void setAdapter() {
         final ArrayList<QuestionModel> questionModel = new ArrayList<>();
 
-        questionModel.add(new QuestionModel("blibli", "hello", 3));
+        //questionModel.add(new QuestionModel("blibli", "hello", 3));
         //TODO: à dégager avec appelle BDD
 
         final QuestionsListAdapter adapterQuestionModel = new QuestionsListAdapter(questionModel, mContext);

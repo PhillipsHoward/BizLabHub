@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import fr.wildcodeschool.hackbus.models.QuestionModel;
 import fr.wildcodeschool.hackbus.models.ReponseModel;
+import fr.wildcodeschool.hackbus.models.UserModel;
 
 public class QuestionActivity extends AppCompatActivity {
 
@@ -106,12 +107,13 @@ public class QuestionActivity extends AppCompatActivity {
         TextView question = findViewById(R.id.tv_question);
         TextView userNameQuestion = findViewById(R.id.tv_user_question);
         TextView openOrClose = findViewById(R.id.tv_open_close);
-
-        String nameAndFirstLastnameLetter = mCurrentQuestion.getSender().getPrenom() + mCurrentQuestion.getSender().getNom().charAt(0);
+        UserModel sender = mDataSingleton.findUserById(mCurrentQuestion.getSenderId());
+        String nameAndFirstLastnameLetter = sender.getPrenom() + " " + sender.getNom().charAt(0);
 
         title.setText(mCurrentQuestion.getTitle());
         question.setText(mCurrentQuestion.getQuestion());
         userNameQuestion.setText(nameAndFirstLastnameLetter);
+        userNameQuestion.setText("RB");
 
         if(!mCurrentQuestion.isOpen()) {
             openOrClose.setText("CLOSE");

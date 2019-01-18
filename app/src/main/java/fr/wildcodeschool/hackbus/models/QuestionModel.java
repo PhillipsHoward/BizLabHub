@@ -7,35 +7,55 @@ public class QuestionModel {
     private String id;
     private String question;
     private String title;
-    private ProjetModel projet;
-    private UserModel sender;
-    private ArrayList<UserModel> userReponse;
     private int priority;
     private ArrayList<TagsModel> skills;
+    private ArrayList<ReponseModel> reponses;
+    private ArrayList<String> answererId;
+    private String senderId;
     private Boolean open = true;
-    private ArrayList<ReponseModel> allReponses;
+
 
     public QuestionModel() {
     }
 
-    public QuestionModel(UserModel sender, String title, String question, int priority) {
+    public QuestionModel(String title, String question, int priority) {
         this.open = true;
-        this.sender = sender;
         this.title = title;
         this.question = question;
         this.priority = priority;
     }
 
-    public QuestionModel(UserModel sender, String title, String question, int priority, ArrayList<UserModel> userReponse, ArrayList<TagsModel> skills, Boolean open, ArrayList<ReponseModel> allReponses, ProjetModel projet) {
-        this.sender = sender;
+    public QuestionModel(String title, String question, int priority, ArrayList<TagsModel> skills, Boolean open, ArrayList<ReponseModel> reponses) {
         this.title = title;
         this.question = question;
         this.priority = priority;
-        this.userReponse = userReponse;
         this.skills = skills;
         this.open = open;
-        this.allReponses = allReponses;
-        this.projet = projet;
+        this.reponses = reponses;
+    }
+
+    public ArrayList<ReponseModel> getReponses() {
+        return reponses;
+    }
+
+    public void setReponses(ArrayList<ReponseModel> reponses) {
+        this.reponses = reponses;
+    }
+
+    public ArrayList<String> getAnswererId() {
+        return answererId;
+    }
+
+    public void setAnswererId(ArrayList<String> answererId) {
+        this.answererId = answererId;
+    }
+
+    public String getSenderId() {
+        return senderId;
+    }
+
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
     }
 
     public String getId() {
@@ -62,30 +82,6 @@ public class QuestionModel {
         this.title = title;
     }
 
-    public ProjetModel getProjet() {
-        return projet;
-    }
-
-    public void setProjet(ProjetModel projet) {
-        this.projet = projet;
-    }
-
-    public UserModel getSender() {
-        return sender;
-    }
-
-    public void setSender(UserModel sender) {
-        this.sender = sender;
-    }
-
-    public ArrayList<UserModel> getUserReponse() {
-        return userReponse;
-    }
-
-    public void setUserReponse(ArrayList<UserModel> userReponse) {
-        this.userReponse = userReponse;
-    }
-
     public int getPriority() {
         return priority;
     }
@@ -110,11 +106,5 @@ public class QuestionModel {
         this.open = open;
     }
 
-    public ArrayList<ReponseModel> getAllReponses() {
-        return allReponses;
-    }
 
-    public void setAllReponses(ArrayList<ReponseModel> allReponses) {
-        this.allReponses = allReponses;
-    }
 }
