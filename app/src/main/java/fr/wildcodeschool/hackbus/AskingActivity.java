@@ -56,7 +56,7 @@ public class AskingActivity extends SuperActivity {
     private void infoButton() {
         ImageButton info = findViewById(R.id.ib_info);
         final View greyView = findViewById(R.id.view_grey);
-        final TextView priorityMeaning = findViewById(R.id.tv_close_open_confirmation);
+        final TextView priorityMeaning = findViewById(R.id.tv_quicky);
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,7 +84,7 @@ public class AskingActivity extends SuperActivity {
     private void closeInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView priorityPopup = findViewById(R.id.tv_priority_popup);
-        TextView priorityMeaning = findViewById(R.id.tv_close_open_confirmation);
+        TextView priorityMeaning = findViewById(R.id.tv_quicky);
 
         greyView.setVisibility(View.GONE);
         priorityPopup.setVisibility(View.GONE);
@@ -94,7 +94,7 @@ public class AskingActivity extends SuperActivity {
     private void showInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView priorityPopup = findViewById(R.id.tv_priority_popup);
-        TextView priorityMeaning = findViewById(R.id.tv_close_open_confirmation);
+        TextView priorityMeaning = findViewById(R.id.tv_quicky);
 
         greyView.setVisibility(View.VISIBLE);
         priorityPopup.setVisibility(View.VISIBLE);
