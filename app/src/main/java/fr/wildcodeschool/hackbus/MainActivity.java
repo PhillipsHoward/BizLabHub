@@ -122,7 +122,7 @@ public class MainActivity extends SuperActivity {
             @Override
             public void onChange(QuestionModel question) {
                 UserModel sender = singletonData.findUserById(question.getSenderId());
-                Toast.makeText(MainActivity.this, sender.getPrenom() + " send you a new question !", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, sender.getPrenom() + " send you a new question : " + question.getTitle(), Toast.LENGTH_LONG).show();
             }
         }, singletonData.getcUser());
 
