@@ -116,6 +116,14 @@ public class MainActivity extends SuperActivity {
             }
         });
 
+        singletonData.getANewQuestionListener(new QuestionReponseListener() {
+            @Override
+            public void onChange(QuestionModel question) {
+                UserModel sender = singletonData.findUserById(question.getSenderId());
+                Toast.makeText(MainActivity.this, sender.getPrenom() + " send you a new question !", Toast.LENGTH_LONG).show();
+            }
+        }, singletonData.getcUser());
+
         Button listProject = findViewById(R.id.bt_projet_list);
         Button createProject = findViewById(R.id.bt_form_projet);
         Button userPage = findViewById(R.id.bt_user_page);
