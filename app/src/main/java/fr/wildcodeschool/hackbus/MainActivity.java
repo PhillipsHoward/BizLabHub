@@ -28,7 +28,7 @@ public class MainActivity extends SuperActivity {
                 Toast.makeText(MainActivity.this, user.getPrenom() + " connexion : " + user.isDispo(), Toast.LENGTH_LONG).show();
             }
         });
-/*
+
         Button listProject = findViewById(R.id.bt_projet_list);
         Button createProject = findViewById(R.id.bt_form_projet);
         Button userPage = findViewById(R.id.bt_user_page);
@@ -55,7 +55,7 @@ public class MainActivity extends SuperActivity {
                 Intent goToUserPage = new Intent(MainActivity.this, UserPage.class);
                 MainActivity.this.startActivity(goToUserPage);
             }
-        });*/
+        });
 
     }
 }

@@ -19,6 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="User Page"
+            android:gravity="center"
+            android:textSize="29sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -95,8 +98,9 @@
             android:ems="10"
             android:hint="Telephone"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_mail" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_mail" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/competenceUserList"
