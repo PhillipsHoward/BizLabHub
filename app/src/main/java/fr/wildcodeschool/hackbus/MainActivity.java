@@ -106,6 +106,7 @@ public class MainActivity extends SuperActivity {
         singletonData.addUsers(user3);
 
         boolean test = true;*/
+
         final SingletonData singletonData = SingletonData.getInstance();
         singletonData.initListenerPresence(new PresenceListener() {
             @Override
@@ -150,6 +151,5 @@ public class MainActivity extends SuperActivity {
                 MainActivity.this.startActivity(goToUserPage);
             }
         });
-
     }
 }

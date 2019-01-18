@@ -214,35 +214,27 @@ public class AskingActivity extends SuperActivity {
     }
 
     private ArrayList<UserModel> selectPotentialsRecipients(ArrayList<UserModel> users, ArrayList<TagsModel> tags, ProjetModel currentProject) {
-
         ArrayList<UserModel> recipients = new ArrayList<>(users);
-
         for (UserModel user : recipients) {
-
             if (!user.isDispo()) {
                 recipients.remove(user);
                 break;
             }
-
             boolean isPresentInProject = false;
-
             for (ProjetModel project : user.getProjetEnCours()) {
-
-                if (project.getId() == currentProject.getId()) {
+                if (project.getId().equals(currentProject.getId())) {
                     isPresentInProject = true;
                     break;
                 }
             }
-
             if (!isPresentInProject) {
                 recipients.remove(user);
                 break;
             }
-
             for (TagsModel tag : tags) {
                 boolean hasTheGoodTag = false;
                 for (CompetenceModel competence : user.getCompetence()) {
-                    if (competence.getTag().getuId() == tag.getuId()) {
+                    if (competence.getTag().getuId().equals(tag.getuId())) {
                         hasTheGoodTag = true;
                         break;
                     }
@@ -254,4 +246,5 @@ public class AskingActivity extends SuperActivity {
         }
         return recipients;
     }
+
 }
