@@ -10,6 +10,7 @@ public class Singleton {
     private QuestionModel currentQuestion;
     private UserModel user;
     private ProjetModel newProject;
+    private ProjetModel currentProject;
 
     public static Singleton getInstance() {
         return ourInstance;
@@ -35,12 +36,12 @@ public class Singleton {
         this.currentQuestion = currentQuestion;
     }
 
-    public UserModel getUser() {
-        return user;
+    public ProjetModel getCurrentProject() {
+        return currentProject;
     }
 
-    public void setUser(UserModel user) {
-        this.user = user;
+    public void setCurrentProject(ProjetModel currentProject) {
+        this.currentProject = currentProject;
     }
 
 }

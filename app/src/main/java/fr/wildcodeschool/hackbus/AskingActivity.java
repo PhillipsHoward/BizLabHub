@@ -26,6 +26,7 @@ import fr.wildcodeschool.hackbus.adapters.AskingGringAdapter;
 import fr.wildcodeschool.hackbus.models.CompetenceModel;
 import fr.wildcodeschool.hackbus.models.ProjetModel;
 import fr.wildcodeschool.hackbus.models.QuestionModel;
+import fr.wildcodeschool.hackbus.models.ReponseModel;
 import fr.wildcodeschool.hackbus.models.TagsModel;
 import fr.wildcodeschool.hackbus.models.UserModel;
 
@@ -38,6 +39,7 @@ public class AskingActivity extends SuperActivity {
     private Singleton mSingleton;
     private SearchableSpinner mSearchableSpinner = null;
     private String typeModels;
+    ArrayList<TagsModel> mTagsToQuestion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,20 +47,16 @@ public class AskingActivity extends SuperActivity {
         setContentView(R.layout.activity_asking);
 
         mSingleton = Singleton.getInstance();
-
         spinnerTag();
-
         seekBar();
-
-        //sendButton();
-
+        sendButton();
         infoButton();
     }
 
     private void infoButton() {
         ImageButton info = findViewById(R.id.ib_info);
         final View greyView = findViewById(R.id.view_grey);
-        final TextView priorityMeaning = findViewById(R.id.tv_close_open_confirmation);
+        final TextView priorityMeaning = findViewById(R.id.tv_quicky);
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +84,7 @@ public class AskingActivity extends SuperActivity {
     private void closeInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView priorityPopup = findViewById(R.id.tv_priority_popup);
-        TextView priorityMeaning = findViewById(R.id.tv_close_open_confirmation);
+        TextView priorityMeaning = findViewById(R.id.tv_quicky);
 
         greyView.setVisibility(View.GONE);
         priorityPopup.setVisibility(View.GONE);
@@ -96,7 +94,7 @@ public class AskingActivity extends SuperActivity {
     private void showInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView priorityPopup = findViewById(R.id.tv_priority_popup);
-        TextView priorityMeaning = findViewById(R.id.tv_close_open_confirmation);
+        TextView priorityMeaning = findViewById(R.id.tv_quicky);
 
         greyView.setVisibility(View.VISIBLE);
         priorityPopup.setVisibility(View.VISIBLE);
@@ -117,8 +115,10 @@ public class AskingActivity extends SuperActivity {
                 if (titleText.isEmpty() || questionText.isEmpty()) {
                     Toast.makeText(AskingActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    QuestionModel newQuestion = new QuestionModel(mSingleton.getUser(), titleText, questionText, mSeekBarProgress);
-                    //TODO: model question tout prêt à balancer quelque part
+                    ProjetModel currentProject = singletonData.getProjects().get(0); //TODO A REMPLACER PAR LE VRAI CURRENT PROJECT
+                    ArrayList<UserModel> usersReceptors = selectPotentialsRecipients(singletonData.getUsers(), mTagsToQuestion, currentProject);
+                    QuestionModel newQuestion = new QuestionModel(titleText, questionText, mSeekBarProgress, mTagsToQuestion, true, new ArrayList<ReponseModel>());
+                    singletonData.askAQuestion(newQuestion, currentProject, singletonData.getcUser(), usersReceptors);
                     startActivity(new Intent(AskingActivity.this, QuestionActivity.class));
                 }
             }
@@ -142,9 +142,8 @@ public class AskingActivity extends SuperActivity {
         mSearchableSpinner.setTitle(getString(R.string.choix_type));
         mSearchableSpinner.setPositiveButton(getString(R.string.ok));
 
-        //TODO récuperer cette liste de tag (typeDeProjetAdapter) pour transferé les info de la question
-        final ArrayList<TagsModel> typeDeProjetAdapter = new ArrayList<>();
-        final AskingGringAdapter adapterTag = new AskingGringAdapter(mContext, typeDeProjetAdapter);
+        mTagsToQuestion = new ArrayList<>();
+        final AskingGringAdapter adapterTag = new AskingGringAdapter(mContext, mTagsToQuestion);
         RecyclerView TagRecyclerView = findViewById(R.id.TagRecyclerView);
         TagRecyclerView.setLayoutManager(new GridLayoutManager(AskingActivity.this, 3));
         TagRecyclerView.setAdapter(adapterTag);
@@ -158,16 +157,16 @@ public class AskingActivity extends SuperActivity {
                     TagsModel typeTag = tagModelSingleton.get(position);
                     boolean isSelected = false;
                     //Je vérifie si l'item na pas déja etais selectionné
-                    for (TagsModel tagModel: typeDeProjetAdapter) {
+                    for (TagsModel tagModel: mTagsToQuestion) {
                         if(tagModel.getNom().equals(typeTag.getNom())){
-                            Toast.makeText(getApplicationContext(), "Vous ne pouvez pas avoir deux tags similaire", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), R.string.no_similars_tag, Toast.LENGTH_SHORT).show();
                             isSelected = true;
                             break;
                         }
                     }
                     // si l'item na pas etais selectioné je l'ajoute
                     if(!isSelected){
-                        typeDeProjetAdapter.add(typeTag);
+                        mTagsToQuestion.add(typeTag);
                         adapterTag.notifyDataSetChanged();
                     }
                 }
@@ -215,35 +214,27 @@ public class AskingActivity extends SuperActivity {
     }
 
     private ArrayList<UserModel> selectPotentialsRecipients(ArrayList<UserModel> users, ArrayList<TagsModel> tags, ProjetModel currentProject) {
-
         ArrayList<UserModel> recipients = new ArrayList<>(users);
-
         for (UserModel user : recipients) {
-
             if (!user.isDispo()) {
                 recipients.remove(user);
                 break;
             }
-
             boolean isPresentInProject = false;
-
             for (ProjetModel project : user.getProjetEnCours()) {
-
-                if (project.getId() == currentProject.getId()) {
+                if (project.getId().equals(currentProject.getId())) {
                     isPresentInProject = true;
                     break;
                 }
             }
-
             if (!isPresentInProject) {
                 recipients.remove(user);
                 break;
             }
-
             for (TagsModel tag : tags) {
                 boolean hasTheGoodTag = false;
                 for (CompetenceModel competence : user.getCompetence()) {
-                    if (competence.getTag().getuId() == tag.getuId()) {
+                    if (competence.getTag().getuId().equals(tag.getuId())) {
                         hasTheGoodTag = true;
                         break;
                     }
@@ -255,4 +246,5 @@ public class AskingActivity extends SuperActivity {
         }
         return recipients;
     }
+
 }

@@ -1,6 +1,7 @@
 package fr.wildcodeschool.hackbus.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import fr.wildcodeschool.hackbus.QuestionActivity;
 import fr.wildcodeschool.hackbus.R;
 import fr.wildcodeschool.hackbus.models.QuestionModel;
 
@@ -17,10 +19,12 @@ public class QuestionsListAdapter extends RecyclerView.Adapter<QuestionsListAdap
 
     private List<QuestionModel> questionsList;
     private Context ctx;
+    private QuestionListener listener;
 
-    public QuestionsListAdapter(List<QuestionModel> questionsList, Context ctx) {
+    public QuestionsListAdapter(List<QuestionModel> questionsList, Context ctx, QuestionListener listener) {
         this.questionsList = questionsList;
         this.ctx = ctx;
+        this.listener = listener;
     }
 
     @Override
@@ -60,7 +64,24 @@ public class QuestionsListAdapter extends RecyclerView.Adapter<QuestionsListAdap
             holder.close.setVisibility(View.VISIBLE);
         }
 
-        //TODO: à rajouter les clicks au boutons answer et answer quick
+        holder.answerNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ctx.startActivity(new Intent(ctx, QuestionActivity.class));
+            }
+        });
+
+        holder.answerQuick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onTouch(question);
+            }
+        });
+        //TODO: à rajouter les clicks au boutons answerNow et answer quick
+    }
+
+    public interface QuestionListener {
+        void onTouch(QuestionModel question);
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -68,6 +89,8 @@ public class QuestionsListAdapter extends RecyclerView.Adapter<QuestionsListAdap
         public TextView questionText;
         public ImageView priority;
         public TextView close;
+        public TextView answerNow;
+        public TextView answerQuick;
 
         public MyViewHolder(View view) {
             super(view);
@@ -75,6 +98,8 @@ public class QuestionsListAdapter extends RecyclerView.Adapter<QuestionsListAdap
             questionText = view.findViewById(R.id.tv_question);
             priority = view.findViewById(R.id.iv_priority_color);
             close = view.findViewById(R.id.tv_close);
+            answerNow = view.findViewById(R.id.tv_answer_now);
+            answerQuick = view.findViewById(R.id.tv_quick_answer);
         }
     }
 

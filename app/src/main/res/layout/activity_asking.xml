@@ -196,7 +196,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_close_open_confirmation"
+        android:id="@+id/tv_quicky"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -224,7 +224,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_close_open_confirmation" />
+        app:layout_constraintTop_toTopOf="@+id/tv_quicky" />
 
 
 </android.support.constraint.ConstraintLayout>
