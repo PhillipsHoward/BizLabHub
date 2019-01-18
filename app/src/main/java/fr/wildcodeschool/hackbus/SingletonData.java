@@ -278,7 +278,8 @@ public class SingletonData {
 
     public void initListenerQuestionReponse(){}
 
-    public void initListenerPresence(final PresenceListener presenceListenerInterface){
+    public void initListenerPresence(final PresenceListener presenceListenerInterface) {
+
         ChildEventListener presenceListener = new ChildEventListener() {
 
             @Override
@@ -355,4 +356,41 @@ public class SingletonData {
         return new UserModel();
     }
 
+    public void getANewQuestionListener(final QuestionReponseListener questionReponseListener, UserModel user){
+        user = cUser;
+        final UserModel finalUser = user;
+        ChildEventListener getAquestionListener = new ChildEventListener() {
+
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                QuestionModel question = dataSnapshot.getValue(QuestionModel.class);
+                questionReponseListener.onChange(question);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                boolean test = true;
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+
+    };
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users").child(finalUser.getuId()).child("questionAsked");
+        databaseReference.addChildEventListener(getAquestionListener);
+
+}
 }

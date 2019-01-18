@@ -106,15 +106,26 @@ public class MainActivity extends SuperActivity {
         singletonData.addUsers(user3);
 
         boolean test = true;*/
+
         final SingletonData singletonData = SingletonData.getInstance();
         singletonData.initListenerPresence(new PresenceListener() {
             @Override
             public void onChange(UserModel user) {
-                if(!singletonData.getcUser().getuId().equals(user.getuId()))
-                Toast.makeText(MainActivity.this, user.getPrenom() + " connexion : " + user.isDispo(), Toast.LENGTH_LONG).show();
+                if(!singletonData.getcUser().getuId().equals(user.getuId())) {
+                    if(user.isDispo()) Toast.makeText(MainActivity.this, user.getPrenom() + " is connected !", Toast.LENGTH_LONG).show();
+                    else Toast.makeText(MainActivity.this, user.getPrenom() + " disconnected !", Toast.LENGTH_LONG).show();
+                }
             }
         });
-/*
+
+        singletonData.getANewQuestionListener(new QuestionReponseListener() {
+            @Override
+            public void onChange(QuestionModel question) {
+                UserModel sender = singletonData.findUserById(question.getSenderId());
+                Toast.makeText(MainActivity.this, sender.getPrenom() + " send you a new question : " + question.getTitle(), Toast.LENGTH_LONG).show();
+            }
+        }, singletonData.getcUser());
+
         Button listProject = findViewById(R.id.bt_projet_list);
         Button createProject = findViewById(R.id.bt_form_projet);
         Button userPage = findViewById(R.id.bt_user_page);
@@ -141,7 +152,6 @@ public class MainActivity extends SuperActivity {
                 Intent goToUserPage = new Intent(MainActivity.this, UserPage.class);
                 MainActivity.this.startActivity(goToUserPage);
             }
-        });*/
-
+        });
     }
 }
