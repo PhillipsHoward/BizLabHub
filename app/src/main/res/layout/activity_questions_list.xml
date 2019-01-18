@@ -45,4 +45,84 @@
         </LinearLayout>
     </ScrollView>
 
+    <View
+        android:id="@+id/view_grey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorGreyTrans"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_quicky"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/classic_border_white"
+        android:gravity="top|center_horizontal"
+        android:paddingLeft="24dp"
+        android:paddingTop="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="200dp"
+        android:text="Choose your answer"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_ten_mn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/classic_border_colorprimary"
+        android:text="Give me 10 mn"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tv_quicky"
+        app:layout_constraintStart_toStartOf="@+id/tv_quicky"
+        app:layout_constraintTop_toTopOf="@+id/tv_quicky" />
+
+    <Button
+        android:id="@+id/b_a_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/classic_border_colorprimary"
+        android:text="Give me a day"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tv_quicky"
+        app:layout_constraintStart_toStartOf="@+id/tv_quicky"
+        app:layout_constraintTop_toBottomOf="@+id/b_ten_mn" />
+
+    <Button
+        android:id="@+id/b_dont_know"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/classic_border_colorprimary"
+        android:text="I don't know"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tv_quicky"
+        app:layout_constraintStart_toStartOf="@+id/tv_quicky"
+        app:layout_constraintTop_toBottomOf="@+id/b_a_day" />
+
 </android.support.constraint.ConstraintLayout>

@@ -44,7 +44,7 @@ public class QuestionActivity extends AppCompatActivity {
     private void setButtons() {
         Button answerButton = findViewById(R.id.send);
         TextView openOrClose = findViewById(R.id.tv_open_close);
-        TextView closeOpenConfirmation = findViewById(R.id.tv_close_open_confirmation);
+        TextView closeOpenConfirmation = findViewById(R.id.tv_quicky);
 
         final EditText answer = findViewById(R.id.et_answer);
 
@@ -54,7 +54,7 @@ public class QuestionActivity extends AppCompatActivity {
                 String answerText = answer.getText().toString();
 
                 if(answerText.isEmpty()){
-                    Toast.makeText(QuestionActivity.this, "Please write your answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuestionActivity.this, "Please write your answerNow", Toast.LENGTH_SHORT).show();
                 } else {
                     ReponseModel newReponse = new ReponseModel(answerText, mDataSingleton.getcUser());
                     //TODO: à balancer vers la BDD
@@ -84,7 +84,7 @@ public class QuestionActivity extends AppCompatActivity {
     private void closeInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView closeOpenPopup = findViewById(R.id.tv_close_open_popup);
-        TextView closeOpenConfirmation = findViewById(R.id.tv_close_open_confirmation);
+        TextView closeOpenConfirmation = findViewById(R.id.tv_quicky);
 
         greyView.setVisibility(View.GONE);
         closeOpenPopup.setVisibility(View.GONE);
@@ -94,7 +94,7 @@ public class QuestionActivity extends AppCompatActivity {
     private void showInfoPopup() {
         View greyView = findViewById(R.id.view_grey);
         TextView closeOpenPopup = findViewById(R.id.tv_close_open_popup);
-        TextView closeOpenConfirmation = findViewById(R.id.tv_close_open_confirmation);
+        TextView closeOpenConfirmation = findViewById(R.id.tv_quicky);
 
         greyView.setVisibility(View.VISIBLE);
         closeOpenPopup.setVisibility(View.VISIBLE);
