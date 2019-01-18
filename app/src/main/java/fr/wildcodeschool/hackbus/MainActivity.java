@@ -110,8 +110,10 @@ public class MainActivity extends SuperActivity {
         singletonData.initListenerPresence(new PresenceListener() {
             @Override
             public void onChange(UserModel user) {
-                if(!singletonData.getcUser().getuId().equals(user.getuId()))
-                Toast.makeText(MainActivity.this, user.getPrenom() + " connexion : " + user.isDispo(), Toast.LENGTH_LONG).show();
+                if(!singletonData.getcUser().getuId().equals(user.getuId())) {
+                    if(user.isDispo()) Toast.makeText(MainActivity.this, user.getPrenom() + " is connected !", Toast.LENGTH_LONG).show();
+                    else Toast.makeText(MainActivity.this, user.getPrenom() + " disconnected !", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
